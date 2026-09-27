@@ -1,0 +1,219 @@
+{
+  "id": 5,
+  "day": 5,
+  "title": "Mantiqiy operatorlar",
+  "description": "Bir nechta shartni birgalikda tekshirish uchun AND, OR va NOT operatorlaridan foydalanishni o'rganamiz.",
+  "level": "beginner",
+  "category": "programming_basics",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Mantiqiy operatorlar nima ekanligini tushunish",
+    "AND operatori qanday ishlashini anglash",
+    "OR operatori qanday ishlashini tushunish",
+    "NOT operatorining vazifasini bilish",
+    "Bir nechta shartni bitta qarorda birlashtirishni o'rganish"
+  ],
+
+  "prerequisites": [
+    4
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Mantiqiy operatorlar nima?",
+      "content": "Mantiqiy operatorlar bir yoki bir nechta shartning natijasini birlashtirish uchun ishlatiladi. Masalan, foydalanuvchi 18 yoshdan katta va akkaunti faol bo'lsa, tizim unga kirishga ruxsat berishi mumkin. Bunday vaziyatda ikkita shartni birgalikda tekshirish kerak bo'ladi."
+    },
+    {
+      "id": 2,
+      "title": "AND operatori",
+      "content": "AND operatori barcha shartlar true bo'lgandagina true natija beradi. Masalan, age >= 18 AND has_account == true bo'lsa, foydalanuvchi ham voyaga yetgan, ham akkauntga ega ekanini tekshiramiz. Agar shartlardan bittasi false bo'lsa, umumiy natija ham false bo'ladi."
+    },
+    {
+      "id": 3,
+      "title": "AND operatorini kundalik misolda",
+      "content": "Tasavvur qiling, kinoteatrga kirish uchun foydalanuvchi 18 yoshdan katta bo'lishi va bileti bo'lishi kerak. Ikkala talab ham bajarilsa kirish mumkin. Yosh yetarli bo'lib, lekin chipta bo'lmasa, kirishga ruxsat berilmaydi."
+    },
+    {
+      "id": 4,
+      "title": "OR operatori",
+      "content": "OR operatorida shartlardan kamida bittasi true bo'lsa, umumiy natija true bo'ladi. Masalan, foydalanuvchi admin yoki moderator bo'lsa, boshqaruv sahifasiga kirishga ruxsat berish mumkin."
+    },
+    {
+      "id": 5,
+      "title": "OR operatorini kundalik misolda",
+      "content": "Tasavvur qiling, chegirma olish uchun foydalanuvchi talaba yoki pensioner bo'lishi kerak. U ikkalasidan bittasiga mos kelsa ham chegirma olishi mumkin. Bu OR operatoriga yaxshi misol bo'ladi."
+    },
+    {
+      "id": 6,
+      "title": "NOT operatori",
+      "content": "NOT operatori mantiqiy qiymatni teskarisiga o'zgartiradi. Agar is_blocked true bo'lsa, NOT is_blocked false bo'ladi. Agar is_blocked false bo'lsa, NOT is_blocked true bo'ladi. Bu operator ma'lum bir holat mavjud emasligini tekshirishda foydali."
+    },
+    {
+      "id": 7,
+      "title": "Bir nechta shartni birlashtirish",
+      "content": "Murakkabroq dasturlarda AND, OR va NOT birgalikda ishlatilishi mumkin. Masalan, foydalanuvchi 18 yoshdan katta AND akkaunti faol AND bloklanmagan bo'lsa tizimga kirishi mumkin. Bunday ifodalarni yozishda har bir shartning ma'nosini alohida tushunish muhim."
+    },
+    {
+      "id": 8,
+      "title": "Mantiqiy operatorlarni noto'g'ri tanlash",
+      "content": "AND va OR bir-biriga o'xshab ko'rinsa ham, ma'nosi juda farq qiladi. Agar barcha talab bajarilishi kerak bo'lsa AND ishlatiladi. Agar talablardan bittasi yetarli bo'lsa OR ishlatiladi. Operatorni noto'g'ri tanlash dastur mantiqida xatoga olib kelishi mumkin."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "age = 20 va has_ticket = true bo'lsa, age >= 18 AND has_ticket qanday natija beradi?",
+      "type": "multiple_choice",
+      "options": [
+        "True",
+        "False",
+        "20",
+        "Error"
+      ],
+      "hints": [
+        "AND operatorida barcha shartlar true bo'lishi kerak.",
+        "Avval age >= 18 shartini tekshiring.",
+        "Keyin has_ticket qiymatini tekshiring. Ikkalasi ham true bo'lsa umumiy natija true bo'ladi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "is_student = false va is_pensioner = true bo'lsa, is_student OR is_pensioner qanday natija beradi?",
+      "type": "multiple_choice",
+      "options": [
+        "True",
+        "False",
+        "Null",
+        "Error"
+      ],
+      "hints": [
+        "OR operatorida kamida bitta shart true bo'lishi yetarli.",
+        "Birinchi qiymat false, ikkinchisi true.",
+        "Kamida bittasi true bo'lgani uchun umumiy natijani aniqlang."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "is_blocked = true bo'lsa, NOT is_blocked qanday natija beradi?",
+      "type": "multiple_choice",
+      "options": [
+        "True",
+        "False",
+        "Blocked",
+        "Null"
+      ],
+      "hints": [
+        "NOT qiymatni teskarisiga o'zgartiradi.",
+        "true ning teskarisi nima ekanini o'ylang.",
+        "NOT true natijasi false bo'ladi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Foydalanuvchi tizimga kirishi uchun yoshi 18 dan katta va akkaunti faol bo'lishi kerak. Bu yerda qaysi mantiqiy operator mos keladi?",
+      "type": "multiple_choice",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "Hech biri"
+      ],
+      "hints": [
+        "Savolda ikkita talab bor.",
+        "Foydalanuvchi faqat bittasini bajarsa yetadimi yoki ikkalasini ham bajarishi kerakmi?",
+        "Barcha talablar bajarilishi kerak bo'lsa AND ishlatiladi."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Foydalanuvchi admin yoki moderator bo'lsa panelga kira oladi. Bu shartni o'z so'zingiz bilan yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Bu yerda ikkita rol mavjud: admin va moderator.",
+        "Ulardan bittasi bo'lishi panelga kirish uchun yetarli.",
+        "Kamida bitta shart true bo'lishi kerak bo'lgan vaziyatda OR ishlatiladi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Tizimga kirish qoidasi",
+    "description": "Foydalanuvchi tizimga kirishi uchun yoshi 18 yoki undan katta bo'lishi, akkaunti faol bo'lishi va bloklanmagan bo'lishi kerak. Qaysi taqqoslash va mantiqiy operatorlardan foydalanishingizni yozing va qaror qabul qilish algoritmini tushuntiring.",
+    "hints": [
+      "Avval har bir talabni alohida yozib chiqing: yosh, akkaunt holati va bloklanganlik.",
+      "Yosh uchun age >= 18 kabi taqqoslash kerak bo'ladi.",
+      "Uchta talabning barchasi bajarilishi kerakligi sababli ularni AND bilan birlashtirishni o'ylang.",
+      "Bloklanmagan holatni is_blocked qiymatining teskarisi orqali ifodalash mumkin: NOT is_blocked."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "AND operatori qachon true natija beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "Kamida bitta shart true bo'lsa",
+          "Barcha shartlar true bo'lsa",
+          "Barcha shartlar false bo'lsa",
+          "Faqat bitta shart bo'lsa"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 2,
+        "question": "OR operatori qachon true natija beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "Faqat barcha shartlar true bo'lsa",
+          "Kamida bitta shart true bo'lsa",
+          "Faqat barcha shartlar false bo'lsa",
+          "Hech qachon"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 3,
+        "question": "NOT operatorining vazifasi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Ikki sonni qo'shish",
+          "Qiymatni saqlash",
+          "Mantiqiy qiymatni teskarisiga o'zgartirish",
+          "Dasturdan chiqish"
+        ],
+        "correct_answer": 2
+      },
+      {
+        "id": 4,
+        "question": "true AND false qanday natija beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "True",
+          "False",
+          "Null",
+          "1"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 5,
+        "question": "false OR true qanday natija beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "True",
+          "False",
+          "Null",
+          "0"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

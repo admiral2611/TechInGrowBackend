@@ -1,0 +1,204 @@
+{
+  "id": 2,
+  "day": 2,
+  "title": "O'zgaruvchilar bilan tanishuv",
+  "description": "Dastur ichida ma'lumotlarni qanday saqlash va ulardan qanday foydalanishni o'rganamiz.",
+  "level": "beginner",
+  "category": "programming_basics",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "O'zgaruvchi nima ekanligini tushunish",
+    "Qiymat va o'zgaruvchi orasidagi farqni anglash",
+    "O'zgaruvchiga qiymat berish prinsipini tushunish",
+    "O'zgaruvchi nomlarini to'g'ri tanlashni o'rganish",
+    "O'zgaruvchining qiymati qanday o'zgarishini tushunish"
+  ],
+
+  "prerequisites": [
+    1
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "O'zgaruvchi nima?",
+      "content": "O'zgaruvchi dastur ichida ma'lumot saqlash uchun ishlatiladigan nomlangan joydir. Uni ichiga qiymat solish mumkin bo'lgan quti sifatida tasavvur qilish mumkin. Masalan, foydalanuvchining ismini saqlash uchun name nomli o'zgaruvchi yaratishimiz mumkin."
+    },
+    {
+      "id": 2,
+      "title": "Qiymat nima?",
+      "content": "Qiymat o'zgaruvchi ichida saqlanadigan ma'lumotdir. Masalan, age o'zgaruvchisi ichida 20 soni saqlanishi mumkin. Bu yerda age o'zgaruvchining nomi, 20 esa uning qiymati hisoblanadi."
+    },
+    {
+      "id": 3,
+      "title": "O'zgaruvchiga qiymat berish",
+      "content": "O'zgaruvchi yaratilgandan keyin unga qiymat beriladi. Masalan, age = 20 deb tasavvur qilamiz. Bu 'age nomli o'zgaruvchiga 20 qiymatini saqla' degan ma'noni anglatadi. Keyinchalik dastur age nomi orqali shu qiymatdan foydalanishi mumkin."
+    },
+    {
+      "id": 4,
+      "title": "O'zgaruvchining qiymati o'zgarishi mumkin",
+      "content": "O'zgaruvchi nomidan ko'rinib turibdiki, uning qiymati o'zgarishi mumkin. Masalan, score = 10 bo'lsa, keyinchalik score = 20 qilinishi mumkin. Bunda eski qiymat o'rniga yangi qiymat saqlanadi."
+    },
+    {
+      "id": 5,
+      "title": "O'zgaruvchi nomi nega muhim?",
+      "content": "O'zgaruvchi nomi uning ichida qanday ma'lumot saqlanayotganini tushuntirib turishi kerak. Masalan, x o'rniga user_age, n o'rniga student_count kabi nomlardan foydalanish kodni tushunarli qiladi. Yaxshi nomlangan o'zgaruvchilar kodni o'qishni ancha osonlashtiradi."
+    },
+    {
+      "id": 6,
+      "title": "Ma'lumotlarning turli ko'rinishlari",
+      "content": "O'zgaruvchilarda turli xil ma'lumotlar saqlanishi mumkin. Masalan, ism matn bo'lishi mumkin, yosh son bo'lishi mumkin, foydalanuvchi tizimga kirgan yoki kirmaganini esa true yoki false kabi mantiqiy qiymat bilan ifodalash mumkin. Keyingi darslarda ma'lumot turlarini chuqurroq o'rganamiz."
+    },
+    {
+      "id": 7,
+      "title": "O'zgaruvchilar kundalik misolda",
+      "content": "Tasavvur qiling, telefoningizdagi profil sahifasida ism, yosh va ball ko'rsatilgan. Dastur bu ma'lumotlarni alohida o'zgaruvchilarda saqlashi mumkin. Masalan, username = 'Ali', age = 18 va score = 100. Shu qiymatlar keyin ekranga chiqariladi yoki hisob-kitoblarda ishlatiladi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Foydalanuvchining ismini saqlash uchun qanday o'zgaruvchi nomini tanlagan bo'lardingiz?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "O'zgaruvchi nomidan uning ichida nima saqlanishini tushunish mumkin bo'lishi kerak.",
+        "Bu o'zgaruvchi foydalanuvchining ismini saqlaydi.",
+        "Masalan, name yoki user_name kabi nomlarni o'ylab ko'ring."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Quyidagilardan qaysi biri yaxshi o'zgaruvchi nomi?",
+      "type": "multiple_choice",
+      "options": [
+        "x",
+        "a",
+        "user_age",
+        "q"
+      ],
+      "hints": [
+        "Yaxshi o'zgaruvchi nomi ichidagi ma'lumotni tushuntirib turadi.",
+        "Bir harfli nomlardan ko'ra ma'noli nomni qidiring.",
+        "Foydalanuvchining yoshini saqlash uchun nomning o'zida shu ma'no ko'rinishi kerak."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "score = 10 dan keyin score = 25 qilinsa, score ning yangi qiymati nima bo'ladi?",
+      "type": "multiple_choice",
+      "options": [
+        "10",
+        "15",
+        "25",
+        "35"
+      ],
+      "hints": [
+        "O'zgaruvchiga yangi qiymat berilganda avvalgi qiymat almashtiriladi.",
+        "Avval score ichida 10 bor edi.",
+        "Keyin score ga 25 berildi. Endi eski 10 emas, yangi qiymat saqlanadi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Talabaning ismi, yoshi va bali uchun uchta o'zgaruvchi nomini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Har bir ma'lumot uchun alohida o'zgaruvchi kerak.",
+        "O'zgaruvchi nomidan qaysi ma'lumot saqlanishi bilinib tursin.",
+        "Masalan, student_name, student_age va student_score kabi nomlash usulini o'ylab ko'ring."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "O'zgaruvchi va qiymat orasidagi farqni o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "O'zgaruvchini nomlangan quti deb tasavvur qiling.",
+        "Qiymat esa shu quti ichida saqlanadigan ma'lumot.",
+        "Masalan, age = 20 da age nom, 20 esa saqlanayotgan qiymat."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Foydalanuvchi profili",
+    "description": "Tasavvur qiling, foydalanuvchi profilini yaratmoqchisiz. Profil uchun ism, yosh, shahar va ball saqlanishi kerak. Har bir ma'lumot uchun mos o'zgaruvchi nomini yozing va ularga misol qiymatlar bering.",
+    "hints": [
+      "Avval profil ichida saqlanishi kerak bo'lgan 4 ta ma'lumotni alohida ajrating.",
+      "Har bir ma'lumot uchun tushunarli o'zgaruvchi nomi tanlang.",
+      "Masalan, ism uchun user_name kabi nom ishlatish mumkin.",
+      "Keyin har bir o'zgaruvchiga mos qiymat bering: matn, son yoki kerakli boshqa qiymat."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "O'zgaruvchi nima uchun ishlatiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Internetga ulanish uchun",
+          "Ma'lumot saqlash uchun",
+          "Telefonni o'chirish uchun",
+          "Rasm chizish uchun"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 2,
+        "question": "age = 20 yozuvida age nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Qiymat",
+          "O'zgaruvchi nomi",
+          "Operator",
+          "Natija"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 3,
+        "question": "age = 20 yozuvida 20 nima?",
+        "type": "multiple_choice",
+        "options": [
+          "O'zgaruvchi nomi",
+          "Funksiya",
+          "Qiymat",
+          "Shart"
+        ],
+        "correct_answer": 2
+      },
+      {
+        "id": 4,
+        "question": "Qaysi o'zgaruvchi nomi tushunarliroq?",
+        "type": "multiple_choice",
+        "options": [
+          "x",
+          "a1",
+          "user_score",
+          "q"
+        ],
+        "correct_answer": 2
+      },
+      {
+        "id": 5,
+        "question": "score = 5 dan keyin score = 12 bajarilsa, score qiymati nima bo'ladi?",
+        "type": "multiple_choice",
+        "options": [
+          "5",
+          "7",
+          "12",
+          "17"
+        ],
+        "correct_answer": 2
+      }
+    ]
+  }
+}

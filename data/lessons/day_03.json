@@ -1,0 +1,210 @@
+{
+  "id": 3,
+  "day": 3,
+  "title": "Shartlar bilan ishlash",
+  "description": "Dastur qanday qilib qaror qabul qilishini va if/else mantig'ini o'rganamiz.",
+  "level": "beginner",
+  "category": "programming_basics",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Shart nima ekanligini tushunish",
+    "True va false mantiqini anglash",
+    "If va else qanday ishlashini tushunish",
+    "Oddiy qaror qabul qilish algoritmlarini tuzish",
+    "Bir nechta holatni tekshirishni o'rganish"
+  ],
+
+  "prerequisites": [
+    2
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Shart nima?",
+      "content": "Shart dasturga ma'lum bir holatni tekshirish va natijaga qarab qaror qabul qilish imkonini beradi. Masalan, foydalanuvchining yoshi 18 dan katta yoki teng bo'lsa, tizim unga kirishga ruxsat berishi mumkin. Aks holda, kirish taqiqlanishi mumkin."
+    },
+    {
+      "id": 2,
+      "title": "True va False",
+      "content": "Shartning natijasi odatda ikki xil bo'ladi: true yoki false. True shart to'g'ri ekanini, false esa shart noto'g'ri ekanini bildiradi. Masalan, age = 20 bo'lsa, age >= 18 sharti true natija beradi."
+    },
+    {
+      "id": 3,
+      "title": "If qanday ishlaydi?",
+      "content": "If ma'lum bir shartni tekshiradi. Agar shart true bo'lsa, if ichidagi amal bajariladi. Masalan, agar score >= 70 bo'lsa, ekranga 'Imtihondan o'tdingiz' degan xabar chiqarish mumkin."
+    },
+    {
+      "id": 4,
+      "title": "Else nima uchun kerak?",
+      "content": "Else shart bajarilmagan holatda nima qilish kerakligini belgilaydi. Masalan, agar score >= 70 bo'lsa 'O'tdingiz', aks holda 'O'tmadingiz' degan natija chiqarish mumkin."
+    },
+    {
+      "id": 5,
+      "title": "If va Else birgalikda",
+      "content": "If va else birgalikda dasturga ikki xil yo'nalishdan birini tanlash imkonini beradi. Masalan, temperature < 0 bo'lsa 'Havo juda sovuq', aks holda 'Harorat noldan yuqori' deb chiqarish mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Bir nechta holatni tekshirish",
+      "content": "Ba'zan faqat ikki holat yetarli bo'lmaydi. Masalan, ball 90 yoki undan yuqori bo'lsa 'A', 80 yoki undan yuqori bo'lsa 'B', aks holda boshqa natija chiqarish kerak bo'lishi mumkin. Bunday vaziyatlarda bir nechta shart ketma-ket tekshiriladi."
+    },
+    {
+      "id": 7,
+      "title": "Kundalik hayotdagi shartlar",
+      "content": "Shartlar kundalik hayotda ham ko'p uchraydi. Agar yomg'ir yog'sa soyabon olamiz. Agar telefon quvvati kam bo'lsa uni zaryadga qo'yamiz. Agar foydalanuvchi to'g'ri parol kiritsa tizimga kirishga ruxsat beramiz. Dasturlashda ham xuddi shu fikrlash ishlatiladi."
+    },
+    {
+      "id": 8,
+      "title": "Kod yozishdan oldin shartni tushunish",
+      "content": "Shartli masalani yechishda avval nimani tekshirish kerakligini aniqlash muhim. Keyin shart true bo'lsa nima bo'lishini, false bo'lsa nima bo'lishini yozib chiqamiz. Shundan keyingina kodga o'tish tavsiya qilinadi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Agar age = 20 bo'lsa, age >= 18 sharti qanday natija beradi?",
+      "type": "multiple_choice",
+      "options": [
+        "True",
+        "False",
+        "Null",
+        "Error"
+      ],
+      "hints": [
+        "20 sonini 18 bilan solishtiring.",
+        "Savol: 20 soni 18 dan katta yoki tengmi?",
+        "Agar shart bajarilsa natija true bo'ladi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Foydalanuvchining yoshi 18 dan kichik bo'lsa, qanday xabar chiqarishni taklif qilgan bo'lardingiz?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Bu holatda foydalanuvchi minimal yosh talabiga yetmagan.",
+        "Xabar foydalanuvchiga nima sababdan kira olmayotganini tushuntirishi mumkin.",
+        "Masalan, kirish uchun yosh yetarli emasligini bildiradigan xabar yozishingiz mumkin."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "score = 65 va o'tish bali 70 bo'lsa, shart score >= 70 qanday natija beradi?",
+      "type": "multiple_choice",
+      "options": [
+        "True",
+        "False",
+        "65",
+        "70"
+      ],
+      "hints": [
+        "65 sonini 70 bilan solishtiring.",
+        "Savol: 65 soni 70 dan katta yoki tengmi?",
+        "Agar shart bajarilmasa natija false bo'ladi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Harorat 0 dan past bo'lsa 'Sovuq', aks holda 'Iliq' chiqaradigan algoritmni oddiy qadamlar bilan yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval qanday qiymatni tekshirishingizni aniqlang.",
+        "Haroratni 0 bilan taqqoslang.",
+        "temperature < 0 bo'lsa bir natija, aks holda boshqa natija kerak.",
+        "True holatda 'Sovuq', false holatda 'Iliq' chiqarishni o'ylang."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "If va else orasidagi farqni o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "If shartni tekshiradigan qism ekanini eslang.",
+        "Else esa if sharti bajarilmaganda ishlaydi.",
+        "Biri true holat uchun, ikkinchisi false holat uchun bajariladigan amalni belgilaydi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Sonni tekshirish",
+    "description": "Dasturga bitta son beriladi. Son 0 dan katta bo'lsa 'Musbat', 0 dan kichik bo'lsa 'Manfiy', 0 ga teng bo'lsa 'Nol' natijasini chiqaradigan algoritm tuzing. Kod yozish shart emas, qaror qabul qilish bosqichlarini yozing.",
+    "hints": [
+      "Barcha holatlarni 0 bilan taqqoslash orqali aniqlash mumkin.",
+      "Avval son > 0 holatini tekshirib ko'ring.",
+      "Agar birinchi shart bajarilmasa, son < 0 ekanini tekshiring.",
+      "Son na 0 dan katta, na 0 dan kichik bo'lsa, qanday qiymat qoladi?"
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Shartning natijasi odatda qanday qiymat bo'ladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Faqat son",
+          "True yoki False",
+          "Faqat matn",
+          "Har doim null"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 2,
+        "question": "If qachon ichidagi amalni bajaradi?",
+        "type": "multiple_choice",
+        "options": [
+          "Shart true bo'lsa",
+          "Shart false bo'lsa",
+          "Har doim",
+          "Hech qachon"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Else qachon ishlaydi?",
+        "type": "multiple_choice",
+        "options": [
+          "If sharti true bo'lsa",
+          "If sharti false bo'lsa",
+          "Faqat dastur boshlanganda",
+          "Faqat xatolik bo'lsa"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 4,
+        "question": "age = 16 bo'lsa, age >= 18 sharti qanday natija beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "True",
+          "False",
+          "18",
+          "16"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 5,
+        "question": "Dasturga qaror qabul qilish imkonini beradigan asosiy tushuncha qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "Shart",
+          "Rasm",
+          "Fayl nomi",
+          "Internet"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

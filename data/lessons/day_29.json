@@ -1,0 +1,225 @@
+{
+  "id": 29,
+  "day": 29,
+  "title": "Mini loyiha: Yechim",
+  "description": "Oldingi darsda rejalashtirilgan Task Tracker loyihasini algoritm, funksiyalar va ma'lumot strukturalari yordamida to'liq yechimga aylantiramiz.",
+  "level": "beginner",
+  "category": "project",
+  "duration_minutes": 50,
+
+  "objectives": [
+    "Loyiha rejasini amaliy yechimga aylantirish",
+    "List va Map ni birgalikda ishlatishni tushunish",
+    "Funksiyalar orqali loyiha vazifalarini ajratish",
+    "Task Tracker dasturining umumiy oqimini tushunish",
+    "Xato holatlarini tekshirish va debugging fikrlashini qo'llash"
+  ],
+
+  "prerequisites": [
+    28
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Rejadan yechimga o'tish",
+      "content": "Oldingi darsda Task Tracker dasturining maqsadi va qismlarini rejalashtirdik. Endi shu rejani aniq algoritmga aylantiramiz. Dasturda vazifalar ro'yxati, vazifa qo'shish, vazifalarni ko'rsatish va vazifani bajarilgan deb belgilash imkoniyatlari bo'ladi."
+    },
+    {
+      "id": 2,
+      "title": "Vazifalar ro'yxati",
+      "content": "Barcha vazifalarni List ichida saqlash mumkin. Har bir vazifa esa title va completed kabi ma'lumotlarni o'z ichiga oladi. Masalan, bitta vazifani {title: 'Dars qilish', completed: false} kabi tasavvur qilish mumkin."
+    },
+    {
+      "id": 3,
+      "title": "add_task funksiyasi",
+      "content": "add_task funksiyasi foydalanuvchidan kelgan vazifa nomini qabul qiladi, yangi vazifa yaratadi va uni vazifalar Listiga qo'shadi. Yangi vazifaning completed qiymati dastlab false bo'lishi mumkin."
+    },
+    {
+      "id": 4,
+      "title": "show_tasks funksiyasi",
+      "content": "show_tasks funksiyasi vazifalar Listi bo'ylab yuradi va har bir vazifani foydalanuvchiga ko'rsatadi. Vazifa bajarilgan yoki bajarilmagan holatini ham title bilan birga ko'rsatish mumkin."
+    },
+    {
+      "id": 5,
+      "title": "complete_task funksiyasi",
+      "content": "complete_task funksiyasi foydalanuvchi tanlagan vazifani topadi va uning completed qiymatini true ga o'zgartiradi. Vazifani topish uchun index yoki boshqa identifikator ishlatilishi mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Dastur oqimi",
+      "content": "Dastur foydalanuvchidan amal tanlashni so'raydi. Masalan, 1 — vazifa qo'shish, 2 — vazifalarni ko'rish, 3 — vazifani bajarilgan deb belgilash. Tanlovga qarab tegishli funksiya chaqiriladi."
+    },
+    {
+      "id": 7,
+      "title": "Takroriy ishlash",
+      "content": "Task Tracker foydalanuvchi bir amal bajargandan keyin darhol tugamasligi kerak. Loop yordamida menyuni qayta-qayta ko'rsatish mumkin. Foydalanuvchi chiqishni tanlaganda loop tugaydi."
+    },
+    {
+      "id": 8,
+      "title": "Noto'g'ri inputlarni tekshirish",
+      "content": "Foydalanuvchi bo'sh vazifa nomi, noto'g'ri menu tanlovi yoki mavjud bo'lmagan vazifa indexini kiritishi mumkin. Dastur bunday holatlarni tekshirishi va tushunarli xabar qaytarishi kerak."
+    },
+    {
+      "id": 9,
+      "title": "Debugging qilish",
+      "content": "Agar complete_task noto'g'ri vazifani belgilasa, avval xatoni takrorlash kerak. Keyin tanlangan index qiymati, list ichidagi vazifalar va shartlarni tekshirish mumkin. Muammo topilgach, tuzatish kiritilib yana test qilinadi."
+    },
+    {
+      "id": 10,
+      "title": "To'liq pseudocode",
+      "content": "Umumiy yechim quyidagicha tasavvur qilinadi: bo'sh tasks List yarat, menyuni ko'rsat, foydalanuvchi tanlovini ol, tanlovga qarab kerakli funksiyani chaqir, natijani ko'rsat va foydalanuvchi chiqishni tanlamaguncha jarayonni takrorla."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Yangi vazifa yaratilganda completed qiymati dastlab qanday bo'lishi mantiqli?",
+      "type": "multiple_choice",
+      "options": [
+        "false",
+        "true",
+        "null",
+        "Har doim 100"
+      ],
+      "hints": [
+        "Yangi qo'shilgan vazifa hali bajarilmagan bo'ladi.",
+        "completed vazifaning bajarilgan holatini bildiradi.",
+        "Bajarilmagan holat false bilan ifodalanishi mumkin."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "show_tasks funksiyasining asosiy vazifasi nima?",
+      "type": "multiple_choice",
+      "options": [
+        "Vazifalarni foydalanuvchiga ko'rsatish",
+        "Faqat yangi vazifa yaratish",
+        "Barcha vazifalarni o'chirish",
+        "Faqat password tekshirish"
+      ],
+      "hints": [
+        "Funksiya nomidagi show so'ziga e'tibor bering.",
+        "Bu funksiya mavjud vazifalar bilan ishlaydi.",
+        "U List ichidagi vazifalarni chiqarishi kerak."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "complete_task funksiyasi qanday ishlashi kerakligini o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval foydalanuvchi qaysi vazifani tanlaganini bilish kerak.",
+        "Keyin shu vazifa List ichidan topiladi.",
+        "Topilgan vazifaning completed qiymati true ga o'zgartiriladi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Nega Task Tracker uchun loop kerak bo'lishi mumkin?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Foydalanuvchi faqat bitta amal bilan cheklanmaydi.",
+        "Bir vazifa qo'shgandan keyin yana boshqa amal bajarishi mumkin.",
+        "Menu foydalanuvchi chiqishni tanlaguncha takrorlanishi mumkin."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Foydalanuvchi mavjud bo'lmagan indexni kiritsa, dastur nima qilishi kerak?",
+      "type": "multiple_choice",
+      "options": [
+        "Xatoni tekshirib, tushunarli xabar chiqarishi",
+        "Tasodifiy vazifani o'zgartirishi",
+        "Barcha vazifalarni o'chirishi",
+        "Doim birinchi vazifani tanlashi"
+      ],
+      "hints": [
+        "Noto'g'ri inputni e'tiborsiz qoldirish xavfli.",
+        "Index list chegarasida ekanini tekshirish kerak.",
+        "Agar index noto'g'ri bo'lsa foydalanuvchiga xabar berish kerak."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Task Tracker algoritmini yakunlash",
+    "description": "Task Tracker uchun to'liq pseudocode yozing. Unda tasks List, add_task, show_tasks, complete_task, menyu, loop va noto'g'ri inputlarni tekshirish bo'lishi kerak. Har bir qism qanday ishlashini qisqacha tushuntiring.",
+    "hints": [
+      "Avval bo'sh tasks List yaratishdan boshlang.",
+      "add_task yangi vazifani title va completed qiymatlari bilan Listga qo'shsin.",
+      "show_tasks List bo'ylab yurib barcha vazifalarni chiqarsin.",
+      "complete_task tanlangan vazifaning completed qiymatini true qilsin.",
+      "Menu loop ichida ishlasin va foydalanuvchi chiqishni tanlaganda tugasin."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Task Tracker da bir nechta vazifalarni saqlash uchun nima ishlatilishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "List",
+          "Faqat bitta string",
+          "Faqat if",
+          "Return"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Yangi vazifaning completed qiymati dastlab qanday bo'lishi mantiqli?",
+        "type": "multiple_choice",
+        "options": [
+          "false",
+          "true",
+          "100",
+          "Boshqa List"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "complete_task funksiyasi nima qiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Tanlangan vazifani bajarilgan deb belgilaydi",
+          "Faqat yangi vazifa qo'shadi",
+          "Barcha vazifalarni o'chiradi",
+          "Faqat menu chiqaradi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Nega menu loop ichida ishlatilishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Foydalanuvchi bir nechta amal bajarishi uchun",
+          "Faqat bir marta ishlashi uchun",
+          "Listni avtomatik o'chirish uchun",
+          "Funksiyalarni bloklash uchun"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Noto'g'ri index kelganda yaxshi yondashuv qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "Indexni tekshirib, xato haqida tushunarli xabar berish",
+          "Tasodifiy elementni o'zgartirish",
+          "Butun dasturni o'chirish",
+          "Har doim index 0 ni ishlatish"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

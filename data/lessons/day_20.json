@@ -1,0 +1,219 @@
+{
+  "id": 20,
+  "day": 20,
+  "title": "Ma'lumot strukturasini tanlash",
+  "description": "Qaysi vaziyatda oddiy o'zgaruvchi, List yoki Map ishlatish kerakligini o'rganamiz.",
+  "level": "beginner",
+  "category": "problem_solving",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Oddiy o'zgaruvchi qachon yetarli bo'lishini tushunish",
+    "List qachon kerakligini aniqlash",
+    "Map qachon qulay ekanini tushunish",
+    "Ma'lumot shakliga qarab to'g'ri strukturani tanlashni o'rganish",
+    "Noto'g'ri struktura tanlash kodni qanday murakkablashtirishini anglash"
+  ],
+
+  "prerequisites": [
+    19
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Nega struktura tanlash muhim?",
+      "content": "Dasturlashda ma'lumotni shunchaki saqlash emas, uni qanday saqlash ham muhim. To'g'ri struktura tanlansa, kodni yozish, o'qish va keyinchalik o'zgartirish osonroq bo'ladi."
+    },
+    {
+      "id": 2,
+      "title": "Oddiy o'zgaruvchi qachon kerak?",
+      "content": "Agar faqat bitta qiymat bilan ishlasak, oddiy o'zgaruvchi ko'pincha yetarli bo'ladi. Masalan, age = 20, username = 'Ali' yoki is_active = true kabi qiymatlar uchun alohida o'zgaruvchi qulay."
+    },
+    {
+      "id": 3,
+      "title": "List qachon kerak?",
+      "content": "Agar bir xil turdagi yoki bir vazifaga tegishli ko'p qiymatlarni tartibli saqlash kerak bo'lsa, List qulay. Masalan, test ballari, mahsulotlar ro'yxati yoki foydalanuvchilar ismlarini List ichida saqlash mumkin."
+    },
+    {
+      "id": 4,
+      "title": "Map qachon kerak?",
+      "content": "Agar ma'lumotlar nom yoki key bilan bog'langan bo'lsa, Map qulay. Masalan, foydalanuvchi profilida name, age, city va email kabi ma'lumotlarni key-value ko'rinishida saqlash mumkin."
+    },
+    {
+      "id": 5,
+      "title": "List yoki Map?",
+      "content": "Agar sizga elementlarning tartibi muhim bo'lsa va ularni ketma-ket ko'rib chiqmoqchi bo'lsangiz, List mos bo'lishi mumkin. Agar ma'lum nom orqali qiymat topish kerak bo'lsa, Map qulayroq bo'ladi."
+    },
+    {
+      "id": 6,
+      "title": "Bir nechta strukturani birga ishlatish",
+      "content": "Katta dasturlarda strukturalar birga ishlatiladi. Masalan, foydalanuvchilar List ichida saqlanishi, har bir foydalanuvchining ma'lumotlari esa Map ko'rinishida bo'lishi mumkin."
+    },
+    {
+      "id": 7,
+      "title": "Noto'g'ri tanlov nima beradi?",
+      "content": "Agar ko'p qiymat uchun o'nlab alohida o'zgaruvchilar ishlatilsa yoki key bilan topilishi kerak bo'lgan ma'lumot Listga majburan joylashtirilsa, kod murakkablashadi. Shuning uchun masala boshlanishida ma'lumot shaklini tushunish muhim."
+    },
+    {
+      "id": 8,
+      "title": "Tanlash uchun uchta savol",
+      "content": "Struktura tanlashda uchta savol yordam beradi: nechta qiymat bor, ularning tartibi muhimmi va qiymatlarni ma'lum nom orqali topish kerakmi? Shu savollarga javob berib, oddiy o'zgaruvchi, List yoki Map orasidan tanlash mumkin."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Foydalanuvchining faqat yoshini saqlash uchun qaysi struktura yetarli?",
+      "type": "multiple_choice",
+      "options": [
+        "Oddiy o'zgaruvchi",
+        "List",
+        "Map",
+        "Loop"
+      ],
+      "hints": [
+        "Bu yerda faqat bitta qiymat saqlanadi.",
+        "Bir nechta element yoki key-value juftligi kerak emas.",
+        "Bitta qiymat uchun oddiy o'zgaruvchi yetarli."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "100 ta test natijasini saqlash uchun qaysi struktura qulayroq?",
+      "type": "multiple_choice",
+      "options": [
+        "List",
+        "Bitta oddiy o'zgaruvchi",
+        "Faqat if",
+        "Return"
+      ],
+      "hints": [
+        "Bu yerda ko'p qiymat bor.",
+        "Ularning barchasi bir xil turdagi ma'lumot: test natijalari.",
+        "Ko'p qiymatni bir joyda saqlaydigan strukturani tanlang."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Foydalanuvchining name, age va email ma'lumotlarini saqlash uchun qaysi struktura qulayroq?",
+      "type": "multiple_choice",
+      "options": [
+        "Map",
+        "Faqat bitta sonli o'zgaruvchi",
+        "Loop",
+        "Return"
+      ],
+      "hints": [
+        "Har bir qiymatning o'z nomi bor.",
+        "name, age va email key sifatida ishlatilishi mumkin.",
+        "Key-value tuzilmasi uchun Map mos keladi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "List va Map orasida tanlashda qaysi savol muhim?",
+      "type": "multiple_choice",
+      "options": [
+        "Qiymatlarni tartib bilan yoki key orqali topish kerakmi?",
+        "Kompyuter qaysi rangda?",
+        "Internet tezligi qancha?",
+        "Dastur nomi nima?"
+      ],
+      "hints": [
+        "List index va tartib bilan bog'liq.",
+        "Map esa key orqali qiymat topishga yordam beradi.",
+        "Ma'lumotga qanday murojaat qilishingiz kerakligini o'ylang."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Bir nechta foydalanuvchi profilini qanday strukturalar yordamida tashkil qilish mumkinligini o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Bir nechta foydalanuvchi borligini eslang.",
+        "Har bir foydalanuvchida name, age, email kabi maydonlar bor.",
+        "Foydalanuvchilar uchun List, har bir profil uchun Map ishlatish mumkinligini o'ylang."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Online do'kon ma'lumotlari",
+    "description": "Online do'konda 10 ta mahsulot mavjud deb tasavvur qiling. Har bir mahsulotda name, price va quantity ma'lumotlari bor. Bu ma'lumotlarni qanday strukturalar yordamida saqlash mantiqli ekanini tushuntiring.",
+    "hints": [
+      "Avval nechta mahsulot borligini hisobga oling.",
+      "Ko'p mahsulotni bitta ro'yxatda saqlash mumkin.",
+      "Har bir mahsulot ichida name, price va quantity kabi nomlangan maydonlar mavjud.",
+      "List ichida Map lar saqlash g'oyasini ko'rib chiqing."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Bitta yosh qiymatini saqlash uchun qaysi struktura yetarli?",
+        "type": "multiple_choice",
+        "options": [
+          "Oddiy o'zgaruvchi",
+          "List",
+          "Map",
+          "Loop"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Bir nechta tartibli qiymatlarni saqlash uchun qaysi struktura qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "List",
+          "Faqat if",
+          "Return",
+          "Scope"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Qiymatni ma'lum nom orqali topish kerak bo'lsa qaysi struktura qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "Map",
+          "Faqat loop",
+          "Oddiy if",
+          "Return"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "List va Map ni birgalikda ishlatish mumkinmi?",
+        "type": "multiple_choice",
+        "options": [
+          "Ha",
+          "Yo'q",
+          "Faqat bir marta",
+          "Faqat internet bo'lsa"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Ma'lumot strukturasi tanlashda nimaga qarash kerak?",
+        "type": "multiple_choice",
+        "options": [
+          "Ma'lumotlar soni, tartibi va ularga qanday murojaat qilinishiga",
+          "Faqat fayl nomiga",
+          "Faqat kompyuter modeliga",
+          "Faqat internet tezligiga"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

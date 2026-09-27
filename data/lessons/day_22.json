@@ -1,0 +1,211 @@
+{
+  "id": 22,
+  "day": 22,
+  "title": "Pseudocode yozish",
+  "description": "Kod yozishdan oldin algoritmni oddiy va tushunarli qadamlar bilan pseudocode ko'rinishida ifodalashni o'rganamiz.",
+  "level": "beginner",
+  "category": "problem_solving",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Pseudocode nima ekanligini tushunish",
+    "Kod yozishdan oldin algoritmni rejalashtirishni o'rganish",
+    "Pseudocode da input, shart, loop va outputni ifodalashni tushunish",
+    "Murakkab masalani oddiy qadamlar bilan yozishni o'rganish",
+    "Pseudocode ni haqiqiy kodga o'tkazish g'oyasini anglash"
+  ],
+
+  "prerequisites": [
+    21
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Pseudocode nima?",
+      "content": "Pseudocode algoritmni haqiqiy dasturlash tiliga bog'lanmagan, oddiy va tushunarli qadamlar bilan yozish usulidir. Uning asosiy maqsadi kod sintaksisini o'ylamasdan turib yechim mantig'ini rejalashtirishdir."
+    },
+    {
+      "id": 2,
+      "title": "Nega pseudocode kerak?",
+      "content": "Masalani ko'rib darhol kod yozishga o'tish ba'zan chalkashlikka olib keladi. Pseudocode avval yechim qanday ishlashini tushunishga yordam beradi. Keyin shu qadamlarni Python, Kotlin yoki boshqa dasturlash tiliga o'tkazish osonlashadi."
+    },
+    {
+      "id": 3,
+      "title": "Oddiy pseudocode misoli",
+      "content": "Ikki sonni qo'shish uchun pseudocode quyidagicha fikrlanishi mumkin: birinchi sonni ol, ikkinchi sonni ol, ularni qo'sh, natijani chiqar. Bu yerda dasturlash tilining aniq sintaksisi muhim emas, faqat bajarilish tartibi muhim."
+    },
+    {
+      "id": 4,
+      "title": "Shartni pseudocode da yozish",
+      "content": "Shartli algoritmni ham oddiy tilda yozish mumkin. Masalan: yoshni ol, agar yosh 18 yoki undan katta bo'lsa 'Kirish mumkin' chiqar, aks holda 'Kirish mumkin emas' chiqar."
+    },
+    {
+      "id": 5,
+      "title": "Loopni pseudocode da yozish",
+      "content": "Takrorlanish ham pseudocode da tushunarli yoziladi. Masalan: 1 dan 10 gacha har bir son uchun sonni ekranga chiqar. Bu yerda aniq for sintaksisini yozish shart emas."
+    },
+    {
+      "id": 6,
+      "title": "Pseudocode aniq bo'lishi kerak",
+      "content": "Yaxshi pseudocode har bir qadamni aniq ifodalaydi. 'Nimadir qil' kabi mavhum jumlalar o'rniga 'foydalanuvchidan yoshni ol' yoki 'ball 70 dan katta yoki tengligini tekshir' kabi aniq qadamlar yozish kerak."
+    },
+    {
+      "id": 7,
+      "title": "Pseudocode va decomposition",
+      "content": "Oldingi darsdagi decomposition bilan pseudocode bir-birini to'ldiradi. Avval katta muammoni kichik vazifalarga ajratamiz, keyin har bir kichik vazifa qanday bajarilishini pseudocode bilan yozamiz."
+    },
+    {
+      "id": 8,
+      "title": "Kodga o'tish",
+      "content": "Pseudocode tayyor bo'lgach, uning qadamlarini haqiqiy kodga aylantirish mumkin. Agar pseudocode aniq bo'lsa, kod yozishda qanday o'zgaruvchi, shart, loop yoki funksiya kerakligi ham ancha ravshan bo'ladi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Pseudocode ning asosiy vazifasi nima?",
+      "type": "multiple_choice",
+      "options": [
+        "Algoritmni oddiy qadamlar bilan rejalashtirish",
+        "Faqat internetga ulanish",
+        "Faqat kodni kompilyatsiya qilish",
+        "Faqat list yaratish"
+      ],
+      "hints": [
+        "Pseudocode haqiqiy dasturlash tili emas.",
+        "U kod yozishdan oldin yechimni tushunishga yordam beradi.",
+        "Asosiy maqsad algoritm qadamlarini rejalashtirish."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Ikki sonning kattasini aniqlash uchun pseudocode qadamlarini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval ikkita sonni input sifatida olish kerak.",
+        "Keyin birinchi sonni ikkinchi son bilan taqqoslang.",
+        "Birinchi son katta bo'lsa uni chiqaring, aks holda ikkinchi sonni ko'rib chiqing.",
+        "Ikkala son teng bo'lishi mumkinligini ham hisobga olish mumkin."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Pseudocode yozishda dasturlash tilining aniq sintaksisini bilish shartmi?",
+      "type": "multiple_choice",
+      "options": [
+        "Yo'q",
+        "Ha, har doim",
+        "Faqat loop uchun",
+        "Faqat string uchun"
+      ],
+      "hints": [
+        "Pseudocode tilga bog'liq bo'lmasligi kerak.",
+        "Muhimi sintaksis emas, algoritm mantig'i.",
+        "Oddiy va tushunarli qadamlar yetarli."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "1 dan 5 gacha bo'lgan sonlarni chiqaradigan algoritmni pseudocode ko'rinishida yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Takrorlanish kerakligini aniqlang.",
+        "Boshlanish qiymati 1, tugash qiymati 5.",
+        "Har bir takrorlanishda joriy sonni chiqaring."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Foydalanuvchining bali 70 yoki undan katta bo'lsa 'O'tdi', aks holda 'O'tmadi' chiqaradigan pseudocode yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval score qiymatini oling.",
+        "score >= 70 shartini tekshiring.",
+        "True va false holatlar uchun alohida natija yozing."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Eng katta sonni topish",
+    "description": "Uchta son berilgan deb tasavvur qiling. Kod yozmasdan, uchala son ichidan eng kattasini topadigan pseudocode tuzing. Input, taqqoslashlar va output bosqichlarini yozing.",
+    "hints": [
+      "Avval uchta sonni input sifatida oling.",
+      "Birinchi sonni vaqtincha eng katta deb qabul qilish mumkin.",
+      "Keyin ikkinchi son undan kattami, tekshiring.",
+      "So'ng uchinchi sonni hozirgi eng katta qiymat bilan solishtiring.",
+      "Oxirida topilgan eng katta qiymatni output qiling."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Pseudocode nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Algoritmni oddiy va tilga bog'lanmagan qadamlar bilan ifodalash",
+          "Faqat Kotlin kodi",
+          "Faqat Python kodi",
+          "Ma'lumotlar bazasi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Pseudocode ning asosiy foydasi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Kod yozishdan oldin yechim mantig'ini tushunishga yordam beradi",
+          "Internet tezligini oshiradi",
+          "Kod yozishni butunlay bekor qiladi",
+          "Faqat fayl nomini tanlaydi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Pseudocode dasturlash tilining aniq sintaksisiga bog'liqmi?",
+        "type": "multiple_choice",
+        "options": [
+          "Yo'q",
+          "Ha",
+          "Faqat Python ga",
+          "Faqat Kotlin ga"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Shartli pseudocode da nima kerak bo'lishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Shart va uning true/false holatlari",
+          "Faqat list indexi",
+          "Faqat global variable",
+          "Faqat return"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Decomposition va pseudocode qanday bog'liq?",
+        "type": "multiple_choice",
+        "options": [
+          "Muammo qismlarga ajratilib, har bir qismning yechim qadamlari yoziladi",
+          "Ular bir-biriga aloqador emas",
+          "Pseudocode faqat list uchun ishlatiladi",
+          "Decomposition faqat internet uchun kerak"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

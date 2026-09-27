@@ -1,0 +1,214 @@
+{
+  "id": 15,
+  "day": 15,
+  "title": "List va Array tushunchasi",
+  "description": "Bir nechta qiymatni bitta strukturada saqlash uchun list va array tushunchalari bilan tanishamiz.",
+  "level": "beginner",
+  "category": "data_structures",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "List va array nima ekanligini tushunish",
+    "Bir nechta qiymatni bitta joyda saqlash g'oyasini anglash",
+    "Element tushunchasini o'rganish",
+    "List ichidagi qiymatlarni tasavvur qilishni o'rganish",
+    "Oddiy vaziyatlarda list qachon kerakligini aniqlash"
+  ],
+
+  "prerequisites": [
+    14
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Nega bir nechta qiymatni saqlash kerak?",
+      "content": "Tasavvur qiling, sizga beshta talabaning ballarini saqlash kerak. Har bir ball uchun alohida o'zgaruvchi yaratish mumkin: score1, score2, score3 va hokazo. Lekin qiymatlar soni yuzta bo'lsa, bunday yondashuv noqulay bo'ladi. List yoki array bir nechta qiymatni bitta nom ostida saqlash imkonini beradi."
+    },
+    {
+      "id": 2,
+      "title": "List nima?",
+      "content": "List bir nechta qiymatni tartibli ko'rinishda saqlaydigan ma'lumot strukturasi sifatida tasavvur qilinadi. Masalan, fruits ichida 'olma', 'banan' va 'uzum' qiymatlari bo'lishi mumkin. Bu qiymatlarning har biri list elementi deb ataladi."
+    },
+    {
+      "id": 3,
+      "title": "Array nima?",
+      "content": "Array ham bir nechta qiymatni tartibli saqlash uchun ishlatiladi. Turli dasturlash tillarida list va array orasida texnik farqlar mavjud bo'lishi mumkin. Hozircha ularning umumiy g'oyasiga e'tibor beramiz: ko'p qiymatni bitta strukturada saqlash."
+    },
+    {
+      "id": 4,
+      "title": "Element nima?",
+      "content": "List yoki array ichidagi har bir alohida qiymat element deb ataladi. Masalan, colors ichida 'qizil', 'yashil' va 'ko'k' bo'lsa, listda uchta element mavjud."
+    },
+    {
+      "id": 5,
+      "title": "Tartib nega muhim?",
+      "content": "List ichidagi elementlar ma'lum tartibda joylashadi. Masalan, ['Ali', 'Vali', 'Sami'] ro'yxatida Ali birinchi, Vali ikkinchi va Sami uchinchi element sifatida turadi. Keyingi darsda elementlarning pozitsiyasini index orqali qanday topishni o'rganamiz."
+    },
+    {
+      "id": 6,
+      "title": "List va oddiy o'zgaruvchi farqi",
+      "content": "Oddiy o'zgaruvchi odatda bitta qiymatni saqlaydi. List esa bir nechta qiymatni bir joyda saqlaydi. Masalan, student_name bitta ismni saqlashi mumkin, students esa ko'plab talabalar ismlarini saqlashi mumkin."
+    },
+    {
+      "id": 7,
+      "title": "Qachon list kerak?",
+      "content": "Agar bir xil turdagi yoki bir vazifaga tegishli ko'p qiymatlar bilan ishlash kerak bo'lsa, list juda qulay. Masalan, mahsulotlar nomi, test ballari, foydalanuvchilar ro'yxati yoki bajarilishi kerak bo'lgan vazifalarni listda saqlash mumkin."
+    },
+    {
+      "id": 8,
+      "title": "List va loop",
+      "content": "Listlarning kuchli tomoni shundaki, keyinchalik loop yordamida barcha elementlarni bittadan ko'rib chiqish mumkin. Masalan, barcha test ballarini tekshirish yoki barcha foydalanuvchilar ismini ekranga chiqarish mumkin."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Beshta talabaning ismini saqlash uchun qaysi yondashuv qulayroq?",
+      "type": "multiple_choice",
+      "options": [
+        "Bitta list ishlatish",
+        "Faqat if ishlatish",
+        "Faqat bitta sonli o'zgaruvchi yaratish",
+        "Hech qanday qiymat saqlamaslik"
+      ],
+      "hints": [
+        "Savolda bir nechta ismni saqlash kerak.",
+        "Oddiy o'zgaruvchi odatda bitta qiymat uchun ishlatiladi.",
+        "Bir nechta qiymatni bitta joyda saqlaydigan strukturani tanlang."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "['olma', 'banan', 'uzum'] listida nechta element bor?",
+      "type": "multiple_choice",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "hints": [
+        "List ichidagi har bir alohida qiymat element hisoblanadi.",
+        "'olma', 'banan' va 'uzum' qiymatlarini bittadan sanang.",
+        "Bu yerda uchta alohida qiymat mavjud."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Oddiy o'zgaruvchi va list orasidagi asosiy farqni o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Oddiy o'zgaruvchida odatda nechta qiymat saqlanishini o'ylang.",
+        "List esa ko'plab qiymatlarni bir nom ostida saqlashi mumkin.",
+        "Masalan, student_name va students orasidagi farqni tasavvur qiling."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Qaysi holatda list ishlatish mantiqliroq?",
+      "type": "multiple_choice",
+      "options": [
+        "100 ta test natijasini saqlashda",
+        "Faqat bitta yosh qiymatini saqlashda",
+        "Faqat bitta true yoki false qiymatini saqlashda",
+        "Dastur nomini yozishda"
+      ],
+      "hints": [
+        "List ko'p qiymatlar bilan ishlashda foydali.",
+        "Variantlardan qaysi birida juda ko'p qiymat mavjudligini toping.",
+        "100 ta natijani alohida o'zgaruvchilarga bo'lish noqulay bo'ladi."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Kundalik hayotdan listga o'xshash bitta misol yozing va undagi elementlarni tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Bir nechta narsani ketma-ket yozadigan ro'yxatni o'ylang.",
+        "Masalan, xaridlar ro'yxati yoki vazifalar ro'yxati bo'lishi mumkin.",
+        "Ro'yxat ichidagi har bir alohida narsa element sifatida qaraladi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Haftalik xaridlar ro'yxati",
+    "description": "Haftalik xaridlar uchun 5 ta mahsulotdan iborat listni tasavvur qiling. Listga qanday nom berishingizni, uning ichida qanday elementlar bo'lishini va nima sababdan alohida 5 ta o'zgaruvchi o'rniga list ishlatish qulayligini tushuntiring.",
+    "hints": [
+      "Avval list nima saqlashini ifodalovchi tushunarli nom tanlang.",
+      "Masalan, shopping_list kabi nom ishlatish mumkin.",
+      "Keyin beshta mahsulotni alohida element sifatida yozing.",
+      "Bitta list yordamida barcha mahsulotlarni birgalikda boshqarish osonroq ekanini tushuntiring."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "List nima uchun ishlatiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Bir nechta qiymatni bir joyda saqlash uchun",
+          "Faqat bitta shartni tekshirish uchun",
+          "Faqat funksiya yaratish uchun",
+          "Faqat internetga ulanish uchun"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "List ichidagi alohida qiymat nima deb ataladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Element",
+          "Function",
+          "Condition",
+          "Return"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "['a', 'b', 'c', 'd'] listida nechta element bor?",
+        "type": "multiple_choice",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correct_answer": 2
+      },
+      {
+        "id": 4,
+        "question": "Qaysi holat list uchun yaxshi misol?",
+        "type": "multiple_choice",
+        "options": [
+          "Bir nechta talabalar ismini saqlash",
+          "Faqat bitta yoshni saqlash",
+          "Faqat bitta shartni tekshirish",
+          "Funksiyani tugatish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Listning oddiy o'zgaruvchidan asosiy farqi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "List bir nechta qiymatni saqlashi mumkin",
+          "List hech qanday qiymat saqlamaydi",
+          "Oddiy o'zgaruvchi doim 100 ta qiymat saqlaydi",
+          "List faqat true yoki false saqlaydi"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

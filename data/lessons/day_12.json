@@ -1,0 +1,214 @@
+{
+  "id": 12,
+  "day": 12,
+  "title": "Parametr va argument",
+  "description": "Funksiyaga ma'lumot uzatish uchun parametr va argumentlardan qanday foydalanishni o'rganamiz.",
+  "level": "beginner",
+  "category": "functions",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Parametr nima ekanligini tushunish",
+    "Argument nima ekanligini tushunish",
+    "Parametr va argument orasidagi farqni anglash",
+    "Funksiyaga tashqaridan ma'lumot uzatish mantiqini o'rganish",
+    "Bir nechta parametr bilan ishlash g'oyasini tushunish"
+  ],
+
+  "prerequisites": [
+    11
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Parametr nima?",
+      "content": "Parametr funksiyaning tashqaridan ma'lumot qabul qilishi uchun ishlatiladigan nomdir. Masalan, greet_user(name) funksiyasida name parametr hisoblanadi. U funksiya ichida keladigan haqiqiy qiymatni ifodalash uchun ishlatiladi."
+    },
+    {
+      "id": 2,
+      "title": "Argument nima?",
+      "content": "Argument funksiyani chaqirish vaqtida unga beriladigan haqiqiy qiymatdir. Masalan, greet_user('Ali') chaqirig'ida 'Ali' argument hisoblanadi. U funksiya ichidagi name parametriga uzatiladi."
+    },
+    {
+      "id": 3,
+      "title": "Parametr va argument farqi",
+      "content": "Parametr funksiyaning ta'rifida yoziladi, argument esa funksiyani chaqirganda beriladi. Oddiy qilib aytganda, parametr qiymat uchun joy, argument esa shu joyga keladigan haqiqiy qiymatdir."
+    },
+    {
+      "id": 4,
+      "title": "Nega parametr kerak?",
+      "content": "Parametr funksiyani moslashuvchan qiladi. Masalan, faqat 'Salom Ali' chiqaradigan funksiya o'rniga name parametrini qabul qiladigan funksiya yozsak, u turli foydalanuvchilarni salomlasha oladi."
+    },
+    {
+      "id": 5,
+      "title": "Bir nechta parametr",
+      "content": "Funksiya bir nechta parametr qabul qilishi mumkin. Masalan, add(a, b) funksiyasi ikkita parametr qabul qiladi. Uni add(5, 3) deb chaqirsak, a = 5 va b = 3 bo'ladi."
+    },
+    {
+      "id": 6,
+      "title": "Parametr nomlari",
+      "content": "Parametr nomlari ham tushunarli bo'lishi kerak. Masalan, calculate_price(price, quantity) nomlari x va y ga qaraganda funksiyaning vazifasini yaxshiroq tushuntiradi."
+    },
+    {
+      "id": 7,
+      "title": "Argumentlarning tartibi",
+      "content": "Ko'p hollarda argumentlar parametrlar tartibiga mos ravishda uzatiladi. Agar funksiya calculate(a, b) ko'rinishida bo'lsa, birinchi argument a ga, ikkinchisi b ga beriladi. Shu sababli argumentlar tartibini tushunish muhim."
+    },
+    {
+      "id": 8,
+      "title": "Funksiya uchun fikrlash modeli",
+      "content": "Funksiya yaratishda undan qanday tashqi ma'lumot kerakligini o'ylang. Agar funksiya foydalanuvchi ismi bilan ishlasa name, ikki son bilan ishlasa a va b kabi parametrlar kerak bo'lishi mumkin. Shunda funksiya faqat bitta holat emas, ko'p holatda ishlay oladi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "greet_user(name) funksiyasida name nima hisoblanadi?",
+      "type": "multiple_choice",
+      "options": [
+        "Parametr",
+        "Argument",
+        "Loop",
+        "Output"
+      ],
+      "hints": [
+        "Bu qiymat funksiyaning ta'rifida yozilgan.",
+        "Funksiya ichida tashqaridan keladigan qiymatni qabul qilish uchun joy kerak.",
+        "Funksiya ta'rifidagi name parametr hisoblanadi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "greet_user('Ali') chaqirig'ida 'Ali' nima hisoblanadi?",
+      "type": "multiple_choice",
+      "options": [
+        "Parametr",
+        "Argument",
+        "Funksiya nomi",
+        "Shart"
+      ],
+      "hints": [
+        "Bu qiymat funksiya chaqirilayotgan vaqtda berilgan.",
+        "Parametr ta'rifda, argument esa chaqirishda ishlatiladi.",
+        "'Ali' — name parametriga uzatilayotgan haqiqiy qiymat."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Parametr va argument orasidagi farqni o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Ularning qayerda yozilishiga e'tibor bering.",
+        "Parametr funksiya ta'rifida bo'ladi.",
+        "Argument funksiya chaqirilganda beriladigan haqiqiy qiymat bo'ladi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "add(a, b) funksiyasi add(10, 4) deb chaqirilsa, a va b qanday qiymat oladi?",
+      "type": "multiple_choice",
+      "options": [
+        "a = 10, b = 4",
+        "a = 4, b = 10",
+        "a = 14, b = 0",
+        "a = 0, b = 14"
+      ],
+      "hints": [
+        "Argumentlar parametrlar tartibiga mos tushadi.",
+        "Birinchi argument birinchi parametrga uzatiladi.",
+        "10 birinchi, 4 esa ikkinchi argument ekanini ko'ring."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Foydalanuvchining ismi va yoshini qabul qiladigan funksiya uchun ikkita parametr nomini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Birinchi parametr ismni ifodalashi kerak.",
+        "Ikkinchi parametr yoshni ifodalashi kerak.",
+        "Masalan, name va age kabi tushunarli nomlardan foydalanish mumkin."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Xarid hisoblash funksiyasi",
+    "description": "Mahsulot narxi va sonini qabul qiladigan calculate_total funksiyasini tasavvur qiling. Qaysi parametrlar kerakligini, funksiyani qanday argumentlar bilan chaqirish mumkinligini va bu yondashuv nima uchun qulayligini tushuntiring.",
+    "hints": [
+      "Funksiya hisoblash uchun ikkita ma'lumotga muhtoj: narx va miqdor.",
+      "Parametrlar price va quantity kabi nomlanishi mumkin.",
+      "Masalan, calculate_total(5000, 3) chaqirig'ini tasavvur qiling.",
+      "Parametrlar funksiyani turli mahsulotlar va miqdorlar bilan qayta ishlatishga imkon beradi."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Parametr nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Funksiya ta'rifida qiymat qabul qilish uchun ishlatiladigan nom",
+          "Faqat tayyor natija",
+          "Loop turi",
+          "Internet qiymati"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Argument nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Funksiyani chaqirganda beriladigan haqiqiy qiymat",
+          "Faqat funksiya nomi",
+          "Faqat shart",
+          "Faqat o'zgaruvchi turi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "greet(name) funksiyasi greet('Aziz') deb chaqirilsa, name nimaga teng bo'ladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Aziz",
+          "name",
+          "greet",
+          "null"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Funksiyada parametr ishlatishning asosiy foydasi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Funksiyani turli qiymatlar bilan qayta ishlatish mumkin",
+          "Funksiya faqat bir marta ishlaydi",
+          "Loop avtomatik o'chadi",
+          "Internet tezlashadi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "calculate(price, quantity) funksiyasida nechta parametr bor?",
+        "type": "multiple_choice",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "correct_answer": 1
+      }
+    ]
+  }
+}

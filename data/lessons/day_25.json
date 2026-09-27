@@ -1,0 +1,214 @@
+{
+  "id": 25,
+  "day": 25,
+  "title": "Xatolar bilan tanishuv",
+  "description": "Dasturlashda uchraydigan xatolar turlarini va xato xabarlari bizga qanday yordam berishini o'rganamiz.",
+  "level": "beginner",
+  "category": "debugging",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Dasturdagi xato nima ekanligini tushunish",
+    "Syntax error tushunchasini anglash",
+    "Runtime error nima ekanligini bilish",
+    "Logic error tushunchasini tushunish",
+    "Xato xabaridan qo'rqmasdan undan foydali ma'lumot olishni o'rganish"
+  ],
+
+  "prerequisites": [
+    24
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Xato nima?",
+      "content": "Dasturlashda xato dastur kutilganidek ishlamasligiga sabab bo'ladigan muammodir. Xato kod yozish jarayonining tabiiy qismi hisoblanadi. Muhimi, xatoni topish va uning sababini tushunishni o'rganish."
+    },
+    {
+      "id": 2,
+      "title": "Syntax error",
+      "content": "Syntax error kod dasturlash tilining yozilish qoidalariga mos kelmaganda yuz beradi. Masalan, yopilishi kerak bo'lgan qavsni unutish yoki buyruqni noto'g'ri yozish syntax error ga olib kelishi mumkin."
+    },
+    {
+      "id": 3,
+      "title": "Runtime error",
+      "content": "Runtime error dastur ishga tushganidan keyin bajarilish vaqtida yuz beradi. Masalan, mavjud bo'lmagan list indexiga murojaat qilish yoki bajarib bo'lmaydigan amalni bajarishga urinish runtime xatoga sabab bo'lishi mumkin."
+    },
+    {
+      "id": 4,
+      "title": "Logic error",
+      "content": "Logic error da dastur ishga tushishi mumkin, lekin noto'g'ri natija beradi. Masalan, chegirma hisoblashda ayirish o'rniga qo'shish bajarilsa, dastur to'xtamasligi mumkin, ammo natija noto'g'ri bo'ladi."
+    },
+    {
+      "id": 5,
+      "title": "Xato xabari",
+      "content": "Xato xabari muammoni topish uchun muhim ma'lumot beradi. Unda ko'pincha xato turi, xato sodir bo'lgan joy yoki muammoga yaqin kod qismi haqida ma'lumot bo'ladi."
+    },
+    {
+      "id": 6,
+      "title": "Xato xabarini o'qish",
+      "content": "Xato xabarini ko'rganda uni darhol yopib yubormaslik kerak. Avval xato nomini, keyin qaysi qator yoki qism ko'rsatilganini va xabarda qanday sabab aytilganini ko'rish foydali."
+    },
+    {
+      "id": 7,
+      "title": "Xatoni kichraytirish",
+      "content": "Agar xato katta kod ichida bo'lsa, muammoni kichik qismga ajratish yordam beradi. Qaysi qadamgacha dastur to'g'ri ishlayotganini aniqlash orqali xatoga yaqinlashish mumkin."
+    },
+    {
+      "id": 8,
+      "title": "Xatoga munosabat",
+      "content": "Xato dasturchining muvaffaqiyatsizligi emas, balki dastur haqida qo'shimcha ma'lumotdir. Har bir xato 'qayerdadir kutganimiz bilan haqiqiy natija orasida farq bor' degan signal beradi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Qavsni yopishni unutish ko'proq qaysi turdagi xatoga misol bo'ladi?",
+      "type": "multiple_choice",
+      "options": [
+        "Syntax error",
+        "Logic error",
+        "Runtime error",
+        "Network error"
+      ],
+      "hints": [
+        "Bu kodning yozilish qoidasi bilan bog'liq.",
+        "Dasturlash tili kodni to'g'ri tushuna olmaydi.",
+        "Yozilish qoidasi buzilganda syntax error yuz beradi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Dastur ishlaydi, lekin noto'g'ri natija qaytaradi. Bu qaysi xato turiga yaqin?",
+      "type": "multiple_choice",
+      "options": [
+        "Logic error",
+        "Syntax error",
+        "Faqat internet xatosi",
+        "Hech qanday xato emas"
+      ],
+      "hints": [
+        "Kod ishga tushyapti.",
+        "Muammo dastur natijasida.",
+        "Algoritm yoki hisoblash mantig'i noto'g'ri bo'lsa logic error bo'lishi mumkin."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Uchta elementli listning index 10 dagi elementini olishga urinish qaysi turdagi muammoga olib kelishi mumkin?",
+      "type": "multiple_choice",
+      "options": [
+        "Runtime error",
+        "Faqat logic error",
+        "Faqat syntax error",
+        "Xato bo'lmaydi"
+      ],
+      "hints": [
+        "Kod yozilish jihatidan to'g'ri bo'lishi mumkin.",
+        "Muammo dastur bajarilayotgan vaqtda paydo bo'ladi.",
+        "Mavjud bo'lmagan indexga murojaat runtime muammoga olib kelishi mumkin."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Xato xabarini ko'rganda birinchi navbatda nimalarga e'tibor berish kerakligini o'z so'zingiz bilan yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Xato turi muhim ma'lumot beradi.",
+        "Qaysi qator yoki joy ko'rsatilganiga qarang.",
+        "Xabardagi sababni tushunishga harakat qiling."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "price = 100 va discount = 20 bo'lsa, dastur yakuniy narxni 120 deb chiqaryapti. Qanday xato bo'lishi mumkinligini tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Dastur to'xtamayapti, faqat natija noto'g'ri.",
+        "Chegirma narxni oshirishi emas, kamaytirishi kerak.",
+        "Hisoblash formulasida noto'g'ri amal ishlatilgan bo'lishi mumkin."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Xatoni tasniflash",
+    "description": "Uchta vaziyatni tahlil qiling: 1) kodda yopilmagan qavs bor, 2) dastur ishga tushganda mavjud bo'lmagan indexga murojaat qilmoqda, 3) ikkita sonni ko'paytirish kerak bo'lsa ham dastur ularni qo'shmoqda. Har bir holat qaysi xato turiga mos kelishini va nima sababdan shunday ekanini tushuntiring.",
+    "hints": [
+      "Birinchi vaziyat kodning yozilish qoidasi bilan bog'liq.",
+      "Ikkinchi vaziyat dastur bajarilayotgan paytda yuz beradi.",
+      "Uchinchi vaziyatda dastur ishlashi mumkin, lekin natija noto'g'ri.",
+      "Syntax, runtime va logic error tushunchalarini uchta vaziyat bilan moslashtiring."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Syntax error nimaga bog'liq?",
+        "type": "multiple_choice",
+        "options": [
+          "Kodning yozilish qoidalari buzilishiga",
+          "Faqat noto'g'ri hisoblash natijasiga",
+          "Faqat internetga",
+          "Faqat database ga"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Runtime error qachon yuz berishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Dastur bajarilayotgan vaqtda",
+          "Faqat kod yozilmasdan oldin",
+          "Faqat fayl nomi tanlanganda",
+          "Faqat dizayn chizilganda"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Dastur ishlaydi, ammo natija noto'g'ri. Bu ko'proq qaysi xato?",
+        "type": "multiple_choice",
+        "options": [
+          "Logic error",
+          "Syntax error",
+          "Faqat runtime error",
+          "Network error"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Xato xabari nima uchun foydali?",
+        "type": "multiple_choice",
+        "options": [
+          "Muammo turi va joyini aniqlashga yordam beradi",
+          "Faqat kodni bezatadi",
+          "Internet tezligini oshiradi",
+          "Xatoni har doim avtomatik tuzatadi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Katta koddagi xatoni topishda qaysi yondashuv foydali?",
+        "type": "multiple_choice",
+        "options": [
+          "Muammoni kichik qismlarga ajratib tekshirish",
+          "Kodning hammasini tasodifiy o'zgartirish",
+          "Xato xabarini o'qimaslik",
+          "Barcha o'zgaruvchilarni o'chirish"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

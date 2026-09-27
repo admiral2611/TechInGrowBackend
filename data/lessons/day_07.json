@@ -1,0 +1,216 @@
+{
+  "id": 7,
+  "day": 7,
+  "title": "For loop",
+  "description": "Takrorlanish soni oldindan ma'lum bo'lgan vazifalarda for loop qanday ishlashini o'rganamiz.",
+  "level": "beginner",
+  "category": "loops",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "For loop nima ekanligini tushunish",
+    "For loop qachon ishlatilishini anglash",
+    "Takrorlanish boshlanishi va tugashini tushunish",
+    "Har bir takrorlanishda qiymat qanday o'zgarishini kuzatish",
+    "Oddiy for loop algoritmlarini tuzishni o'rganish"
+  ],
+
+  "prerequisites": [
+    6
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "For loop nima?",
+      "content": "For loop biror amalni ma'lum miqdorda yoki ma'lum qiymatlar ketma-ketligi bo'yicha takrorlash uchun ishlatiladi. Masalan, 1 dan 5 gacha bo'lgan sonlarni chiqarish yoki 10 ta elementni ketma-ket ko'rib chiqish for loop uchun mos vazifalardir."
+    },
+    {
+      "id": 2,
+      "title": "For loop qachon ishlatiladi?",
+      "content": "Agar takrorlanish soni oldindan ma'lum bo'lsa, for loop odatda juda qulay bo'ladi. Masalan, 'Salom' so'zini 5 marta chiqarish kerak bo'lsa, necha marta takrorlashimiz kerakligini oldindan bilamiz. Shu sababli for loop ishlatish mantiqli."
+    },
+    {
+      "id": 3,
+      "title": "Takrorlanish qiymati",
+      "content": "For loop davomida ko'pincha takrorlanish raqamini ifodalovchi o'zgaruvchi ishlatiladi. Masalan, i nomli o'zgaruvchi 1, 2, 3, 4 va 5 qiymatlarini ketma-ket qabul qilishi mumkin. Har bir yangi qiymat loopning yangi takrorlanishini bildiradi."
+    },
+    {
+      "id": 4,
+      "title": "1 dan 5 gacha yurish",
+      "content": "Tasavvur qiling, loop 1 dan boshlanadi va 5 gacha davom etadi. Birinchi takrorlanishda qiymat 1, keyingisida 2, undan keyin 3 bo'ladi. Jarayon 5 ga yetgach tugaydi. Shu tariqa bir xil amal turli qiymatlar bilan qayta bajariladi."
+    },
+    {
+      "id": 5,
+      "title": "Har bir takrorlanishda nima bo'ladi?",
+      "content": "For loop ichidagi amal har bir takrorlanishda qayta bajariladi. Masalan, agar loop 1 dan 5 gacha yurib, har safar joriy sonni ekranga chiqarsa, natijada 1, 2, 3, 4 va 5 ketma-ket ko'rinadi."
+    },
+    {
+      "id": 6,
+      "title": "For loop va hisoblash",
+      "content": "For loop faqat ma'lumot chiqarish uchun emas, hisoblash uchun ham ishlatiladi. Masalan, 1 dan 5 gacha bo'lgan sonlarning yig'indisini topish uchun har bir sonni umumiy natijaga qo'shib borish mumkin."
+    },
+    {
+      "id": 7,
+      "title": "Takrorlanish chegaralari",
+      "content": "For loopda boshlanish va tugash chegaralarini to'g'ri tushunish muhim. Ba'zi dasturlash tillarida oxirgi chegara hisobga olinmasligi mumkin. Hozircha biz kod sintaksisiga emas, loopning mantiqiga e'tibor beramiz: qayerdan boshlaymiz, qachongacha davom etamiz va har safar nima qilamiz."
+    },
+    {
+      "id": 8,
+      "title": "For loop uchun fikrlash modeli",
+      "content": "For loop masalasini yechishda to'rtta savol berish foydali: nechta marta takrorlash kerak, qaysi qiymatdan boshlash kerak, qiymat qanday o'zgaradi va har bir takrorlanishda nima bajariladi. Shu savollarga javob topilsa, loop algoritmini tuzish ancha osonlashadi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "1 dan 5 gacha bo'lgan sonlarni chiqarish uchun loop necha marta ishlaydi?",
+      "type": "multiple_choice",
+      "options": [
+        "3 marta",
+        "4 marta",
+        "5 marta",
+        "6 marta"
+      ],
+      "hints": [
+        "1, 2, 3, 4 va 5 qiymatlarini sanab chiqing.",
+        "Har bir qiymat bitta takrorlanishga teng.",
+        "Nechta qiymat borligini hisoblang."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "For loop qaysi holatda eng mos keladi?",
+      "type": "multiple_choice",
+      "options": [
+        "Takrorlanish soni oldindan ma'lum bo'lsa",
+        "Hech qanday takrorlanish bo'lmasa",
+        "Faqat bitta qiymat saqlansa",
+        "Faqat internet bilan ishlansa"
+      ],
+      "hints": [
+        "For loop odatda nechta marta takrorlash kerakligini bilganimizda qulay.",
+        "Masalan, bir amalni 10 marta bajarish kerakligini tasavvur qiling.",
+        "Takrorlanish soni oldindan ma'lum bo'lgan variantni tanlang."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "1 dan 4 gacha bo'lgan sonlarni ketma-ket chiqarish algoritmini oddiy qadamlar bilan yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Boshlang'ich qiymatni aniqlang.",
+        "Har bir takrorlanishda joriy qiymatni chiqarish kerak.",
+        "Har safar qiymatni 1 ga oshiring.",
+        "Qiymat 4 dan o'tganda takrorlanishni tugating."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Agar loop 1, 2, 3 qiymatlari bo'yicha ishlasa, loop ichidagi amal necha marta bajariladi?",
+      "type": "multiple_choice",
+      "options": [
+        "1 marta",
+        "2 marta",
+        "3 marta",
+        "4 marta"
+      ],
+      "hints": [
+        "Loop ichidagi amal har bir qiymat uchun bir marta bajariladi.",
+        "Bu yerda uchta qiymat bor: 1, 2 va 3.",
+        "Har bir qiymat bitta takrorlanish ekanini eslang."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "1 dan 5 gacha sonlarning yig'indisini topishda for loopdan qanday foydalanish mumkinligini o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval yig'indini saqlash uchun alohida o'zgaruvchi kerakligini o'ylang.",
+        "Boshlang'ich yig'indi 0 bo'lishi mumkin.",
+        "Loop har bir sonni navbat bilan oladi.",
+        "Har bir sonni umumiy yig'indiga qo'shib boring."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Juft sonlarni chiqarish",
+    "description": "2 dan 10 gacha bo'lgan juft sonlarni ketma-ket chiqaradigan for loop algoritmini kod yozmasdan tuzing. Qaysi qiymatdan boshlashingizni, qiymat qanday o'zgarishini va loop qachon tugashini tushuntiring.",
+    "hints": [
+      "Eng kichik juft son 2 dan boshlang.",
+      "Keyingi juft songa o'tish uchun 1 emas, 2 ga oshirish mumkinligini o'ylang.",
+      "Qiymatlar 2, 4, 6, 8, 10 ko'rinishida ketadi.",
+      "Qiymat 10 dan oshganda loop tugashi kerak."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "For loop qachon ishlatish uchun qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "Takrorlanish soni oldindan ma'lum bo'lsa",
+          "Faqat bitta amal bajarilsa",
+          "Dastur internetga ulanmasa",
+          "Faqat matn saqlansa"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "1 dan 5 gacha bo'lgan qiymatlar bilan ishlaydigan loop nechta takrorlanishga ega?",
+        "type": "multiple_choice",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "10"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 3,
+        "question": "For loop ichidagi amal qachon bajariladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Har bir takrorlanishda",
+          "Faqat birinchi marta",
+          "Faqat oxirida",
+          "Hech qachon"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "For loop yordamida nima qilish mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Takroriy hisoblash",
+          "Faqat o'zgaruvchi nomlash",
+          "Faqat dastur nomini yozish",
+          "Faqat internetni tekshirish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "For loop algoritmini tuzishda qaysi ma'lumot muhim?",
+        "type": "multiple_choice",
+        "options": [
+          "Boshlanish, tugash va har bir takrorlanishdagi amal",
+          "Faqat kompyuter modeli",
+          "Faqat fayl nomi",
+          "Faqat internet tezligi"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

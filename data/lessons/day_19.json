@@ -1,0 +1,214 @@
+{
+  "id": 19,
+  "day": 19,
+  "title": "Dictionary va Map tushunchasi",
+  "description": "Ma'lumotlarni key-value ko'rinishida saqlash va kerakli qiymatni kalit orqali topishni o'rganamiz.",
+  "level": "beginner",
+  "category": "data_structures",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Dictionary va Map nima ekanligini tushunish",
+    "Key va value tushunchalarini anglash",
+    "List va Map orasidagi farqni tushunish",
+    "Qiymatni key orqali topish g'oyasini o'rganish",
+    "Oddiy ma'lumotlarni key-value ko'rinishida tuzishni o'rganish"
+  ],
+
+  "prerequisites": [
+    18
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Dictionary yoki Map nima?",
+      "content": "Dictionary yoki Map ma'lumotlarni key-value juftliklari ko'rinishida saqlaydigan strukturadir. Masalan, foydalanuvchi profilida name kalitiga 'Ali', age kalitiga 20 qiymatini bog'lash mumkin."
+    },
+    {
+      "id": 2,
+      "title": "Key nima?",
+      "content": "Key ma'lum bir qiymatni topish uchun ishlatiladigan nom yoki identifikator hisoblanadi. Masalan, profile ichida 'name' key bo'lishi mumkin. Shu key orqali foydalanuvchining ismini topamiz."
+    },
+    {
+      "id": 3,
+      "title": "Value nima?",
+      "content": "Value key bilan bog'langan haqiqiy ma'lumotdir. Masalan, name -> 'Ali' juftligida name key, 'Ali' esa value hisoblanadi."
+    },
+    {
+      "id": 4,
+      "title": "Key-value juftligi",
+      "content": "Map ichidagi har bir yozuv key va value dan tashkil topadi. Masalan, city -> 'Toshkent' yoki score -> 95. Key nimani qidirayotganimizni bildiradi, value esa shu key ga tegishli ma'lumotni saqlaydi."
+    },
+    {
+      "id": 5,
+      "title": "List va Map farqi",
+      "content": "List elementlarni tartib asosida saqlaydi va ko'pincha index orqali topiladi. Map esa qiymatlarni key orqali saqlaydi va topadi. Masalan, listda ikkinchi elementni index orqali olamiz, mapda esa foydalanuvchining yoshini 'age' key orqali olishimiz mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Map qachon foydali?",
+      "content": "Agar ma'lumotlar biror nom bilan bog'langan bo'lsa, map juda qulay. Masalan, foydalanuvchi profili, mahsulot haqida ma'lumot yoki sozlamalar key-value shaklida saqlanishi mumkin."
+    },
+    {
+      "id": 7,
+      "title": "Key orqali qiymat topish",
+      "content": "Mapdagi qiymatni topish uchun uning key ini bilish yetarli. Masalan, profile ichida email qiymatini olish uchun 'email' key dan foydalanish mumkin."
+    },
+    {
+      "id": 8,
+      "title": "Map bilan fikrlash",
+      "content": "Map bilan ishlaganda avval qanday ma'lumotlar borligini aniqlang, keyin har bir ma'lumot uchun tushunarli key tanlang. Key nomi value nimani ifodalashini aniq ko'rsatib turishi kerak."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "name -> 'Ali' juftligida name nima hisoblanadi?",
+      "type": "multiple_choice",
+      "options": [
+        "Key",
+        "Value",
+        "Index",
+        "Loop"
+      ],
+      "hints": [
+        "Chap tomondagi qism qiymatni topish uchun ishlatiladi.",
+        "Key ma'lum bir value ni aniqlashga yordam beradi.",
+        "Bu yerda name orqali 'Ali' qiymatini topamiz."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "name -> 'Ali' juftligida 'Ali' nima hisoblanadi?",
+      "type": "multiple_choice",
+      "options": [
+        "Key",
+        "Value",
+        "Index",
+        "Function"
+      ],
+      "hints": [
+        "Key nom bo'lib xizmat qiladi.",
+        "Key bilan bog'langan haqiqiy ma'lumot value bo'ladi.",
+        "'Ali' name key ga tegishli ma'lumot."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Foydalanuvchining ismi, yoshi va shahri uchun qanday key nomlarini tanlagan bo'lardingiz?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Har bir key value nimani anglatishini tushuntirib turishi kerak.",
+        "Ism uchun name, yosh uchun age kabi nomlarni o'ylang.",
+        "Shahar uchun city kabi tushunarli key ishlatish mumkin."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "List va Map orasidagi asosiy farq qaysi?",
+      "type": "multiple_choice",
+      "options": [
+        "List ko'pincha index, Map esa key orqali qiymat topadi",
+        "List faqat matn saqlaydi",
+        "Map faqat son saqlaydi",
+        "Ular orasida hech qanday farq yo'q"
+      ],
+      "hints": [
+        "List darsida element pozitsiyasini qanday topganimizni eslang.",
+        "Listda index ishlatiladi.",
+        "Mapda esa value ni topish uchun key ishlatiladi."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Mahsulot haqida name, price va quantity ma'lumotlarini Map ko'rinishida qanday tashkil qilgan bo'lardingiz?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Har bir ma'lumot uchun alohida key kerak.",
+        "Masalan, name key mahsulot nomiga bog'lanishi mumkin.",
+        "price va quantity uchun ham mos value larni yozing."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Foydalanuvchi profili",
+    "description": "Foydalanuvchi profili uchun name, age, city va score ma'lumotlarini key-value ko'rinishida tuzing. Har bir key uchun misol value yozing va nima sababdan bu ma'lumotlar uchun Map ishlatish qulayligini tushuntiring.",
+    "hints": [
+      "Avval to'rtta ma'lumot uchun key nomlarini aniqlang.",
+      "Key nomlari value nimani anglatishini tushuntirib tursin.",
+      "Har bir key uchun misol qiymat yozing.",
+      "Mapda ma'lumotni index bilan emas, ma'noli key orqali topish mumkinligini eslang."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Map ma'lumotlarni qanday ko'rinishda saqlaydi?",
+        "type": "multiple_choice",
+        "options": [
+          "Key-value juftliklari ko'rinishida",
+          "Faqat indexlar ko'rinishida",
+          "Faqat boolean qiymatlar ko'rinishida",
+          "Faqat looplar ko'rinishida"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Key nima uchun ishlatiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Tegishli value ni topish uchun",
+          "Faqat loopni tugatish uchun",
+          "Faqat son qo'shish uchun",
+          "Funksiyani o'chirish uchun"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "age -> 20 juftligida 20 nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Key",
+          "Value",
+          "Index",
+          "Function"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 4,
+        "question": "List va Map orasidagi asosiy farqlardan biri qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "List ko'pincha index bilan, Map key bilan ishlaydi",
+          "Map hech qanday qiymat saqlamaydi",
+          "List faqat bitta qiymat saqlaydi",
+          "Map faqat loop ichida ishlaydi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Foydalanuvchi profilidagi email qiymatini Map ichidan topish uchun nima kerak?",
+        "type": "multiple_choice",
+        "options": [
+          "email key",
+          "Faqat index 0",
+          "Loopni o'chirish",
+          "Return ishlatmaslik"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

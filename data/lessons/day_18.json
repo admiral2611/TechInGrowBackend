@@ -1,0 +1,215 @@
+{
+  "id": 18,
+  "day": 18,
+  "title": "String bilan ishlash",
+  "description": "Matn qiymatlarini saqlash, ularning uzunligini tushunish va string ichidagi belgilar bilan ishlashni o'rganamiz.",
+  "level": "beginner",
+  "category": "data_structures",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "String nima ekanligini tushunish",
+    "String va oddiy sonli qiymat orasidagi farqni anglash",
+    "String ichidagi belgilar ketma-ketligini tushunish",
+    "String uzunligi nima ekanligini o'rganish",
+    "String bilan bog'liq oddiy algoritmlarni tuzishni o'rganish"
+  ],
+
+  "prerequisites": [
+    17
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "String nima?",
+      "content": "String matnli ma'lumotni saqlash uchun ishlatiladi. Masalan, foydalanuvchining ismi, shahar nomi yoki xabar matni string bo'lishi mumkin. 'Ali', 'Toshkent' va 'Salom dunyo' string qiymatlariga misol bo'ladi."
+    },
+    {
+      "id": 2,
+      "title": "String belgilar ketma-ketligi",
+      "content": "Stringni belgilar ketma-ketligi sifatida tasavvur qilish mumkin. Masalan, 'Ali' stringi A, l va i belgilaridan tashkil topgan. Har bir belgi string ichida ma'lum tartibda joylashadi."
+    },
+    {
+      "id": 3,
+      "title": "String va son farqi",
+      "content": "Matn ko'rinishidagi '20' bilan son ko'rinishidagi 20 bir xil tushuncha emas. Son ustida matematik amallar bajarish mumkin, string esa matn sifatida qaraladi. Dasturlashda ma'lumotning qanday ko'rinishda saqlanishi muhim."
+    },
+    {
+      "id": 4,
+      "title": "String uzunligi",
+      "content": "String uzunligi uning ichida nechta belgi borligini bildiradi. Masalan, 'Ali' stringida 3 ta belgi bor. Bo'sh joy ham ko'pincha alohida belgi sifatida hisoblanadi."
+    },
+    {
+      "id": 5,
+      "title": "String ichidagi belgilar",
+      "content": "String ichidagi belgilarni ham list elementlariga o'xshash tarzda ketma-ket ko'rish mumkin. Masalan, 'Code' stringida birinchi belgi C, keyin o, d va e keladi. Ko'p dasturlash tillarida belgilar index orqali ham olinadi."
+    },
+    {
+      "id": 6,
+      "title": "Stringlarni birlashtirish",
+      "content": "Ikki yoki undan ko'p stringni birlashtirib yangi matn hosil qilish mumkin. Masalan, 'Salom' va 'Ali' qiymatlarini birlashtirib 'Salom Ali' kabi natija olish mumkin."
+    },
+    {
+      "id": 7,
+      "title": "String bo'ylab yurish",
+      "content": "Loop yordamida string ichidagi belgilarni bittadan ko'rib chiqish mumkin. Masalan, so'z ichida nechta 'a' harfi borligini topish uchun har bir belgini tekshirish mumkin."
+    },
+    {
+      "id": 8,
+      "title": "String bilan fikrlash",
+      "content": "String bilan ishlaganda matnning o'zi, uning uzunligi va ichidagi belgilar muhim bo'lishi mumkin. Masala nimani so'rayotganiga qarab stringni to'liq qiymat sifatida yoki belgilar ketma-ketligi sifatida ko'rish kerak."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Quyidagilardan qaysi biri string qiymatiga misol bo'ladi?",
+      "type": "multiple_choice",
+      "options": [
+        "Toshkent",
+        "25",
+        "true",
+        "10 + 5"
+      ],
+      "hints": [
+        "String matnli ma'lumotni ifodalaydi.",
+        "Shahar nomi matn hisoblanadi.",
+        "Variantlardan matn sifatida qaraladigan qiymatni tanlang."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "'Salom' stringida nechta belgi bor?",
+      "type": "multiple_choice",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "hints": [
+        "Stringdagi har bir harfni bittadan sanang.",
+        "S, a, l, o, m belgilarini ko'rib chiqing.",
+        "Jami nechta belgi borligini hisoblang."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "'Ali' va 'Vali' stringlarini birlashtirib qanday natija olish mumkinligini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Ikki matnni ketma-ket qo'shishni o'ylang.",
+        "Ularning orasiga bo'sh joy qo'shish mumkin.",
+        "Natija 'Ali Vali' kabi ko'rinishda bo'lishi mumkin."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "'Code' stringidagi birinchi belgi qaysi?",
+      "type": "multiple_choice",
+      "options": [
+        "C",
+        "o",
+        "d",
+        "e"
+      ],
+      "hints": [
+        "String chapdan o'ngga qarab o'qiladi.",
+        "Birinchi pozitsiyada qaysi harf turganiga qarang.",
+        "'Code' so'zi C harfi bilan boshlanadi."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "String ichida nechta 'a' harfi borligini topish uchun qanday algoritm ishlatish mumkin?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "String ichidagi barcha belgilarni bittadan ko'rib chiqish kerak.",
+        "Har bir belgi 'a' ga teng yoki teng emasligini tekshirish mumkin.",
+        "Mos belgi topilganda count qiymatini 1 ga oshirish mumkin."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Unli harflarni sanash",
+    "description": "Dasturga bitta so'z berilgan deb tasavvur qiling. Shu so'z ichida nechta unli harf borligini aniqlaydigan algoritm tuzing. Kod yozish shart emas. String bo'ylab yurish, har bir belgini tekshirish va count ishlatishni tushuntiring.",
+    "hints": [
+      "Avval count = 0 kabi hisoblagichdan boshlang.",
+      "So'z ichidagi har bir belgini loop orqali ko'rib chiqing.",
+      "Har bir belgi unli harflardan biriga teng yoki teng emasligini tekshiring.",
+      "Unli harf topilganda count ni 1 ga oshiring.",
+      "Loop tugagach count unli harflar sonini bildiradi."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "String nima uchun ishlatiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Matnli ma'lumotni saqlash uchun",
+          "Faqat loop yaratish uchun",
+          "Faqat sonlarni qo'shish uchun",
+          "Faqat shart tekshirish uchun"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "'Hello' stringida nechta belgi bor?",
+        "type": "multiple_choice",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 3,
+        "question": "String uzunligi nimani bildiradi?",
+        "type": "multiple_choice",
+        "options": [
+          "String ichidagi belgilar sonini",
+          "String ichidagi sonlar yig'indisini",
+          "Faqat birinchi belgini",
+          "Faqat oxirgi belgini"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "String bo'ylab loop bilan yurish orqali nima qilish mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Har bir belgini bittadan tekshirish",
+          "Faqat stringni o'chirish",
+          "Faqat yangi funksiya yaratish",
+          "Faqat internetga ulanish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "'20' va 20 orasidagi asosiy farq nima?",
+        "type": "multiple_choice",
+        "options": [
+          "'20' matn, 20 esa son sifatida qaralishi mumkin",
+          "Ular har doim mutlaqo bir xil",
+          "20 string, '20' esa loop",
+          "Ikkalasi ham faqat boolean qiymat"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "id": 23,
+  "day": 23,
+  "title": "Flowchart va qarorlar",
+  "description": "Algoritmni vizual ko'rinishda ifodalash va qaror nuqtalarini flowchart orqali tushunishni o'rganamiz.",
+  "level": "beginner",
+  "category": "problem_solving",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Flowchart nima ekanligini tushunish",
+    "Algoritmni vizual ko'rinishda tasvirlashni anglash",
+    "Boshlanish, amal va qaror bloklarini farqlash",
+    "If/else mantiqini flowchart orqali ko'rishni o'rganish",
+    "Oddiy algoritmni flowchart bosqichlariga ajratish"
+  ],
+
+  "prerequisites": [
+    22
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Flowchart nima?",
+      "content": "Flowchart algoritm yoki jarayonning bosqichlarini diagramma ko'rinishida ifodalash usulidir. Unda bajarilish tartibi bloklar va ularni bog'lovchi yo'nalishlar orqali ko'rsatiladi."
+    },
+    {
+      "id": 2,
+      "title": "Nega flowchart foydali?",
+      "content": "Ba'zan algoritmni faqat matn bilan o'qish qiyin bo'lishi mumkin. Flowchart esa qaysi qadamdan keyin qaysi qadam kelishini ko'z bilan ko'rishga yordam beradi. Ayniqsa shart va bir nechta yo'nalish mavjud bo'lgan algoritmlarda bu juda foydali."
+    },
+    {
+      "id": 3,
+      "title": "Boshlanish va tugash",
+      "content": "Flowchart odatda boshlanish nuqtasidan boshlanadi va tugash nuqtasida yakunlanadi. Bu algoritmning qayerdan boshlanishi va qayerda tugashini aniq ko'rsatadi."
+    },
+    {
+      "id": 4,
+      "title": "Amal bloki",
+      "content": "Amal bloki ma'lum bir ish bajarilishini bildiradi. Masalan, sonni olish, qiymatni hisoblash yoki natijani chiqarish kabi bosqichlar amal sifatida tasvirlanishi mumkin."
+    },
+    {
+      "id": 5,
+      "title": "Qaror bloki",
+      "content": "Qaror bloki shartni tekshirish uchun ishlatiladi. Masalan, age >= 18 savoli flowchart ichida qaror nuqtasi bo'lishi mumkin. Natija true bo'lsa bir yo'nalishga, false bo'lsa boshqa yo'nalishga o'tiladi."
+    },
+    {
+      "id": 6,
+      "title": "If/Else flowchartda",
+      "content": "If/else mantiqini flowchartda tasvirlash juda qulay. Avval shart tekshiriladi, so'ng true va false uchun ikkita alohida yo'nalish hosil bo'ladi. Keyinchalik bu yo'nalishlar yana birlashtirilishi mumkin."
+    },
+    {
+      "id": 7,
+      "title": "Oddiy misol",
+      "content": "Yoshni tekshirish algoritmini tasavvur qiling: boshlash, yoshni olish, age >= 18 shartini tekshirish, true bo'lsa 'Kirish mumkin' chiqarish, false bo'lsa 'Kirish mumkin emas' chiqarish, keyin tugash."
+    },
+    {
+      "id": 8,
+      "title": "Flowchart va pseudocode",
+      "content": "Pseudocode algoritmni matnli qadamlar bilan ifodalaydi, flowchart esa shu mantiqni vizual ko'rinishda ko'rsatadi. Ikkalasi ham kod yozishdan oldin yechimni rejalashtirishga yordam beradi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Flowchart nima uchun ishlatiladi?",
+      "type": "multiple_choice",
+      "options": [
+        "Algoritmni vizual ko'rinishda tasvirlash uchun",
+        "Faqat string saqlash uchun",
+        "Faqat internetga ulanish uchun",
+        "Faqat list yaratish uchun"
+      ],
+      "hints": [
+        "Flowchart diagrammaga o'xshaydi.",
+        "U algoritm bosqichlarini ko'z bilan ko'rishga yordam beradi.",
+        "Vizual tarzda bajarilish ketma-ketligini ko'rsatadigan variantni tanlang."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Flowchart ichidagi qaror bloki nima uchun kerak?",
+      "type": "multiple_choice",
+      "options": [
+        "Shartni tekshirish uchun",
+        "Faqat qiymat saqlash uchun",
+        "Faqat loopni tugatish uchun",
+        "Faqat matn yozish uchun"
+      ],
+      "hints": [
+        "Qaror deganda dastur ikki yoki undan ko'p yo'nalishdan birini tanlaydi.",
+        "Buning uchun shart kerak bo'ladi.",
+        "If/else mantig'ini eslang."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "age >= 18 sharti flowchartda qanday vazifani bajaradi?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Bu ifoda true yoki false natija beradi.",
+        "True va false uchun turli yo'nalishlar bo'lishi mumkin.",
+        "Demak, bu qaror nuqtasi vazifasini bajaradi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Foydalanuvchining bali 70 yoki undan katta bo'lsa 'O'tdi', aks holda 'O'tmadi' chiqaradigan flowchart bosqichlarini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Boshlanish nuqtasidan boshlang.",
+        "Score qiymatini olish kerak.",
+        "score >= 70 shartini qaror sifatida tekshiring.",
+        "True va false uchun alohida natija yozing va keyin tugating."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Pseudocode va flowchart orasidagi farqni o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Ikkalasi ham algoritmni rejalashtirish uchun ishlatiladi.",
+        "Pseudocode matnli qadamlar bilan yoziladi.",
+        "Flowchart esa shu qadamlarni vizual diagramma sifatida ko'rsatadi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Musbat, manfiy yoki nol",
+    "description": "Bitta son berilgan deb tasavvur qiling. Son musbat, manfiy yoki nol ekanini aniqlaydigan flowchart mantiqini yozing. Boshlanish, input, qarorlar, output va tugash bosqichlarini ketma-ket tushuntiring.",
+    "hints": [
+      "Avval sonni input sifatida oling.",
+      "Birinchi qaror sifatida number > 0 ni tekshirish mumkin.",
+      "Agar false bo'lsa number < 0 shartini tekshiring.",
+      "Ikkala shart ham false bo'lsa son 0 ga teng bo'ladi.",
+      "Har bir holat uchun mos output yozing va oxirida tugash nuqtasiga o'ting."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Flowchart nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Algoritmning vizual tasviri",
+          "Faqat kod yozish tili",
+          "Ma'lumotlar bazasi",
+          "List turi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Flowchartdagi qaror bloki nima qiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Shartni tekshiradi",
+          "Faqat son saqlaydi",
+          "Faqat string yaratadi",
+          "Internetni yoqadi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "If/else mantiqi flowchartda qanday ko'rinadi?",
+        "type": "multiple_choice",
+        "options": [
+          "Qarordan keyin true va false yo'nalishlari bilan",
+          "Faqat bitta to'g'ri chiziq bilan",
+          "Faqat list orqali",
+          "Faqat funksiya orqali"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Flowchart qachon ayniqsa foydali?",
+        "type": "multiple_choice",
+        "options": [
+          "Algoritm oqimi va qarorlarini ko'rish kerak bo'lganda",
+          "Faqat password saqlashda",
+          "Faqat email yuborishda",
+          "Faqat database yaratishda"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Pseudocode va flowchartning umumiy maqsadi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Kod yozishdan oldin algoritmni rejalashtirish",
+          "Internet tezligini oshirish",
+          "Fayllarni o'chirish",
+          "Faqat list yaratish"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

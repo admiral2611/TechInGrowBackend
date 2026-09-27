@@ -1,0 +1,211 @@
+{
+  "id": 17,
+  "day": 17,
+  "title": "List bo'ylab yurish",
+  "description": "Loop yordamida list ichidagi barcha elementlarni bittadan ko'rib chiqish va ular ustida amal bajarishni o'rganamiz.",
+  "level": "beginner",
+  "category": "data_structures",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "List bo'ylab yurish nima ekanligini tushunish",
+    "Loop va listni birgalikda ishlatish g'oyasini anglash",
+    "Har bir element ustida alohida amal bajarishni o'rganish",
+    "List elementlarini tekshirish va sanashni tushunish",
+    "List bilan bog'liq oddiy algoritmlarni tuzishni o'rganish"
+  ],
+
+  "prerequisites": [
+    16
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "List bo'ylab yurish nima?",
+      "content": "List bo'ylab yurish deganda list ichidagi elementlarni bittadan ko'rib chiqish tushuniladi. Masalan, ['Ali', 'Vali', 'Sami'] listidagi har bir ismni navbat bilan olish va ekranga chiqarish mumkin."
+    },
+    {
+      "id": 2,
+      "title": "Loop va list",
+      "content": "Loop list ichidagi barcha elementlarni qayta ishlash uchun juda qulay. Har bir takrorlanishda listning bitta elementi olinadi va unga kerakli amal bajariladi."
+    },
+    {
+      "id": 3,
+      "title": "Har bir element bilan ishlash",
+      "content": "Tasavvur qiling, scores = [50, 70, 90] listi mavjud. Loop birinchi takrorlanishda 50, keyingisida 70 va oxirida 90 qiymati bilan ishlashi mumkin. Shu tariqa barcha elementlar bittadan ko'rib chiqiladi."
+    },
+    {
+      "id": 4,
+      "title": "List elementlarini chiqarish",
+      "content": "List bo'ylab yurishning eng oddiy misollaridan biri barcha elementlarni chiqarishdir. Masalan, mahsulotlar listidagi har bir mahsulot nomini ekranga chiqarish mumkin."
+    },
+    {
+      "id": 5,
+      "title": "List ichida shart tekshirish",
+      "content": "Loop bilan list bo'ylab yurayotganda if yordamida har bir elementni tekshirish mumkin. Masalan, test ballari ichidan faqat 70 yoki undan katta ballarni tanlash mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Elementlarni sanash",
+      "content": "List ichida ma'lum shartga mos nechta element borligini sanash mumkin. Buning uchun count = 0 kabi hisoblagich yaratilib, har safar shart bajarilganda count 1 ga oshiriladi."
+    },
+    {
+      "id": 7,
+      "title": "Yig'indi hisoblash",
+      "content": "Listdagi sonlarning umumiy yig'indisini ham loop orqali topish mumkin. Avval total = 0 qiymati olinadi, keyin har bir element total ga qo'shib boriladi."
+    },
+    {
+      "id": 8,
+      "title": "List bilan ishlash fikrlashi",
+      "content": "List bilan bog'liq masalada avval listdagi barcha elementlar bilan ishlash kerakmi yoki faqat ayrimlari bilanmi, shuni aniqlang. Keyin loop bilan elementlarni ko'rib chiqing va kerak bo'lsa shart yordamida tanlang."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "['Ali', 'Vali', 'Sami'] listidagi barcha ismlarni chiqarish uchun qaysi tushuncha eng qulay?",
+      "type": "multiple_choice",
+      "options": [
+        "Loop",
+        "Faqat if",
+        "Return",
+        "Scope"
+      ],
+      "hints": [
+        "Listda bir nechta element bor.",
+        "Har bir element bilan navbatma-navbat ishlash kerak.",
+        "Takroriy amal uchun loop qulay."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "scores = [50, 70, 90] listi bo'ylab yurilganda nechta element ko'rib chiqiladi?",
+      "type": "multiple_choice",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "hints": [
+        "Listdagi elementlarni bittadan sanang.",
+        "50, 70 va 90 uchta alohida element.",
+        "Har bir element loopda bir marta ko'rib chiqiladi."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Listdagi faqat 70 yoki undan katta ballarni chiqarish uchun qanday yondashuv kerak?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval barcha ballar bo'ylab loop bilan yurish kerak.",
+        "Har bir ball uchun shart tekshiriladi.",
+        "score >= 70 bo'lsa, shu qiymatni chiqarish mumkin."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Listdagi musbat sonlar sonini hisoblash uchun count o'zgaruvchisi qanday ishlatiladi?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Count ni 0 dan boshlash mumkin.",
+        "Har bir son uchun son > 0 shartini tekshiring.",
+        "Shart true bo'lsa count ni 1 ga oshiring."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "[2, 4, 6] listidagi sonlarning yig'indisini topish uchun qanday algoritm ishlatiladi?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval total = 0 dan boshlang.",
+        "Listdagi har bir sonni loop bilan oling.",
+        "Har bir sonni total ga qo'shib boring.",
+        "Loop tugagach total umumiy yig'indini saqlaydi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: O'tgan talabalarni aniqlash",
+    "description": "scores = [45, 72, 88, 61, 90] listi mavjud deb tasavvur qiling. 70 yoki undan katta ball olgan talabalarni o'tgan deb hisoblang. Kod yozmasdan, list bo'ylab yurish, shart tekshirish va o'tganlar sonini hisoblash algoritmini yozing.",
+    "hints": [
+      "Avval passed_count = 0 kabi hisoblagich kerakligini o'ylang.",
+      "Scores listidagi barcha elementlarni loop orqali ko'rib chiqing.",
+      "Har bir score uchun score >= 70 shartini tekshiring.",
+      "Shart true bo'lsa passed_count ni 1 ga oshiring.",
+      "Loop tugagach passed_count o'tgan talabalar sonini bildiradi."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "List bo'ylab yurish nima degani?",
+        "type": "multiple_choice",
+        "options": [
+          "List elementlarini bittadan ko'rib chiqish",
+          "Listni o'chirish",
+          "Faqat birinchi elementni olish",
+          "List nomini o'zgartirish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Listdagi barcha elementlar bilan ishlash uchun qaysi tushuncha qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "Loop",
+          "Return",
+          "Scope",
+          "Faqat else"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "List ichidan faqat ma'lum shartga mos elementlarni tanlash uchun nima kerak?",
+        "type": "multiple_choice",
+        "options": [
+          "Loop va shart",
+          "Faqat return",
+          "Faqat parametr",
+          "Faqat scope"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Count o'zgaruvchisi list bilan ishlashda nima uchun kerak bo'lishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Shartga mos elementlar sonini hisoblash uchun",
+          "Faqat list nomini saqlash uchun",
+          "Internetni tekshirish uchun",
+          "Funksiyani tugatish uchun"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "[3, 5, 7] listidagi barcha sonlarni total ga qo'shib borish orqali nima topiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Sonlarning umumiy yig'indisi",
+          "Faqat birinchi son",
+          "List indexi",
+          "Faqat elementlar soni"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

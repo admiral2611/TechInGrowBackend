@@ -1,0 +1,214 @@
+{
+  "id": 4,
+  "day": 4,
+  "title": "Taqqoslash operatorlari",
+  "description": "Qiymatlarni bir-biri bilan solishtirish va shartlarda taqqoslash operatorlaridan foydalanishni o'rganamiz.",
+  "level": "beginner",
+  "category": "programming_basics",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Taqqoslash operatorlari nima ekanligini tushunish",
+    "Teng va teng emas operatorlarini farqlash",
+    "Katta, kichik, katta yoki teng, kichik yoki teng operatorlarini tushunish",
+    "Taqqoslash natijasi true yoki false bo'lishini anglash",
+    "Taqqoslash operatorlarini oddiy masalalarda qo'llash"
+  ],
+
+  "prerequisites": [
+    3
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Taqqoslash nima?",
+      "content": "Taqqoslash ikki qiymat orasidagi munosabatni tekshirishdir. Masalan, 10 soni 5 dan kattami yoki 7 soni 7 ga tengmi kabi savollar taqqoslash hisoblanadi. Dastur bunday tekshiruvlarga odatda true yoki false natija qaytaradi."
+    },
+    {
+      "id": 2,
+      "title": "Tenglik operatori",
+      "content": "Tenglik operatori ikki qiymat bir-biriga teng yoki teng emasligini tekshiradi. Masalan, age == 18 ifodasi age qiymati 18 ga teng ekanini tekshiradi. Agar age 18 bo'lsa natija true, aks holda false bo'ladi."
+    },
+    {
+      "id": 3,
+      "title": "Teng emas operatori",
+      "content": "Teng emas operatori ikki qiymat bir-biridan farq qilishini tekshiradi. Masalan, score != 0 ifodasi score qiymati 0 ga teng emasligini tekshiradi. Agar score 10 bo'lsa natija true bo'ladi."
+    },
+    {
+      "id": 4,
+      "title": "Katta va kichik operatorlari",
+      "content": "Katta operatori > belgisi bilan, kichik operatori esa < belgisi bilan yoziladi. Masalan, age > 18 ifodasi age 18 dan kattaligini tekshiradi. temperature < 0 esa harorat noldan kichikligini tekshiradi."
+    },
+    {
+      "id": 5,
+      "title": "Katta yoki teng va kichik yoki teng",
+      "content": "Ba'zi holatlarda chegaraning o'zi ham hisobga olinadi. >= operatori katta yoki teng, <= operatori esa kichik yoki teng degan ma'noni bildiradi. Masalan, score >= 70 ifodasi score 70 yoki undan katta ekanini tekshiradi."
+    },
+    {
+      "id": 6,
+      "title": "Taqqoslash va shartlar",
+      "content": "Taqqoslash operatorlari ko'pincha if va else bilan birga ishlatiladi. Masalan, agar age >= 18 bo'lsa foydalanuvchiga kirishga ruxsat berish mumkin. Demak, taqqoslash shartning asosiy qismini tashkil qiladi."
+    },
+    {
+      "id": 7,
+      "title": "Bir qarashda o'xshash operatorlar",
+      "content": "== va = bir xil narsa emas. = odatda qiymat berish uchun ishlatiladi, == esa ikki qiymatni taqqoslash uchun ishlatiladi. Masalan, age = 18 o'zgaruvchiga qiymat beradi, age == 18 esa age qiymati 18 ga tengligini tekshiradi."
+    },
+    {
+      "id": 8,
+      "title": "Kundalik misollar",
+      "content": "Taqqoslash operatorlarini kundalik vaziyatlarda ham ko'rish mumkin. Masalan, balans >= narx bo'lsa mahsulot sotib olish mumkin, speed > limit bo'lsa tezlik chegarasi buzilgan bo'ladi, temperature <= 0 bo'lsa suv muzlash chegarasiga yetgan bo'ladi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "10 > 5 ifodasi qanday natija beradi?",
+      "type": "multiple_choice",
+      "options": [
+        "True",
+        "False",
+        "10",
+        "5"
+      ],
+      "hints": [
+        "10 va 5 sonlarini taqqoslang.",
+        "> belgisi chap tomondagi qiymat kattami degan savolni beradi.",
+        "10 soni 5 dan katta ekanini tekshiring."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "7 == 7 ifodasi qanday natija beradi?",
+      "type": "multiple_choice",
+      "options": [
+        "True",
+        "False",
+        "14",
+        "0"
+      ],
+      "hints": [
+        "== operatori ikki qiymat tengligini tekshiradi.",
+        "Chap va o'ng tomondagi qiymatlar bir xilmi?",
+        "7 va 7 bir-biriga teng."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "age = 18 va age == 18 orasidagi farqni o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Birinchi ifodada bitta = belgisi bor, ikkinchisida ikkita.",
+        "= odatda qiymat berish uchun ishlatiladi.",
+        "== esa qiymatlarni bir-biri bilan taqqoslaydi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "score = 70 bo'lsa, score >= 70 sharti qanday natija beradi?",
+      "type": "multiple_choice",
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "Null"
+      ],
+      "hints": [
+        ">= belgisi katta YOKI teng degan ma'noni bildiradi.",
+        "score aynan 70 ga teng.",
+        "Tenglik ham >= operatoriga mos kelishini eslang."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Harorat 0 dan kichik yoki teng ekanini tekshiradigan shartni oddiy ko'rinishda yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Tekshiriladigan qiymat temperature bo'lishi mumkin.",
+        "Savolda 'kichik yoki teng' deyilmoqda.",
+        "Kichik yoki teng operatori <= bilan yoziladi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Kirish huquqini tekshirish",
+    "description": "Foydalanuvchining yoshi va tizimga kirish uchun minimal yosh 18 ekanini tasavvur qiling. Yosh 18 yoki undan katta bo'lsa 'Kirish mumkin', aks holda 'Kirish mumkin emas' natijasini beradigan algoritm tuzing. Qaysi taqqoslash operatoridan foydalanishingizni ham yozing.",
+    "hints": [
+      "Avval qaysi qiymatni tekshirishingizni aniqlang.",
+      "Minimal yosh 18 bo'lgani uchun yoshni 18 bilan taqqoslash kerak.",
+      "18 yoshning o'zi ham kirishga ruxsat berilgan holatga kiradi.",
+      "Shuning uchun faqat > emas, >= operatoridan foydalanishni o'ylang."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Qaysi operator ikki qiymat tengligini tekshiradi?",
+        "type": "multiple_choice",
+        "options": [
+          "=",
+          "==",
+          ">",
+          "!="
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 2,
+        "question": "Qaysi operator 'teng emas' degan ma'noni bildiradi?",
+        "type": "multiple_choice",
+        "options": [
+          "==",
+          ">=",
+          "!=",
+          "<="
+        ],
+        "correct_answer": 2
+      },
+      {
+        "id": 3,
+        "question": "score = 80 bo'lsa, score >= 70 qanday natija beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "True",
+          "False",
+          "70",
+          "80"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "temperature = -5 bo'lsa, temperature < 0 qanday natija beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "True",
+          "False",
+          "0",
+          "-5"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Qaysi ifoda age qiymati 18 yoki undan kichik ekanini tekshiradi?",
+        "type": "multiple_choice",
+        "options": [
+          "age > 18",
+          "age < 18",
+          "age <= 18",
+          "age != 18"
+        ],
+        "correct_answer": 2
+      }
+    ]
+  }
+}

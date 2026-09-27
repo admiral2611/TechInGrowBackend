@@ -1,0 +1,268 @@
+{
+  "id": 10,
+  "day": 10,
+  "title": "1–9 kunlarni mustahkamlash",
+  "description": "O'zgaruvchilar, shartlar, taqqoslash operatorlari, mantiqiy operatorlar va loop mavzularini birgalikda takrorlaymiz.",
+  "level": "beginner",
+  "category": "review",
+  "duration_minutes": 50,
+
+  "objectives": [
+    "Oldingi 9 kunlik mavzularni takrorlash",
+    "O'zgaruvchi va shartlarni birgalikda qo'llash",
+    "Taqqoslash va mantiqiy operatorlarni mustahkamlash",
+    "For va while loop orasidagi farqni eslab qolish",
+    "Bir nechta tushunchani birlashtirib masala yechishni o'rganish"
+  ],
+
+  "prerequisites": [
+    9
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Nimalarni o'rgandik?",
+      "content": "Birinchi 9 kun davomida dasturlashning asosiy fikrlash usullari bilan tanishdik. Algoritm, o'zgaruvchi, shart, taqqoslash operatorlari, mantiqiy operatorlar va loop tushunchalarini o'rgandik. Endi ularni alohida emas, birgalikda ishlatishni mashq qilamiz."
+    },
+    {
+      "id": 2,
+      "title": "O'zgaruvchilarni eslaymiz",
+      "content": "O'zgaruvchi ma'lumotni saqlash uchun ishlatiladi. Masalan, age foydalanuvchining yoshini, score esa uning ballini saqlashi mumkin. Masala yechishda avval qanday ma'lumotlarni saqlash kerakligini aniqlash foydali."
+    },
+    {
+      "id": 3,
+      "title": "Shartlarni eslaymiz",
+      "content": "If va else dasturga qaror qabul qilish imkonini beradi. Masalan, score >= 70 bo'lsa foydalanuvchi testdan o'tgan deb hisoblash mumkin, aks holda o'tmagan bo'ladi."
+    },
+    {
+      "id": 4,
+      "title": "Taqqoslash operatorlarini eslaymiz",
+      "content": "==, !=, >, <, >= va <= operatorlari qiymatlarni taqqoslash uchun ishlatiladi. Taqqoslash natijasi true yoki false bo'ladi va ko'pincha shartlarning ichida ishlatiladi."
+    },
+    {
+      "id": 5,
+      "title": "Mantiqiy operatorlarni eslaymiz",
+      "content": "AND barcha shartlar true bo'lganda true natija beradi. OR shartlardan kamida bittasi true bo'lsa true beradi. NOT esa mantiqiy qiymatni teskarisiga o'zgartiradi."
+    },
+    {
+      "id": 6,
+      "title": "For va while loop",
+      "content": "For loop ko'pincha takrorlanish soni oldindan ma'lum bo'lganda ishlatiladi. While loop esa takrorlanish shartga bog'liq bo'lganda qulay. Har ikkala loopda ham tugash holatini to'g'ri tushunish muhim."
+    },
+    {
+      "id": 7,
+      "title": "Loop va shartlarni birlashtirish",
+      "content": "Loop yordamida ko'p qiymatlarni ko'rib chiqish, if yordamida esa har bir qiymatni tekshirish mumkin. Masalan, 1 dan 20 gacha bo'lgan sonlardan faqat juft va 10 dan kattalarini tanlash mumkin."
+    },
+    {
+      "id": 8,
+      "title": "Masalani qanday yechamiz?",
+      "content": "Murakkabroq masalada darhol kod yozish o'rniga avval inputni aniqlang, kerakli o'zgaruvchilarni belgilang, qanday shartlar kerakligini toping va takrorlanish mavjud bo'lsa loopni tanlang. Keyin algoritmni qadamlar bilan yozing."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Foydalanuvchining yoshini saqlash uchun qaysi tushuncha kerak?",
+      "type": "multiple_choice",
+      "options": [
+        "O'zgaruvchi",
+        "Loop",
+        "Faqat else",
+        "Output"
+      ],
+      "hints": [
+        "Savolda biror ma'lumotni saqlash haqida gap ketmoqda.",
+        "Ma'lumotni nom bilan saqlash uchun ishlatiladigan tushunchani eslang.",
+        "age = 20 kabi yozuvda age nimani bildiradi?"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "age = 20 bo'lsa, age >= 18 qanday natija beradi?",
+      "type": "multiple_choice",
+      "options": [
+        "True",
+        "False",
+        "20",
+        "18"
+      ],
+      "hints": [
+        "20 ni 18 bilan solishtiring.",
+        ">= katta yoki teng degan ma'noni bildiradi.",
+        "20 soni 18 dan katta bo'lganligi uchun shart bajariladi."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Foydalanuvchi yoshi 18 yoki undan katta va akkaunti faol bo'lsa tizimga kira oladi. Bu algoritmda qaysi mantiqiy operator ishlatiladi?",
+      "type": "multiple_choice",
+      "options": [
+        "AND",
+        "OR",
+        "NOT",
+        "Hech biri"
+      ],
+      "hints": [
+        "Bu yerda ikkita talab mavjud.",
+        "Yosh talabi ham, akkaunt talabi ham bajarilishi kerak.",
+        "Barcha shartlar bajarilishi kerak bo'lganda qaysi operator ishlatilishini eslang."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "1 dan 10 gacha bo'lgan sonlarni chiqarish uchun qaysi loopdan foydalanish qulayroq va nega?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Nechta qiymat bilan ishlash kerakligi oldindan ma'lum.",
+        "1 dan 10 gacha aniq ketma-ketlik mavjud.",
+        "Takrorlanish soni oldindan ma'lum bo'lgan vaziyatda for loop haqida o'ylang."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Foydalanuvchi to'g'ri parol kiritmaguncha parol so'rash uchun qaysi loop qulayroq?",
+      "type": "multiple_choice",
+      "options": [
+        "While loop",
+        "Faqat if",
+        "O'zgaruvchi",
+        "Output"
+      ],
+      "hints": [
+        "Foydalanuvchi nechanchi urinishda to'g'ri parol kiritishini oldindan bilmaymiz.",
+        "Takrorlanish soni emas, shart muhim.",
+        "Parol noto'g'ri bo'lib turgan vaqt davomida ishlaydigan loopni tanlang."
+      ]
+    },
+    {
+      "id": 6,
+      "question": "1 dan 20 gacha bo'lgan sonlardan faqat juft va 10 dan kattalarini chiqaradigan algoritmni qadamlar bilan yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval 1 dan 20 gacha sonlarni loop orqali ko'rib chiqing.",
+        "Har bir son uchun ikkita shart kerak: juft bo'lishi va 10 dan katta bo'lishi.",
+        "Juft sonni 2 ga bo'lgandagi qoldiq orqali aniqlash mumkin.",
+        "Ikkala shart ham bajarilishi kerakligi uchun ularni AND bilan birlashtiring."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Checkpoint challenge: Ballarni tahlil qilish",
+    "description": "Tasavvur qiling, sizda bir nechta test ballari mavjud. Har bir ballni tekshirib, 70 yoki undan katta ballarni o'tgan deb hisoblash kerak. O'tganlar sonini ham hisoblang. Kod yozmasdan turib, qanday o'zgaruvchilar, loop, shart va taqqoslash operatorlaridan foydalanishingizni qadamlar bilan tushuntiring.",
+    "hints": [
+      "Avval barcha ballarni bittadan ko'rib chiqish uchun loop kerakligini aniqlang.",
+      "O'tganlar sonini saqlash uchun count kabi o'zgaruvchini 0 dan boshlash mumkin.",
+      "Har bir ball uchun score >= 70 shartini tekshiring.",
+      "Shart true bo'lsa, count qiymatini 1 ga oshirib boring.",
+      "Loop tugagach count o'tgan foydalanuvchilar sonini bildiradi."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "O'zgaruvchi nima uchun ishlatiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Ma'lumot saqlash uchun",
+          "Faqat loop yaratish uchun",
+          "Faqat internetga ulanish uchun",
+          "Dasturdan chiqish uchun"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Qaysi operator ikki qiymat tengligini tekshiradi?",
+        "type": "multiple_choice",
+        "options": [
+          "=",
+          "==",
+          "!=",
+          ">"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 3,
+        "question": "true AND false qanday natija beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "True",
+          "False",
+          "Null",
+          "1"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 4,
+        "question": "false OR true qanday natija beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "True",
+          "False",
+          "Null",
+          "0"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Takrorlanish soni oldindan ma'lum bo'lsa qaysi loop ko'pincha qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "For loop",
+          "While loop",
+          "If",
+          "Else"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 6,
+        "question": "Takrorlanish soni shartga bog'liq bo'lsa qaysi loop qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "While loop",
+          "Faqat if",
+          "O'zgaruvchi",
+          "Output"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 7,
+        "question": "Son juftligini tekshirishda qaysi mantiq ishlatiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "2 ga bo'lgandagi qoldiq 0 ekanini tekshirish",
+          "Son 10 dan katta ekanini tekshirish",
+          "Son matn ekanini tekshirish",
+          "Faqat sonni ekranga chiqarish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 8,
+        "question": "Loop ichidagi if nima uchun foydali?",
+        "type": "multiple_choice",
+        "options": [
+          "Har bir qiymatni shart asosida tekshirish uchun",
+          "Faqat loopni o'chirish uchun",
+          "Faqat o'zgaruvchi yaratish uchun",
+          "Faqat fayl saqlash uchun"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

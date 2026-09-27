@@ -1,0 +1,221 @@
+{
+  "id": 28,
+  "day": 28,
+  "title": "Mini loyiha: Rejalashtirish",
+  "description": "Kichik dastur yaratishdan oldin uning maqsadi, vazifalari, ma'lumotlari va algoritmini rejalashtirishni o'rganamiz.",
+  "level": "beginner",
+  "category": "project",
+  "duration_minutes": 50,
+
+  "objectives": [
+    "Loyiha maqsadini aniq belgilashni o'rganish",
+    "Loyiha talablarini kichik vazifalarga ajratish",
+    "Input, Process va Outputni aniqlash",
+    "Kerakli ma'lumot strukturalarini tanlash",
+    "Kod yozishdan oldin pseudocode va umumiy yechim rejasini yaratish"
+  ],
+
+  "prerequisites": [
+    27
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Mini loyiha nima?",
+      "content": "Mini loyiha o'rgangan tushunchalarni birgalikda ishlatish uchun yaratiladigan kichik dasturdir. Bu darsda oddiy Task Tracker, ya'ni vazifalarni boshqarish dasturini rejalashtiramiz."
+    },
+    {
+      "id": 2,
+      "title": "Loyiha maqsadi",
+      "content": "Birinchi qadam dastur nima muammoni hal qilishini aniqlashdir. Bizning Task Tracker dasturimiz foydalanuvchiga vazifa qo'shish, mavjud vazifalarni ko'rish va vazifani bajarilgan deb belgilash imkonini beradi."
+    },
+    {
+      "id": 3,
+      "title": "Talablarni aniqlash",
+      "content": "Loyiha uchun minimal talablarni yozamiz: yangi vazifa qo'shish, barcha vazifalarni ko'rsatish, vazifani bajarilgan deb belgilash va dasturdagi vazifalar sonini ko'rsatish. Avval kichik funksiyalar bilan boshlash muhim."
+    },
+    {
+      "id": 4,
+      "title": "Muammoni qismlarga ajratish",
+      "content": "Task Tracker loyihasini bir nechta vazifaga ajratish mumkin: vazifani yaratish, uni saqlash, ro'yxatni ko'rsatish, kerakli vazifani topish va uning holatini o'zgartirish. Bu decomposition yondashuvidir."
+    },
+    {
+      "id": 5,
+      "title": "Ma'lumot strukturasini tanlash",
+      "content": "Dasturda bir nechta vazifa bo'lgani uchun ularni List ichida saqlash mumkin. Har bir vazifaning title va completed kabi ma'lumotlari mavjud bo'lsa, bitta vazifani Map ko'rinishida tasavvur qilish mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Input → Process → Output",
+      "content": "Vazifa qo'shishda input — yangi vazifa nomi. Process — yangi vazifani yaratib Listga qo'shish. Output — yangilangan vazifalar ro'yxati yoki muvaffaqiyat xabari. Shu model yordamida boshqa imkoniyatlarni ham tahlil qilish mumkin."
+    },
+    {
+      "id": 7,
+      "title": "Funksiyalarni rejalashtirish",
+      "content": "Loyihada add_task, show_tasks va complete_task kabi funksiyalar bo'lishi mumkin. Har bir funksiya bitta aniq vazifani bajarishi Clean Code tamoyiliga mos keladi."
+    },
+    {
+      "id": 8,
+      "title": "Pseudocode tuzish",
+      "content": "Kod yozishdan oldin umumiy pseudocode tuzish foydali: bo'sh vazifalar ro'yxatini yarat, foydalanuvchidan amalni tanlashni so'ra, tanlovga qarab vazifa qo'sh, ro'yxatni chiqar yoki vazifani bajarilgan deb belgilab qo'y."
+    },
+    {
+      "id": 9,
+      "title": "Xato holatlarini oldindan o'ylash",
+      "content": "Rejalashtirishda noto'g'ri inputlarni ham hisobga olish kerak. Masalan, foydalanuvchi mavjud bo'lmagan vazifani belgilashi yoki bo'sh nomli vazifa qo'shishga harakat qilishi mumkin. Bunday holatlarni oldindan aniqlash debuggingni osonlashtiradi."
+    },
+    {
+      "id": 10,
+      "title": "Kod yozishdan oldingi tekshiruv",
+      "content": "Reja tayyor bo'lgach quyidagilarni tekshiring: dastur maqsadi aniqmi, asosiy funksiyalar belgilanganmi, ma'lumot strukturasi tanlanganmi, input va output tushunarlimi va algoritmning asosiy qadamlari yozilganmi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Task Tracker dasturida bir nechta vazifani saqlash uchun qaysi struktura qulay?",
+      "type": "multiple_choice",
+      "options": [
+        "List",
+        "Faqat bitta oddiy o'zgaruvchi",
+        "Faqat if",
+        "Return"
+      ],
+      "hints": [
+        "Dasturda bitta emas, ko'p vazifa bo'lishi mumkin.",
+        "Ko'p qiymatlarni birgalikda saqlash uchun qaysi strukturani o'rganganimizni eslang.",
+        "Vazifalar to'plami uchun List mos keladi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Bitta vazifaning title va completed ma'lumotlarini qanday strukturada tasavvur qilish mumkin?",
+      "type": "multiple_choice",
+      "options": [
+        "Map",
+        "Faqat loop",
+        "Faqat string",
+        "Faqat return"
+      ],
+      "hints": [
+        "Har bir ma'lumotning o'z nomi mavjud.",
+        "title va completed key sifatida ishlatilishi mumkin.",
+        "Key-value tuzilmasi uchun Map qulay."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Vazifa qo'shish funksiyasi uchun Input → Process → Output modelini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Input — foydalanuvchi kiritgan vazifa nomi.",
+        "Process — yangi vazifani yaratish va ro'yxatga qo'shish.",
+        "Output — yangilangan ro'yxat yoki muvaffaqiyat xabari."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Task Tracker loyihasini kamida 4 ta kichik vazifaga ajrating.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Yangi vazifa qo'shish alohida vazifa.",
+        "Vazifalarni ko'rsatish alohida vazifa.",
+        "Vazifani bajarilgan deb belgilash ham alohida vazifa.",
+        "Ma'lumotlarni saqlashni ham alohida qism sifatida ko'rib chiqing."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Nega loyihani kod yozishdan oldin rejalashtirish foydali?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Reja dastur nima qilishi kerakligini aniqlashtiradi.",
+        "Qanday funksiyalar va ma'lumotlar kerakligini oldindan bilish mumkin.",
+        "Bu kod yozish paytidagi chalkashlikni kamaytiradi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Task Tracker rejasini tuzing",
+    "description": "Oddiy Task Tracker dasturi uchun to'liq reja tuzing. Dastur maqsadini, asosiy imkoniyatlarini, kerakli ma'lumot strukturalarini, funksiyalarini va umumiy pseudocode ni yozing. Hozircha haqiqiy kod yozish shart emas.",
+    "hints": [
+      "Birinchi navbatda dastur qanday muammoni hal qilishini bitta jumlada yozing.",
+      "Keyin kamida uchta asosiy imkoniyatni belgilang: qo'shish, ko'rish va bajarilgan deb belgilash.",
+      "Bir nechta vazifalarni Listda, har bir vazifani esa title va completed maydonlari bilan tasavvur qiling.",
+      "Har bir imkoniyat uchun alohida funksiya rejalashtiring.",
+      "Oxirida dastur oqimini pseudocode ko'rinishida bosqichma-bosqich yozing."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Loyiha yaratishdagi birinchi muhim qadamlardan biri nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Dastur maqsadini aniqlash",
+          "Darhol juda ko'p kod yozish",
+          "Barcha funksiyalarni bitta joyga yozish",
+          "Xatolarni e'tiborsiz qoldirish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Bir nechta vazifalarni saqlash uchun qaysi struktura qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "List",
+          "Faqat bitta variable",
+          "If",
+          "Return"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Bitta vazifaning title va completed qiymatlarini saqlash uchun qaysi yondashuv qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "Key-value ko'rinishidagi Map",
+          "Faqat bitta son",
+          "Faqat loop",
+          "Faqat if"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "add_task, show_tasks va complete_task funksiyalarini alohida qilish qaysi tamoyilga mos?",
+        "type": "multiple_choice",
+        "options": [
+          "Har bir funksiya bitta aniq vazifani bajarishi",
+          "Barcha vazifalarni bitta funksiyaga joylash",
+          "Faqat global variable ishlatish",
+          "Kodning barcha qismini takrorlash"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Pseudocode loyihada nima uchun foydali?",
+        "type": "multiple_choice",
+        "options": [
+          "Kod yozishdan oldin dastur mantig'ini rejalashtirish uchun",
+          "Faqat dizayn rangini tanlash uchun",
+          "Internet tezligini oshirish uchun",
+          "Ma'lumotlarni avtomatik o'chirish uchun"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

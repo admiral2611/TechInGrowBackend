@@ -1,0 +1,215 @@
+{
+  "id": 27,
+  "day": 27,
+  "title": "Kodni soddalashtirish",
+  "description": "Kodning tushunarli, ixcham va boshqarish oson bo'lishi uchun clean code asoslarini o'rganamiz.",
+  "level": "beginner",
+  "category": "clean_code",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Clean code nima ekanligini tushunish",
+    "Tushunarli nomlashning ahamiyatini anglash",
+    "Keraksiz takrorlanishni kamaytirishni o'rganish",
+    "Funksiyaga bitta aniq vazifa berish g'oyasini tushunish",
+    "Kodning o'qilishi va keyinchalik o'zgartirilishini yengillashtirish"
+  ],
+
+  "prerequisites": [
+    26
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Clean code nima?",
+      "content": "Clean code — boshqa dasturchi yoki kelajakdagi o'zingiz oson tushuna oladigan koddir. Kod faqat ishlashi emas, balki o'qilishi, tekshirilishi va o'zgartirilishi ham oson bo'lishi kerak."
+    },
+    {
+      "id": 2,
+      "title": "Tushunarli nomlar",
+      "content": "O'zgaruvchi va funksiyalarning nomlari ularning vazifasini tushuntirib turishi kerak. Masalan, x o'rniga user_age, a o'rniga total_price kabi nomlar kodni ancha tushunarli qiladi."
+    },
+    {
+      "id": 3,
+      "title": "Qisqa emas, aniq nom",
+      "content": "Eng qisqa nom har doim eng yaxshi nom emas. Agar nom kodning ma'nosini yashirsa, keyinchalik uni tushunish qiyinlashadi. Tushunarli va aniq nom tanlash ko'pincha bir necha ortiqcha harfdan muhimroq."
+    },
+    {
+      "id": 4,
+      "title": "Takrorlanishni kamaytirish",
+      "content": "Bir xil kod bir necha joyda takrorlansa, uni alohida funksiya yoki umumiy qismga ajratish mumkin. Bu o'zgarish kiritishda faqat bitta joyni yangilash imkonini beradi."
+    },
+    {
+      "id": 5,
+      "title": "Bitta funksiya — bitta vazifa",
+      "content": "Funksiya imkon qadar bitta aniq vazifani bajarishi yaxshi. Masalan, calculate_total funksiyasi umumiy narxni hisoblasin, print_receipt esa natijani chiqarish bilan shug'ullansin. Bu kodni tushunish va test qilishni osonlashtiradi."
+    },
+    {
+      "id": 6,
+      "title": "Keraksiz murakkablikdan qochish",
+      "content": "Oddiy masala uchun keragidan ortiq shart, loop yoki funksiya ishlatish kodni murakkablashtiradi. Yechim imkon qadar sodda, lekin tushunarli bo'lishi kerak."
+    },
+    {
+      "id": 7,
+      "title": "Kod formatining ahamiyati",
+      "content": "Bir xil tartibdagi bo'shliqlar, qatorlar va bloklar kodni ko'z bilan tez o'qishga yordam beradi. Tartibli format kod mantig'ini tushunishni yengillashtiradi."
+    },
+    {
+      "id": 8,
+      "title": "Clean code fikrlashi",
+      "content": "Kod yozgandan keyin o'zingizga savol bering: bu kodni bir oy o'tib qayta ko'rsam tushunamanmi? Boshqa dasturchi izohsiz ham asosiy mantiqni anglay oladimi? Keraksiz takrorlanish yoki ortiqcha murakkablik bormi?"
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Qaysi o'zgaruvchi nomi tushunarliroq?",
+      "type": "multiple_choice",
+      "options": [
+        "user_age",
+        "x",
+        "a",
+        "v"
+      ],
+      "hints": [
+        "Nom qiymat nimani anglatishini tushuntirishi kerak.",
+        "Bir harfli nomlar ko'pincha ma'noni yashiradi.",
+        "Foydalanuvchining yoshini ifodalovchi nomni tanlang."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Bir xil hisoblash kodi 5 ta joyda takrorlangan bo'lsa, qanday yondashuv foydali?",
+      "type": "multiple_choice",
+      "options": [
+        "Uni alohida funksiya qilish",
+        "Yana ko'proq nusxa olish",
+        "Barcha kodni o'chirish",
+        "Faqat nomini o'zgartirish"
+      ],
+      "hints": [
+        "Bir xil kod ko'p joyda bo'lsa, keyin o'zgartirish qiyinlashadi.",
+        "Umumiy vazifani bitta joyga yig'ish mumkin.",
+        "Takrorlanadigan hisoblashni funksiya qilish foydali."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Nima uchun funksiya bitta aniq vazifani bajarishi foydali?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Kichik va aniq funksiyani tushunish osonroq.",
+        "Uni alohida test qilish ham qulay.",
+        "Bir funksiya juda ko'p ish qilsa, xatoni topish qiyinlashishi mumkin."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "calculate_total va print_receipt vazifalarini bitta katta funksiya o'rniga ikkita funksiya qilishning foydasini tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Bir funksiya hisoblash bilan shug'ullanishi mumkin.",
+        "Ikkinchi funksiya natijani chiqarishi mumkin.",
+        "Vazifalarni ajratish kodni tushunish va o'zgartirishni osonlashtiradi."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Qaysi yondashuv clean code ga yaqinroq?",
+      "type": "multiple_choice",
+      "options": [
+        "Tushunarli nomlar va sodda mantiq",
+        "Imkon qadar qisqa va tushunarsiz nomlar",
+        "Bir xil kodni ko'p marta nusxalash",
+        "Barcha vazifani bitta juda katta funksiyaga joylash"
+      ],
+      "hints": [
+        "Clean code ning maqsadi faqat kodni ishlatish emas.",
+        "Kod boshqalarga ham tushunarli bo'lishi kerak.",
+        "Tushunarli nom va sodda mantiq muhim."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Kodni soddalashtirish",
+    "description": "Tasavvur qiling, dasturda mahsulot umumiy narxini hisoblaydigan bir xil formula uchta joyda takrorlangan va o'zgaruvchilar a, b va c deb nomlangan. Kodni clean code tamoyillari asosida qanday yaxshilashingizni tushuntiring.",
+    "hints": [
+      "Avval a, b va c nimani anglatishini aniqlang.",
+      "Ularni price, quantity va total kabi tushunarli nomlar bilan almashtirishni o'ylang.",
+      "Takrorlanayotgan hisoblashni alohida funksiya qilish mumkin.",
+      "Funksiya nomi uning vazifasini tushuntirib tursin.",
+      "Natijada bir xil mantiq faqat bitta joyda qolishi kerak."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Clean code ning asosiy maqsadi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Kodni tushunarli va boshqarish oson qilish",
+          "Faqat kodni qisqartirish",
+          "Faqat loop sonini ko'paytirish",
+          "Internet tezligini oshirish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Qaysi nom tushunarliroq?",
+        "type": "multiple_choice",
+        "options": [
+          "total_price",
+          "x",
+          "z",
+          "q"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Bir xil kod bir necha joyda takrorlansa nima qilish foydali?",
+        "type": "multiple_choice",
+        "options": [
+          "Umumiy qismini alohida funksiya qilish",
+          "Uni yana ko'proq nusxalash",
+          "Hech qachon o'zgartirmaslik",
+          "Faqat comment qo'shish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Bitta funksiya uchun yaxshi tamoyil qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "Bitta aniq vazifani bajarish",
+          "Imkon qadar ko'p vazifani bajarish",
+          "Faqat global o'zgaruvchilar ishlatish",
+          "Hech qanday natija bermaslik"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Nega tushunarli nomlar muhim?",
+        "type": "multiple_choice",
+        "options": [
+          "Kod nimani anglatishini tezroq tushunishga yordam beradi",
+          "Internet tezligini oshiradi",
+          "Barcha xatolarni avtomatik tuzatadi",
+          "Kodga hech qanday ta'siri yo'q"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

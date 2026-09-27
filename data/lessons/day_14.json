@@ -1,0 +1,214 @@
+{
+  "id": 14,
+  "day": 14,
+  "title": "Scope",
+  "description": "O'zgaruvchining qayerda mavjud bo'lishi va qayerdan foydalanish mumkinligini tushunamiz.",
+  "level": "beginner",
+  "category": "functions",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Scope nima ekanligini tushunish",
+    "Local scope tushunchasini anglash",
+    "Global scope tushunchasini tushunish",
+    "Funksiya ichida yaratilgan o'zgaruvchi nega tashqarida ishlamasligini bilish",
+    "O'zgaruvchilarni kerakli joyda yaratish odatini shakllantirish"
+  ],
+
+  "prerequisites": [
+    13
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Scope nima?",
+      "content": "Scope o'zgaruvchining dastur ichida qayerda mavjud ekanini va undan qayerdan foydalanish mumkinligini bildiradi. Har bir o'zgaruvchi dasturning barcha joyida avtomatik mavjud bo'lavermaydi."
+    },
+    {
+      "id": 2,
+      "title": "Local scope",
+      "content": "Funksiya ichida yaratilgan o'zgaruvchi odatda local o'zgaruvchi hisoblanadi. U asosan shu funksiya ichida mavjud bo'ladi. Masalan, calculate_total funksiyasi ichida total nomli o'zgaruvchi yaratilsa, boshqa joydan total ga to'g'ridan-to'g'ri murojaat qilib bo'lmasligi mumkin."
+    },
+    {
+      "id": 3,
+      "title": "Nega local scope foydali?",
+      "content": "Local scope funksiyalarni bir-biridan ajratib turadi. Bir funksiyadagi vaqtinchalik o'zgaruvchilar boshqa funksiyalar ishiga tasodifan ta'sir qilmaydi. Bu kodni xavfsizroq va tushunarliroq qiladi."
+    },
+    {
+      "id": 4,
+      "title": "Global scope",
+      "content": "Funksiyalardan tashqarida yaratilgan o'zgaruvchilar ko'pincha global scope da bo'ladi. Bunday qiymatlar dasturning bir nechta joyidan ko'rinishi mumkin. Lekin global o'zgaruvchilarni haddan tashqari ko'p ishlatish kodni tushunishni qiyinlashtirishi mumkin."
+    },
+    {
+      "id": 5,
+      "title": "Bir xil nomli o'zgaruvchilar",
+      "content": "Turli scope larda bir xil nomli o'zgaruvchilar mavjud bo'lishi mumkin. Masalan, tashqarida score = 100 bo'lishi, funksiya ichida esa boshqa score o'zgaruvchisi yaratilishi mumkin. Ularning nomi bir xil bo'lsa ham, ular har doim bir xil o'zgaruvchi bo'lmasligi mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Parametr ham local qiymat",
+      "content": "Funksiya parametrlarini ham shu funksiya ichidagi local qiymatlar sifatida tasavvur qilish mumkin. Masalan, greet_user(name) funksiyasidagi name parametridan funksiya ichida foydalaniladi. Funksiya tashqarisida aynan shu parametr avtomatik mavjud bo'lmaydi."
+    },
+    {
+      "id": 7,
+      "title": "Scope bilan bog'liq xatolar",
+      "content": "Ba'zan dasturchi bir o'zgaruvchini funksiya ichida yaratib, keyin undan funksiya tashqarisida foydalanishga harakat qiladi. Agar o'zgaruvchi tashqarida mavjud bo'lmasa, xatolik yuzaga keladi. Shuning uchun o'zgaruvchining qayerda yaratilganiga e'tibor berish muhim."
+    },
+    {
+      "id": 8,
+      "title": "Qayerda o'zgaruvchi yaratish kerak?",
+      "content": "O'zgaruvchini imkon qadar undan foydalaniladigan eng kichik scope ichida yaratish yaxshi odat hisoblanadi. Agar qiymat faqat bitta funksiya uchun kerak bo'lsa, uni global qilish shart emas."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Funksiya ichida yaratilgan o'zgaruvchi odatda qaysi scope ga tegishli?",
+      "type": "multiple_choice",
+      "options": [
+        "Local scope",
+        "Global scope",
+        "Internet scope",
+        "Loop scope"
+      ],
+      "hints": [
+        "O'zgaruvchi qayerda yaratilganiga e'tibor bering.",
+        "U funksiya ichida yaratilgan.",
+        "Funksiya ichidagi o'zgaruvchi odatda local scope ga tegishli bo'ladi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Global o'zgaruvchi deganda nimani tushunasiz?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Local o'zgaruvchi faqat kichik hududda mavjud bo'lishini eslang.",
+        "Global o'zgaruvchi kengroq hududdan ko'rinadi.",
+        "Ko'pincha funksiyalardan tashqarida yaratilgan o'zgaruvchilar global bo'ladi."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Funksiya ichida yaratilgan temporary_value o'zgaruvchisidan funksiya tashqarisida foydalanishga urinish qanday muammo keltirib chiqarishi mumkin?",
+      "type": "multiple_choice",
+      "options": [
+        "O'zgaruvchi mavjud bo'lmasligi mumkin",
+        "Internet tezlashadi",
+        "Loop avtomatik boshlanadi",
+        "Funksiya doim true qaytaradi"
+      ],
+      "hints": [
+        "temporary_value funksiya ichida yaratilgan.",
+        "Funksiya ichidagi qiymat odatda local scope ga tegishli.",
+        "Local o'zgaruvchi funksiya tashqarisida ko'rinmasligi mumkin."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Funksiya parametrini qaysi scope bilan bog'lash mantiqliroq?",
+      "type": "multiple_choice",
+      "options": [
+        "Funksiyaning local scope i",
+        "Har doim global scope",
+        "Faqat loop scope",
+        "Hech qanday scope emas"
+      ],
+      "hints": [
+        "Parametr funksiya ishlayotgan paytda qiymat qabul qiladi.",
+        "U asosan funksiya ichida ishlatiladi.",
+        "Shuning uchun parametrni local scope bilan bog'lash mantiqli."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Nima uchun barcha o'zgaruvchilarni global qilish yaxshi yondashuv emasligini o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Ko'p joydan bitta qiymatni o'zgartirish mumkinligini tasavvur qiling.",
+        "Bu qaysi kod qiymatni o'zgartirganini tushunishni qiyinlashtirishi mumkin.",
+        "Keraksiz global qiymatlar kodni boshqarish va xatoni topishni qiyinlashtiradi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: O'zgaruvchilarni joylashtirish",
+    "description": "Tasavvur qiling, calculate_total funksiyasi ichida price, quantity va total qiymatlaridan foydalaniladi. price va quantity parametr sifatida keladi, total esa funksiya ichida hisoblanadi. Qaysi qiymatlar local scope da bo'lishini va nima sababdan ularni global qilish shart emasligini tushuntiring.",
+    "hints": [
+      "Price va quantity funksiya parametrlaridir.",
+      "Parametrlar odatda funksiya local scope ida ishlaydi.",
+      "Total ham funksiya ichida yaratilayotgan bo'lsa, u ham local bo'lishi mumkin.",
+      "Agar bu qiymatlar faqat calculate_total uchun kerak bo'lsa, ularni global qilishga ehtiyoj yo'q."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Scope nimani bildiradi?",
+        "type": "multiple_choice",
+        "options": [
+          "O'zgaruvchining qayerda mavjudligi va undan qayerdan foydalanish mumkinligini",
+          "Faqat o'zgaruvchining qiymatini",
+          "Faqat loop sonini",
+          "Internet ulanishini"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Funksiya ichida yaratilgan o'zgaruvchi odatda qanday o'zgaruvchi hisoblanadi?",
+        "type": "multiple_choice",
+        "options": [
+          "Local",
+          "Global",
+          "Static internet",
+          "Output"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Global scope nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Funksiyalardan tashqaridagi kengroq scope",
+          "Faqat bitta if ichidagi scope",
+          "Faqat loopning oxiri",
+          "Funksiyaning return qiymati"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "O'zgaruvchini imkon qadar undan foydalaniladigan kichik scope da yaratishning foydasi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Kod tushunarliroq va boshqarish osonroq bo'ladi",
+          "Internet tezlashadi",
+          "Barcha funksiyalar bir xil bo'ladi",
+          "Looplar kerak bo'lmaydi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Funksiya parametrlaridan odatda qayerda foydalaniladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Funksiya ichida",
+          "Faqat boshqa dasturda",
+          "Faqat internetda",
+          "Hech qayerda"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

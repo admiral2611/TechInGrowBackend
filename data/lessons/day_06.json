@@ -1,0 +1,215 @@
+{
+  "id": 6,
+  "day": 6,
+  "title": "Takrorlanish nima?",
+  "description": "Bir xil yoki o'xshash amallarni takroran bajarish uchun loop tushunchasi nima ekanini o'rganamiz.",
+  "level": "beginner",
+  "category": "loops",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Takrorlanish nima ekanligini tushunish",
+    "Loop nima uchun kerakligini anglash",
+    "Takrorlanuvchi vazifalarni aniqlashni o'rganish",
+    "Loop ishlatish kodni qanday soddalashtirishini tushunish",
+    "Takrorlanish qachon tugashi kerakligini anglash"
+  ],
+
+  "prerequisites": [
+    5
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Takrorlanish nima?",
+      "content": "Takrorlanish bir xil yoki o'xshash amalni bir necha marta bajarishdir. Masalan, 1 dan 10 gacha bo'lgan sonlarni ekranga chiqarish uchun har bir son uchun alohida buyruq yozish mumkin. Lekin bu juda ko'p takroriy kodga olib keladi. Loop bunday vazifalarni avtomatik takrorlash uchun ishlatiladi."
+    },
+    {
+      "id": 2,
+      "title": "Loop nima?",
+      "content": "Loop dasturga ma'lum bir amalni qayta-qayta bajarishni buyuradigan mexanizmdir. Masalan, biror matnni 5 marta chiqarish, ro'yxatdagi barcha elementlarni ko'rib chiqish yoki ma'lum bir shart bajarilguncha amalni takrorlash loop yordamida bajariladi."
+    },
+    {
+      "id": 3,
+      "title": "Nega loop kerak?",
+      "content": "Loop bo'lmasa, takrorlanuvchi vazifalarda bir xil kodni ko'p marta yozishga to'g'ri keladi. Masalan, 'Salom' so'zini 100 marta chiqarish uchun 100 ta alohida buyruq yozish noqulay. Loop bilan esa bitta amalni 100 marta bajarishni qisqa va tushunarli tarzda yozish mumkin."
+    },
+    {
+      "id": 4,
+      "title": "Loopning asosiy qismlari",
+      "content": "Ko'p looplarda uchta muhim tushuncha mavjud: qayerdan boshlash, qachongacha davom etish va har bir takrorlanishda nima qilish. Masalan, 1 dan boshlash, 5 gacha davom etish va har safar sonni ekranga chiqarish."
+    },
+    {
+      "id": 5,
+      "title": "Takrorlanish soni",
+      "content": "Ba'zi vazifalarda necha marta takrorlash kerakligi oldindan ma'lum bo'ladi. Masalan, 10 ta foydalanuvchining ma'lumotini ko'rib chiqish. Boshqa vazifalarda esa takrorlanish soni oldindan noma'lum bo'lishi mumkin va loop ma'lum bir shart bajarilguncha davom etadi."
+    },
+    {
+      "id": 6,
+      "title": "Loop tugashi nega muhim?",
+      "content": "Har bir loop qachondir tugashi kerak. Agar loop tugash sharti noto'g'ri bo'lsa, u cheksiz davom etishi mumkin. Bu infinite loop deb ataladi. Shuning uchun takrorlanish algoritmini tuzishda loopning qachon to'xtashini aniq belgilash juda muhim."
+    },
+    {
+      "id": 7,
+      "title": "Kundalik hayotdagi takrorlanish",
+      "content": "Takrorlanishni kundalik hayotda ham ko'rish mumkin. Masalan, zinadan chiqishda har bir pog'onada bir xil harakatni takrorlaymiz. Idishlarni yuvishda har bir idishga o'xshash amallarni bajaramiz. Dasturlashdagi loop ham shu g'oyaga asoslanadi."
+    },
+    {
+      "id": 8,
+      "title": "Loopni qachon ishlatamiz?",
+      "content": "Agar bir xil yoki o'xshash amal bir necha marta bajarilishi kerak bo'lsa, loop ishlatish haqida o'ylash kerak. Lekin har bir takroriy ko'ringan vazifada loop shart emas. Muhimi, vazifaning mantiqiy ravishda takrorlanayotganini aniqlash."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Bir xil amalni 20 marta bajarish kerak bo'lsa, qaysi tushuncha eng mos keladi?",
+      "type": "multiple_choice",
+      "options": [
+        "Loop",
+        "O'zgaruvchi",
+        "Faqat if",
+        "Faqat input"
+      ],
+      "hints": [
+        "Savolda bir xil amal ko'p marta takrorlanmoqda.",
+        "Takroriy ishlarni avtomatlashtirish uchun qanday tushuncha ishlatilishini eslang.",
+        "Bir amalni qayta-qayta bajarish uchun loop ishlatiladi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "1 dan 5 gacha bo'lgan sonlarni chiqarish vazifasini qadamlar bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval qaysi sondan boshlashingizni aniqlang.",
+        "Har bir takrorlanishda joriy son bilan nima qilish kerakligini o'ylang.",
+        "Sonni chiqarib, keyin uni 1 ga oshirib borish mumkin.",
+        "Jarayon 5 ga yetganda tugashi kerak."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Loop ishlatishning asosiy foydasi nima?",
+      "type": "multiple_choice",
+      "options": [
+        "Takroriy kodni kamaytirish",
+        "Internet tezligini oshirish",
+        "Telefon xotirasini avtomatik tozalash",
+        "Dasturlash tilini almashtirish"
+      ],
+      "hints": [
+        "Bir xil kodni 100 marta yozish kerakligini tasavvur qiling.",
+        "Loop shu takroriy kodni bitta mantiqqa jamlashga yordam beradi.",
+        "Asosiy foyda — takrorlanadigan kodni kamaytirish."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Agar loop hech qachon tugamasa, bu holat nima deb ataladi?",
+      "type": "multiple_choice",
+      "options": [
+        "Infinite loop",
+        "Input",
+        "Output",
+        "Variable"
+      ],
+      "hints": [
+        "Bu loopning tugash sharti hech qachon bajarilmaydigan holat.",
+        "Infinite so'zi 'cheksiz' degan ma'noni anglatadi.",
+        "Cheksiz davom etadigan loop infinite loop deb ataladi."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Kundalik hayotdan takrorlanishga bitta misol yozing va undagi takroriy amalni tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Har kuni yoki bir vazifa ichida bir necha marta bajaradigan ishlaringizni o'ylang.",
+        "Masalan, zinadan chiqish, idish yuvish yoki bir nechta kitobni javonga joylash mumkin.",
+        "Qaysi harakat qayta-qayta bajarilayotganini alohida yozing."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: 1 dan 10 gacha",
+    "description": "Kod yozmasdan 1 dan 10 gacha bo'lgan sonlarni ketma-ket chiqaradigan takrorlanish algoritmini yozing. Boshlang'ich qiymatni, qachongacha davom etishini, har bir takrorlanishda nima bajarilishini va loop qachon tugashini tushuntiring.",
+    "hints": [
+      "Boshlang'ich qiymat sifatida 1 dan foydalaning.",
+      "Har bir takrorlanishda joriy sonni chiqarish kerak.",
+      "Har safar sonni 1 ga oshirib boring.",
+      "Son 10 dan o'tganda loop tugashi kerak."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Loop nima uchun ishlatiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Takroriy amallarni bajarish uchun",
+          "Faqat ma'lumot saqlash uchun",
+          "Faqat rasm chizish uchun",
+          "Internetga ulanish uchun"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Loopning asosiy afzalligi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Takroriy kodni kamaytiradi",
+          "Kompyuterni o'chiradi",
+          "Har doim dasturni sekinlashtiradi",
+          "Faqat bitta amal bajaradi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Infinite loop nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Bir marta ishlaydigan loop",
+          "Hech qachon tugamaydigan loop",
+          "Faqat sonlarni saqlaydigan loop",
+          "Xatolarsiz ishlaydigan dastur"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 4,
+        "question": "Loop tuzishda nimani aniq belgilash muhim?",
+        "type": "multiple_choice",
+        "options": [
+          "Qachon tugashini",
+          "Faqat fayl nomini",
+          "Telefon modelini",
+          "Internet tezligini"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Qaysi holatda loop ishlatish eng mantiqli?",
+        "type": "multiple_choice",
+        "options": [
+          "Bir xil amal ko'p marta bajarilganda",
+          "Faqat bitta oddiy qiymat saqlanganda",
+          "Faqat dastur nomi yozilganda",
+          "Hech qanday takrorlanish bo'lmaganda"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

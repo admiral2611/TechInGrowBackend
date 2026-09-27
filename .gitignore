@@ -1,0 +1,100 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# =========================
+# Virtual environment
+# =========================
+venv/
+.venv/
+env/
+ENV/
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# PyCharm / JetBrains
+# =========================
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Database
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# Cache
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# =========================
+# Coverage
+# =========================
+.coverage
+.coverage.*
+htmlcov/
+
+# =========================
+# Build / package
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# TechInGrow local files
+# =========================
+media/
+uploads/
+temp/
+tmp/
+
+# Local generated data
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# =========================
+# Credentials / keys
+# =========================
+*.pem
+*.key
+*.crt
+credentials.json
+secrets.json

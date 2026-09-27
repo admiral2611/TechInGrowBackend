@@ -1,0 +1,215 @@
+{
+  "id": 8,
+  "day": 8,
+  "title": "While loop",
+  "description": "Takrorlanish soni oldindan aniq bo'lmagan holatlarda while loop qanday ishlashini o'rganamiz.",
+  "level": "beginner",
+  "category": "loops",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "While loop nima ekanligini tushunish",
+    "While loop qachon ishlatilishini anglash",
+    "Shart asosida takrorlanishni tushunish",
+    "Loop ichida qiymatni o'zgartirish nega muhimligini bilish",
+    "Infinite loop qanday paydo bo'lishini tushunish"
+  ],
+
+  "prerequisites": [
+    7
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "While loop nima?",
+      "content": "While loop ma'lum bir shart true bo'lib turgan vaqt davomida amalni qayta-qayta bajaradi. For loopda ko'pincha takrorlanish soni oldindan ma'lum bo'ladi, while loopda esa takrorlanish qancha davom etishi shartga bog'liq bo'ladi."
+    },
+    {
+      "id": 2,
+      "title": "While loop qanday ishlaydi?",
+      "content": "While loop avval shartni tekshiradi. Agar shart true bo'lsa, loop ichidagi amal bajariladi. Keyin shart yana tekshiriladi. Shart false bo'lganda loop to'xtaydi."
+    },
+    {
+      "id": 3,
+      "title": "Oddiy misol",
+      "content": "Tasavvur qiling, count = 1. Shart count <= 5 bo'lsa, count qiymatini chiqaramiz va keyin count ni 1 ga oshiramiz. Jarayon count 6 bo'lganda to'xtaydi, chunki 6 <= 5 false bo'ladi."
+    },
+    {
+      "id": 4,
+      "title": "While loop qachon qulay?",
+      "content": "Takrorlanish soni oldindan noma'lum bo'lgan vaziyatlarda while loop juda qulay. Masalan, foydalanuvchi to'g'ri parol kiritmaguncha qayta so'rash yoki faylda ma'lumot tugamaguncha o'qishni davom ettirish."
+    },
+    {
+      "id": 5,
+      "title": "Loop ichida qiymatni o'zgartirish",
+      "content": "While loopda shart bilan bog'liq qiymatni odatda loop ichida o'zgartirib borish kerak. Aks holda shart doim true bo'lib qolishi va loop hech qachon tugamasligi mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Infinite loop",
+      "content": "Agar while loopning sharti hech qachon false bo'lmasa, loop cheksiz davom etadi. Bu infinite loop deyiladi. Masalan, count = 1 bo'lib, count < 5 sharti tekshirilsa, lekin count hech qachon oshirilmasa, loop to'xtamaydi."
+    },
+    {
+      "id": 7,
+      "title": "For va While farqi",
+      "content": "For loop ko'pincha necha marta takrorlash kerakligi ma'lum bo'lganda ishlatiladi. While loop esa takrorlanish soni aniq bo'lmagan, lekin davom etish sharti mavjud bo'lgan holatlarda qulay."
+    },
+    {
+      "id": 8,
+      "title": "While loop uchun fikrlash modeli",
+      "content": "While loop tuzishda uchta savol muhim: qaysi shart true bo'lib turishi kerak, loop ichida nima bajariladi va qaysi o'zgarish shartni oxir-oqibat false qiladi. Shu uchta savolga javob topish infinite loopdan qochishga yordam beradi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "While loop qachongacha ishlaydi?",
+      "type": "multiple_choice",
+      "options": [
+        "Shart true bo'lib turgan vaqt davomida",
+        "Faqat bir marta",
+        "Har doim 10 marta",
+        "Faqat shart false bo'lsa"
+      ],
+      "hints": [
+        "While loop har safar shartni tekshiradi.",
+        "Shart bajarilayotgan bo'lsa loop davom etadi.",
+        "Shart false bo'lganda loop to'xtaydi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "count = 1 va shart count <= 3 bo'lsa, count har safar 1 ga oshirilganda loop nechta marta ishlaydi?",
+      "type": "multiple_choice",
+      "options": [
+        "2 marta",
+        "3 marta",
+        "4 marta",
+        "Cheksiz"
+      ],
+      "hints": [
+        "Count 1 dan boshlanadi.",
+        "Loop count qiymatlari 1, 2 va 3 bo'lganda ishlaydi.",
+        "Count 4 bo'lganda 4 <= 3 false bo'ladi."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "While loop ichida shartga ta'sir qiluvchi qiymat umuman o'zgarmasa qanday muammo paydo bo'lishi mumkin?",
+      "type": "multiple_choice",
+      "options": [
+        "Infinite loop",
+        "Internet uzilishi",
+        "Variable yo'qolishi",
+        "Dastur avtomatik tugashi"
+      ],
+      "hints": [
+        "Loop tugashi uchun shart bir vaqtda false bo'lishi kerak.",
+        "Agar shartga ta'sir qiluvchi qiymat o'zgarmasa, shart doim true bo'lib qolishi mumkin.",
+        "Cheksiz davom etadigan loop qanday atalishini eslang."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Foydalanuvchi to'g'ri parol kiritmaguncha parol so'rash vazifasi uchun for yoki while loopdan qaysi biri mantiqliroq? Sababini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Oldindan foydalanuvchi nechta urinishda to'g'ri parol kiritishini bilmaymiz.",
+        "Bu vazifa aniq takrorlanish soniga emas, shartga bog'liq.",
+        "Parol noto'g'ri bo'lib turgan vaqt davomida takrorlanadigan loopni o'ylang."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "count 1 dan boshlanib 5 dan kichik bo'lgan vaqt davomida ishlaydigan loopning ishlash qadamlarini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval count = 1 deb boshlang.",
+        "Har safar count < 5 shartini tekshiring.",
+        "Shart true bo'lsa count bilan kerakli amalni bajaring va uni 1 ga oshiring.",
+        "Count 5 bo'lganda shart false bo'ladi va loop tugaydi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: To'g'ri parolni kutish",
+    "description": "Tasavvur qiling, foydalanuvchi to'g'ri parol kiritmaguncha dastur undan parol so'rashi kerak. Kod yozmasdan while loop asosidagi algoritm tuzing. Shart nima bo'lishini, loop ichida nima bajarilishini va loop qachon tugashini tushuntiring.",
+    "hints": [
+      "Loopning davom etish sharti foydalanuvchining paroli noto'g'ri bo'lishi bilan bog'liq.",
+      "Loop ichida foydalanuvchidan yangi parol olish kerak.",
+      "Har bir urinishdan keyin yangi qiymatni to'g'ri parol bilan solishtiring.",
+      "Parol to'g'ri bo'lganda shart false bo'lib, loop tugashi kerak."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "While loop qaysi holatda ayniqsa qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "Takrorlanish soni shartga bog'liq bo'lsa",
+          "Hech qanday takrorlanish bo'lmasa",
+          "Faqat bir qiymat saqlansa",
+          "Faqat internet ishlatilsa"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "While loop qachon to'xtaydi?",
+        "type": "multiple_choice",
+        "options": [
+          "Shart false bo'lganda",
+          "Shart true bo'lganda",
+          "Har doim birinchi takrorlanishda",
+          "Faqat dastur yopilganda"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Infinite loop nima sababdan yuzaga kelishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Shart hech qachon false bo'lmasa",
+          "O'zgaruvchi nomi uzun bo'lsa",
+          "Internet sekin bo'lsa",
+          "Dasturda bitta qiymat bo'lsa"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "For va while loop orasidagi asosiy farqlardan biri qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "For ko'pincha takrorlanish soni ma'lum bo'lganda, while esa shartga bog'liq bo'lganda ishlatiladi",
+          "For faqat matn bilan ishlaydi",
+          "While faqat son saqlaydi",
+          "Ular umuman bir-biridan farq qilmaydi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "While loop ichida shartga ta'sir qiluvchi qiymat nega o'zgartiriladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Loop oxir-oqibat tugashi uchun",
+          "Internet ishlashi uchun",
+          "Dastur nomini o'zgartirish uchun",
+          "Faqat kod uzunroq bo'lishi uchun"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

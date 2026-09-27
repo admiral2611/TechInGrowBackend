@@ -1,0 +1,210 @@
+{
+  "id": 26,
+  "day": 26,
+  "title": "Debugging fikrlashi",
+  "description": "Xatoni tasodifiy tuzatishga urinish o'rniga uni bosqichma-bosqich topish va tekshirish usulini o'rganamiz.",
+  "level": "beginner",
+  "category": "debugging",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Debugging nima ekanligini tushunish",
+    "Xatoni qayta takrorlashni o'rganish",
+    "Muammoni kichik qismga ajratishni tushunish",
+    "Qiymatlar va dastur holatini tekshirishni o'rganish",
+    "Fix qilgandan keyin qayta test qilish odatini shakllantirish"
+  ],
+
+  "prerequisites": [
+    25
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Debugging nima?",
+      "content": "Debugging dasturdagi xatoni topish, uning sababini tushunish va to'g'ri yechim bilan tuzatish jarayonidir. Debugging faqat kodni o'zgartirish emas, balki muammo qayerda va nima sababdan yuz berayotganini aniqlashdir."
+    },
+    {
+      "id": 2,
+      "title": "1-qadam: Reproduce",
+      "content": "Birinchi qadam xatoni qayta takrorlashdir. Xato qachon yuz berishini bilmasak, uni tekshirish qiyin bo'ladi. Masalan, qaysi input berilganda noto'g'ri natija chiqayotganini aniqlash kerak."
+    },
+    {
+      "id": 3,
+      "title": "2-qadam: Isolate",
+      "content": "Keyingi qadam muammoni kichik qismga ajratishdir. Butun dasturga qarash o'rniga qaysi funksiya, shart yoki hisoblash muammoga sabab bo'layotganini topishga harakat qilamiz."
+    },
+    {
+      "id": 4,
+      "title": "3-qadam: Inspect",
+      "content": "Muammoli qism aniqlangach, undagi qiymatlarni va bajarilish tartibini tekshiramiz. Masalan, o'zgaruvchining qiymati kutilganidekmi, shart true bo'lishi kerak bo'lgan joyda false bo'lyaptimi yoki hisoblash noto'g'rimi, shuni ko'ramiz."
+    },
+    {
+      "id": 5,
+      "title": "4-qadam: Fix",
+      "content": "Xatoning asl sababi aniqlangandan keyin kodni tuzatamiz. Muhimi, taxmin bilan tasodifiy o'zgarishlar qilish emas, aynan topilgan sababni bartaraf etishdir."
+    },
+    {
+      "id": 6,
+      "title": "5-qadam: Test",
+      "content": "Xato tuzatilgandan keyin dastur qayta tekshirilishi kerak. Avval xatoga sabab bo'lgan holatni yana sinab ko'ramiz, keyin boshqa odatiy holatlar ham buzilmaganini tekshiramiz."
+    },
+    {
+      "id": 7,
+      "title": "Kutilgan va haqiqiy natija",
+      "content": "Debuggingda ikki narsani solishtirish foydali: nima bo'lishi kerak edi va aslida nima bo'ldi. Masalan, 100000 so'mga 20 foiz chegirma qo'llanganda 80000 chiqishi kerak, lekin 120000 chiqsa, process bosqichidagi hisoblashni tekshirish kerak."
+    },
+    {
+      "id": 8,
+      "title": "Tasodifiy o'zgartirishdan saqlanish",
+      "content": "Kod ishlamayotganda ko'p joyni bir vaqtning o'zida o'zgartirish muammoni yanada chalkashtirishi mumkin. Bitta taxminni tekshirish, natijani ko'rish va keyin keyingi qadamga o'tish yaxshiroq debugging usulidir."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Debugging jarayonida birinchi navbatda nima qilish foydali?",
+      "type": "multiple_choice",
+      "options": [
+        "Xatoni qayta takrorlash",
+        "Barcha kodni o'chirish",
+        "Tasodifiy qiymatlarni o'zgartirish",
+        "Yangi loyiha boshlash"
+      ],
+      "hints": [
+        "Muammoni tuzatishdan oldin uning qachon yuz berishini bilish kerak.",
+        "Bir xil holatda xatoni yana ko'ra olish muhim.",
+        "Bu bosqich reproduce deb ataladi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Isolate bosqichining vazifasi nima?",
+      "type": "multiple_choice",
+      "options": [
+        "Muammoni kichikroq qismga ajratish",
+        "Kodning barcha qismini bir vaqtning o'zida o'zgartirish",
+        "Faqat yangi variable yaratish",
+        "Faqat natijani chiqarish"
+      ],
+      "hints": [
+        "Katta dasturda xato qayerdaligini topish qiyin.",
+        "Muammoli funksiya yoki kod qismini alohida aniqlash kerak.",
+        "Muammoni kichraytirish isolate bosqichining maqsadi."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Dastur score >= 70 bo'lsa 'O'tdi' chiqarishi kerak, lekin score = 80 bo'lganda 'O'tmadi' chiqyapti. Qaysi joylarni tekshirgan bo'lardingiz?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval score haqiqatan ham 80 ekanini tekshiring.",
+        "Keyin shart qanday yozilganiga qarang.",
+        "True va false holatlarida qaysi output bajarilayotganini tekshiring."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Xatoni tuzatgandan keyin nima uchun qayta test qilish kerak?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Tuzatish xatoni haqiqatan bartaraf qilganini tekshirish kerak.",
+        "Bitta joyni tuzatish boshqa joyga ta'sir qilishi mumkin.",
+        "Avvalgi xatoli holat va boshqa odatiy holatlarni yana sinab ko'rish foydali."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Debugging paytida nega bir vaqtning o'zida ko'p joyni o'zgartirish tavsiya etilmaydi?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Qaysi o'zgarish muammoni hal qilganini aniqlash qiyinlashishi mumkin.",
+        "Yangi xatolar ham paydo bo'lishi mumkin.",
+        "Bitta taxminni bitta o'zgarish bilan tekshirish aniqroq natija beradi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Noto'g'ri chegirmani debug qilish",
+    "description": "Dastur price = 100000 va discount = 20 qiymatlari uchun 80000 qaytarishi kerak, lekin 120000 qaytaryapti. Reproduce → Isolate → Inspect → Fix → Test bosqichlari bo'yicha qanday debugging qilishingizni tushuntiring.",
+    "hints": [
+      "Reproduce: aynan price = 100000 va discount = 20 bilan xatoni qayta tekshiring.",
+      "Isolate: muammo inputda, hisoblash formulasida yoki outputda ekanini ajrating.",
+      "Inspect: chegirma formulasi narxdan ayiryaptimi yoki aksincha qo'shyaptimi, tekshiring.",
+      "Fix: topilgan noto'g'ri hisoblashni to'g'rilang.",
+      "Test: 20 foizdan tashqari 0 foiz va boshqa qiymatlar bilan ham qayta tekshiring."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Debugging nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Xatoni topish, sababini tushunish va tuzatish jarayoni",
+          "Faqat yangi kod yozish",
+          "Faqat database yaratish",
+          "Faqat dizayn qilish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Reproduce bosqichining maqsadi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Xato qachon va qanday yuz berishini qayta ko'rish",
+          "Xatoni yashirish",
+          "Barcha funksiyalarni o'chirish",
+          "Faqat yangi list yaratish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Inspect bosqichida nima qilinadi?",
+        "type": "multiple_choice",
+        "options": [
+          "Qiymatlar va dastur bajarilish tartibi tekshiriladi",
+          "Faqat loyiha nomi almashtiriladi",
+          "Barcha kod qayta yoziladi",
+          "Internet tezligi tekshiriladi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Fix dan keyin qaysi bosqich kelishi kerak?",
+        "type": "multiple_choice",
+        "options": [
+          "Test",
+          "Delete",
+          "Ignore",
+          "Restart project"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Nima uchun kutilgan va haqiqiy natijani solishtirish foydali?",
+        "type": "multiple_choice",
+        "options": [
+          "Muammo qayerda bo'lishi mumkinligini tushunishga yordam beradi",
+          "Kod rangini o'zgartiradi",
+          "Internetni tezlashtiradi",
+          "Barcha xatolarni avtomatik tuzatadi"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

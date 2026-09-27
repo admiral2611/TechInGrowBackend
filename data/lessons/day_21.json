@@ -1,0 +1,210 @@
+{
+  "id": 21,
+  "day": 21,
+  "title": "Muammoni qismlarga bo'lish",
+  "description": "Katta yoki murakkab masalani kichik va boshqarish oson bo'lgan vazifalarga ajratishni o'rganamiz.",
+  "level": "beginner",
+  "category": "problem_solving",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Decomposition nima ekanligini tushunish",
+    "Katta muammoni kichik vazifalarga ajratishni o'rganish",
+    "Har bir kichik vazifani alohida tahlil qilishni tushunish",
+    "Masalani bosqichma-bosqich yechish odatini shakllantirish",
+    "Dastur yaratishdan oldin vazifalarni rejalashtirishni o'rganish"
+  ],
+
+  "prerequisites": [
+    20
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Decomposition nima?",
+      "content": "Decomposition katta yoki murakkab muammoni kichikroq va tushunish oson bo'lgan qismlarga ajratish usulidir. Bir qarashda qiyin ko'ringan vazifa kichik bosqichlarga bo'linganda uni yechish ancha osonlashadi."
+    },
+    {
+      "id": 2,
+      "title": "Nega muammoni bo'lamiz?",
+      "content": "Katta masalani birdaniga yechishga urinish chalkashlikka olib kelishi mumkin. Uni kichik qismlarga ajratsak, har bir qismga alohida e'tibor berish, xatoni topish va yechimni tekshirish osonroq bo'ladi."
+    },
+    {
+      "id": 3,
+      "title": "Oddiy kundalik misol",
+      "content": "Tasavvur qiling, siz sayohatga tayyorlanyapsiz. 'Sayohatga tayyorlanish' bitta katta vazifa. Uni chipta olish, mehmonxona topish, sumka tayyorlash va hujjatlarni tekshirish kabi kichik vazifalarga ajratish mumkin. Dasturlashdagi decomposition ham xuddi shu g'oyaga asoslanadi."
+    },
+    {
+      "id": 4,
+      "title": "Dasturdagi vazifalarni ajratish",
+      "content": "Masalan, login tizimini yaratish vazifasini olaylik. Uni foydalanuvchidan username olish, password olish, ma'lumotlarni tekshirish va natijani chiqarish kabi kichik bosqichlarga ajratish mumkin."
+    },
+    {
+      "id": 5,
+      "title": "Har bir qism bitta aniq vazifa",
+      "content": "Yaxshi ajratilgan kichik vazifa bitta aniq maqsadga ega bo'ladi. Masalan, 'foydalanuvchini tekshirish' alohida vazifa, 'xabar chiqarish' esa boshqa vazifa bo'lishi mumkin. Vazifalar aniq bo'lsa, ularni keyinchalik funksiyalarga ajratish ham osonlashadi."
+    },
+    {
+      "id": 6,
+      "title": "Qaysi qismdan boshlash kerak?",
+      "content": "Muammoni ajratgandan keyin eng asosiy yoki eng sodda qismdan boshlash mumkin. Har bir kichik vazifa ishlayotganini tekshirib, keyin ularni birlashtirish katta masalani boshqarishni osonlashtiradi."
+    },
+    {
+      "id": 7,
+      "title": "Decomposition va debugging",
+      "content": "Muammo kichik qismlarga bo'lingan bo'lsa, xatoni topish ham osonroq bo'ladi. Butun dastur noto'g'ri ishlayotganida qaysi qism xato ekanini aniqlash qiyin. Lekin qismlar alohida bo'lsa, har birini tekshirish mumkin."
+    },
+    {
+      "id": 8,
+      "title": "Muammoni bo'lish uchun savollar",
+      "content": "Masalani ko'rganda quyidagi savollar foydali: dastur qanday input oladi, qanday ishlar bajarilishi kerak, qaysi qarorlar qabul qilinadi, qanday natija chiqadi va bu vazifalarni alohida qismlarga ajratish mumkinmi?"
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Decomposition nima?",
+      "type": "multiple_choice",
+      "options": [
+        "Katta muammoni kichik qismlarga ajratish",
+        "Barcha kodni bitta qatorga yozish",
+        "Faqat loop ishlatish",
+        "Ma'lumotni o'chirish"
+      ],
+      "hints": [
+        "Decomposition murakkab vazifani boshqarishni osonlashtiradi.",
+        "Katta vazifani birdaniga yechish o'rniga uni bo'lib chiqish haqida o'ylang.",
+        "Muammoni kichik vazifalarga ajratish decomposition deyiladi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Login tizimini qanday kichik vazifalarga ajratish mumkinligini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval foydalanuvchidan qanday ma'lumotlar olinishi kerakligini o'ylang.",
+        "Keyin olingan ma'lumotlar bilan nima qilish kerak?",
+        "Username va password olish, ularni tekshirish va natijani chiqarish kabi bosqichlarni ajrating."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Muammoni kichik qismlarga ajratishning asosiy foydasi nima?",
+      "type": "multiple_choice",
+      "options": [
+        "Masalani tushunish va yechishni osonlashtiradi",
+        "Internet tezligini oshiradi",
+        "Har doim kodni uzunlashtiradi",
+        "Barcha funksiyalarni yo'q qiladi"
+      ],
+      "hints": [
+        "Katta va chalkash vazifani tasavvur qiling.",
+        "Uni kichik qismlarga bo'lsangiz, har bir qismni alohida tushunish mumkin.",
+        "Bu yechimni boshqarishni va tekshirishni osonlashtiradi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Online do'konda mahsulot sotib olish jarayonini kamida 4 ta kichik vazifaga ajrating.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Foydalanuvchi avval mahsulotni tanlashi kerak.",
+        "Keyin savat va to'lov jarayonini o'ylang.",
+        "Mahsulot tanlash, savatga qo'shish, to'lov qilish va buyurtmani tasdiqlash kabi bosqichlar bo'lishi mumkin."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Nima uchun kichik vazifalarni alohida tekshirish debugging jarayonini osonlashtiradi?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Butun dastur bitta katta blok bo'lsa xato qayerdaligini topish qiyin.",
+        "Har bir kichik qism alohida tekshirilsa, noto'g'ri ishlayotgan joyni tezroq topish mumkin.",
+        "Muammo qaysi bosqichda paydo bo'layotganini aniqlash osonlashadi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Vazifalar ro'yxati dasturi",
+    "description": "Oddiy To-Do dasturi yaratishingiz kerak deb tasavvur qiling. Foydalanuvchi yangi vazifa qo'shishi, vazifalarni ko'rishi va bajarilgan vazifani belgilashi kerak. Bu katta vazifani kichik qismlarga ajrating va har bir qismning vazifasini tushuntiring.",
+    "hints": [
+      "Avval dastur bajarishi kerak bo'lgan asosiy imkoniyatlarni alohida yozing.",
+      "Yangi vazifa qo'shish va vazifalarni ko'rsatish ikki xil vazifa.",
+      "Bajarilgan vazifani belgilash ham alohida qism bo'lishi mumkin.",
+      "Ma'lumotlarni qayerda saqlash kerakligini ham alohida vazifa sifatida o'ylang.",
+      "Har bir kichik vazifa keyinchalik alohida funksiya bo'lishi mumkinligini tasavvur qiling."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Decomposition nimani anglatadi?",
+        "type": "multiple_choice",
+        "options": [
+          "Katta muammoni kichik vazifalarga ajratishni",
+          "Faqat o'zgaruvchi yaratishni",
+          "Faqat list bilan ishlashni",
+          "Internetga ulanishni"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Muammoni qismlarga ajratishning foydasi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Uni tushunish va boshqarish osonlashadi",
+          "Kod avtomatik yoziladi",
+          "Looplar kerak bo'lmaydi",
+          "Har doim faqat bitta funksiya qoladi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Login tizimidagi 'passwordni tekshirish' nimaga misol bo'lishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Katta vazifaning kichik qismiga",
+          "Faqat global o'zgaruvchiga",
+          "List indexiga",
+          "String uzunligiga"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Decomposition debuggingga qanday yordam beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "Xato qaysi qismda ekanini aniqlashni osonlashtiradi",
+          "Barcha xatolarni avtomatik o'chiradi",
+          "Internet tezligini oshiradi",
+          "Kod yozishni butunlay bekor qiladi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Yaxshi ajratilgan kichik vazifa qanday bo'lishi kerak?",
+        "type": "multiple_choice",
+        "options": [
+          "Bitta aniq maqsadga ega bo'lishi kerak",
+          "Imkon qadar ko'p vazifa bajarishi kerak",
+          "Faqat global o'zgaruvchilardan foydalanishi kerak",
+          "Hech qanday maqsadga ega bo'lmasligi kerak"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

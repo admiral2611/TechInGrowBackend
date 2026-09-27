@@ -1,0 +1,214 @@
+{
+  "id": 11,
+  "day": 11,
+  "title": "Funksiya nima?",
+  "description": "Kodning ma'lum bir vazifani bajaradigan qismini funksiya sifatida ajratish va qayta ishlatish g'oyasini o'rganamiz.",
+  "level": "beginner",
+  "category": "functions",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Funksiya nima ekanligini tushunish",
+    "Funksiya nima uchun kerakligini anglash",
+    "Kodning vazifalar bo'yicha bo'linishini tushunish",
+    "Bir xil kodni qayta yozmaslik uchun funksiyadan foydalanishni anglash",
+    "Funksiya chaqirilganda nima sodir bo'lishini tushunish"
+  ],
+
+  "prerequisites": [
+    10
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Funksiya nima?",
+      "content": "Funksiya ma'lum bir vazifani bajarish uchun yozilgan kod bo'lagidir. Masalan, ikki sonni qo'shish, foydalanuvchini salomlash yoki natijani tekshirish kabi vazifalarni alohida funksiya sifatida yozish mumkin."
+    },
+    {
+      "id": 2,
+      "title": "Funksiya nima uchun kerak?",
+      "content": "Agar bir xil amal dasturda bir necha marta kerak bo'lsa, uni har safar qayta yozish o'rniga bitta funksiya yaratib, kerak bo'lgan joyda chaqirish mumkin. Bu kodni qisqartiradi va tushunarli qiladi."
+    },
+    {
+      "id": 3,
+      "title": "Funksiyani kundalik hayotga o'xshatish",
+      "content": "Funksiyani ma'lum vazifani bajaradigan kichik mashina deb tasavvur qilish mumkin. Masalan, kofe apparati tugma bosilganda bir xil jarayonni bajaradi va natijada kofe tayyorlaydi. Funksiya ham chaqirilganda oldindan belgilangan ishni bajaradi."
+    },
+    {
+      "id": 4,
+      "title": "Funksiyani chaqirish nima?",
+      "content": "Funksiyani yozishning o'zi yetarli emas. Undan foydalanish uchun uni chaqirish kerak. Funksiya chaqirilganda uning ichidagi amallar ketma-ket bajariladi."
+    },
+    {
+      "id": 5,
+      "title": "Funksiyalar kodni qanday tartibga soladi?",
+      "content": "Katta dasturda barcha kodni bitta joyga yozish qiyin bo'ladi. Funksiyalar yordamida dasturni kichik vazifalarga ajratish mumkin. Masalan, login tekshirish, profilni yuklash va natijani chiqarish alohida funksiyalar bo'lishi mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Takroriy kodni kamaytirish",
+      "content": "Bir xil kod bir necha joyda takrorlansa, xato ehtimoli oshadi. Funksiya yordamida mantiqni bitta joyda saqlab, kerak bo'lgan joylarda qayta ishlatish mumkin."
+    },
+    {
+      "id": 7,
+      "title": "Funksiya nomi",
+      "content": "Funksiya nomi uning vazifasini tushuntirib turishi kerak. Masalan, calculate_total, check_age yoki show_message kabi nomlar funksiyaning nima qilishini anglashni osonlashtiradi."
+    },
+    {
+      "id": 8,
+      "title": "Funksiya haqida fikrlash modeli",
+      "content": "Funksiya yaratishda avval bitta aniq vazifani tanlash kerak. So'ng funksiya nima qilishi, qanday ma'lumot kerakligi va qanday natija berishi haqida o'ylash foydali. Keyingi darslarda parametr va return bilan shu fikrni davom ettiramiz."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Funksiya nima uchun ishlatiladi?",
+      "type": "multiple_choice",
+      "options": [
+        "Ma'lum vazifani bajaradigan kodni ajratish uchun",
+        "Faqat internetga ulanish uchun",
+        "Faqat o'zgaruvchi yaratish uchun",
+        "Faqat loopni to'xtatish uchun"
+      ],
+      "hints": [
+        "Funksiya kodni ma'lum vazifalar bo'yicha ajratishga yordam beradi.",
+        "Bir xil ishni qayta ishlatish mumkinligini eslang.",
+        "Ma'lum vazifani bajaradigan kod bo'lagi haqida o'ylang."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Bir xil amal dasturda 5 marta kerak bo'lsa, funksiyadan foydalanishning foydasi nimada?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Bir xil kodni 5 marta yozish kerak bo'lishini tasavvur qiling.",
+        "Agar shu kodni bitta joyga yozib, kerakli joylarda chaqirsak nima bo'ladi?",
+        "Funksiya takroriy kodni kamaytirish va o'zgartirishni osonlashtirishga yordam beradi."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Foydalanuvchini salomlash uchun qaysi funksiya nomi tushunarliroq?",
+      "type": "multiple_choice",
+      "options": [
+        "x",
+        "a",
+        "greet_user",
+        "q"
+      ],
+      "hints": [
+        "Funksiya nomidan uning vazifasi tushunarli bo'lishi kerak.",
+        "Bir harfli nomlar vazifani tushuntirib bermaydi.",
+        "Foydalanuvchini salomlash vazifasini bevosita ifodalovchi nomni tanlang."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Funksiyani yozgandan keyin undan foydalanish uchun nima qilish kerak?",
+      "type": "multiple_choice",
+      "options": [
+        "Uni chaqirish",
+        "Uni o'chirish",
+        "Internetni yoqish",
+        "Faqat o'zgaruvchi yaratish"
+      ],
+      "hints": [
+        "Funksiyani yaratish va undan foydalanish ikki xil bosqich.",
+        "Funksiya ichidagi kod qachon ishlashini eslang.",
+        "Funksiya bajarilishi uchun uni chaqirish kerak."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Katta dasturni funksiyalarga ajratish nega foydali ekanini o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Barcha kod bitta katta blokda bo'lsa uni tushunish qiyinlashadi.",
+        "Har bir funksiya bitta aniq vazifa bajarsa kodni topish va o'zgartirish osonroq bo'ladi.",
+        "Login, profil va hisoblash kabi vazifalarni alohida funksiyalarga ajratishni tasavvur qiling."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Dastur vazifalarini bo'lish",
+    "description": "Tasavvur qiling, oddiy kalkulyator dasturi yaratyapsiz. Qo'shish, ayirish, ko'paytirish va bo'lish amallarini alohida funksiyalarga qanday ajratgan bo'lardingiz? Funksiyalar uchun tushunarli nomlar yozing va har birining vazifasini qisqacha tushuntiring.",
+    "hints": [
+      "Kalkulyatorda to'rtta alohida vazifa mavjudligini aniqlang.",
+      "Har bir amal uchun bitta funksiya yaratish mumkin.",
+      "Funksiya nomi nima qilishini aniq ifodalasin: masalan, add yoki subtract kabi.",
+      "Har bir funksiya faqat o'ziga tegishli bitta vazifani bajarishi yaxshi yondashuv."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Funksiya nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Ma'lum vazifani bajaradigan kod bo'lagi",
+          "Faqat son saqlaydigan o'zgaruvchi",
+          "Faqat loop turi",
+          "Internet protokoli"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Funksiyaning asosiy foydalaridan biri qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "Takroriy kodni kamaytirish",
+          "Internet tezligini oshirish",
+          "Kompyuterni avtomatik o'chirish",
+          "Faqat sonlarni chiqarish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Funksiya yozilgandan keyin uning ichidagi kod qachon ishlaydi?",
+        "type": "multiple_choice",
+        "options": [
+          "Funksiya chaqirilganda",
+          "Har doim avtomatik",
+          "Faqat internet bo'lganda",
+          "Hech qachon"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Qaysi funksiya nomi tushunarliroq?",
+        "type": "multiple_choice",
+        "options": [
+          "x",
+          "f1",
+          "calculate_total",
+          "abc"
+        ],
+        "correct_answer": 2
+      },
+      {
+        "id": 5,
+        "question": "Funksiyalar katta dasturda nima beradi?",
+        "type": "multiple_choice",
+        "options": [
+          "Kodni vazifalar bo'yicha tartibli ajratish imkonini",
+          "Barcha kodni bitta qatorga yozish imkonini",
+          "Faqat o'zgaruvchilarni o'chirishni",
+          "Faqat internet bilan ishlashni"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

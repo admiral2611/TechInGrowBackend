@@ -1,0 +1,214 @@
+{
+  "id": 16,
+  "day": 16,
+  "title": "List elementlari bilan ishlash",
+  "description": "List ichidagi elementlarning tartibi, index tushunchasi va kerakli elementga murojaat qilishni o'rganamiz.",
+  "level": "beginner",
+  "category": "data_structures",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Index nima ekanligini tushunish",
+    "List elementlarining pozitsiyasini aniqlashni o'rganish",
+    "Ko'p dasturlash tillarida index 0 dan boshlanishini anglash",
+    "List ichidan kerakli elementni topish g'oyasini tushunish",
+    "Index bilan ishlashdagi keng tarqalgan xatolarni bilish"
+  ],
+
+  "prerequisites": [
+    15
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Index nima?",
+      "content": "Index list ichidagi elementning pozitsiyasini bildiradi. Ko'p dasturlash tillarida birinchi elementning indexi 0 dan boshlanadi. Masalan, ['olma', 'banan', 'uzum'] listida 'olma' index 0 da, 'banan' index 1 da va 'uzum' index 2 da joylashadi."
+    },
+    {
+      "id": 2,
+      "title": "Nega index 0 dan boshlanadi?",
+      "content": "Ko'p dasturlash tillarida list va array elementlarini sanash 0 dan boshlanadi. Bu yangi boshlovchilar uchun avvaliga g'alati ko'rinishi mumkin. Muhimi, birinchi element index 0, ikkinchi element index 1 ekanini eslab qolish."
+    },
+    {
+      "id": 3,
+      "title": "Elementga murojaat qilish",
+      "content": "Agar list ichidan ma'lum element kerak bo'lsa, uning indexidan foydalanish mumkin. Masalan, fruits listining index 1 dagi elementi 'banan' bo'lishi mumkin. Demak, index orqali listdagi aniq pozitsiyaga murojaat qilamiz."
+    },
+    {
+      "id": 4,
+      "title": "Element tartibi",
+      "content": "List tartibli strukturadir. Elementlarning joylashish tartibi muhim bo'lishi mumkin. Agar list ['Ali', 'Vali', 'Sami'] ko'rinishida bo'lsa, Ali birinchi, Vali ikkinchi va Sami uchinchi element bo'lib turadi."
+    },
+    {
+      "id": 5,
+      "title": "Index va element soni",
+      "content": "Agar listda 4 ta element bo'lsa, uning indexlari odatda 0, 1, 2 va 3 bo'ladi. Shu sababli elementlar soni 4 bo'lsa ham, eng oxirgi index 3 bo'ladi."
+    },
+    {
+      "id": 6,
+      "title": "Noto'g'ri index",
+      "content": "Listda mavjud bo'lmagan indexga murojaat qilish xatoga olib kelishi mumkin. Masalan, uchta elementli listning indexlari 0, 1 va 2 bo'ladi. Index 5 dagi elementni olishga urinish mantiqan noto'g'ri."
+    },
+    {
+      "id": 7,
+      "title": "Elementni o'zgartirish",
+      "content": "Ko'p list turlarida mavjud elementning qiymatini uning indexi orqali o'zgartirish mumkin. Masalan, ikkinchi element noto'g'ri bo'lsa, shu pozitsiyadagi qiymatni yangisiga almashtirish mumkin."
+    },
+    {
+      "id": 8,
+      "title": "Index bilan fikrlash",
+      "content": "List bilan ishlaganda ikki savolni ajratish muhim: listda nechta element bor va kerakli element qaysi indexda joylashgan. Element tartib raqami bilan index bir xil bo'lmasligi mumkin, chunki index ko'pincha 0 dan boshlanadi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "['olma', 'banan', 'uzum'] listida 'olma' qaysi indexda joylashgan?",
+      "type": "multiple_choice",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "hints": [
+        "Ko'p dasturlash tillarida index 0 dan boshlanadi.",
+        "'olma' listdagi birinchi element.",
+        "Birinchi elementning indexi 0 bo'ladi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "['olma', 'banan', 'uzum'] listida index 1 dagi element qaysi?",
+      "type": "multiple_choice",
+      "options": [
+        "olma",
+        "banan",
+        "uzum",
+        "Hech biri"
+      ],
+      "hints": [
+        "Indexlarni 0, 1, 2 deb sanang.",
+        "Index 0 da 'olma' turibdi.",
+        "Keyingi element index 1 da joylashadi."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Agar listda 5 ta element bo'lsa, odatda oxirgi elementning indexi nechaga teng bo'ladi?",
+      "type": "multiple_choice",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "hints": [
+        "Index 0 dan boshlanadi.",
+        "5 ta element uchun indexlar ketma-ketligini yozib ko'ring.",
+        "0, 1, 2, 3, 4 — jami 5 ta pozitsiya."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "['Ali', 'Vali', 'Sami', 'Olim'] listida Sami qaysi indexda joylashganini tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Birinchi elementdan 0 deb boshlab sanang.",
+        "Ali → 0, Vali → 1 deb davom ettiring.",
+        "Sami uchinchi element, lekin uning indexi tartib raqamidan bittaga kichik."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Uchta elementli listda index 5 dagi elementni olishga urinish nega muammo ekanini tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval uchta element uchun mavjud indexlarni yozing.",
+        "Ular odatda 0, 1 va 2 bo'ladi.",
+        "Index 5 list chegarasidan tashqarida ekanini tushuntiring."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Topshiriqlar ro'yxati",
+    "description": "Tasavvur qiling, tasks = ['Dars qilish', 'Kod yozish', 'Sport', 'Kitob o'qish'] listi mavjud. Har bir elementning indexini yozing. So'ng 'Sport' elementi qaysi indexda ekanini aniqlang va shu elementni 'Sayr qilish' qiymatiga almashtirish uchun qanday fikrlash kerakligini tushuntiring.",
+    "hints": [
+      "Birinchi elementga index 0 bering va qolganlarini ketma-ket sanang.",
+      "'Sport' listdagi uchinchi element.",
+      "Uchinchi elementning indexi 2 bo'lishini tekshiring.",
+      "Elementni almashtirish uchun aynan shu indexdagi qiymatni yangi qiymat bilan yangilash kerak."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Ko'p dasturlash tillarida listning birinchi elementi qaysi indexda bo'ladi?",
+        "type": "multiple_choice",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "-1"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "['a', 'b', 'c'] listida index 2 dagi element qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "a",
+          "b",
+          "c",
+          "Element mavjud emas"
+        ],
+        "correct_answer": 2
+      },
+      {
+        "id": 3,
+        "question": "4 ta elementli listning oxirgi indexi odatda nechaga teng?",
+        "type": "multiple_choice",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 4,
+        "question": "Index nimani bildiradi?",
+        "type": "multiple_choice",
+        "options": [
+          "Elementning list ichidagi pozitsiyasini",
+          "Faqat list nomini",
+          "Funksiya natijasini",
+          "Shartning true yoki false ekanini"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Listda mavjud bo'lmagan indexga murojaat qilish nimaga olib kelishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Xatoga",
+          "Har doim birinchi element qaytishiga",
+          "List avtomatik kattalashishiga",
+          "Loop avtomatik boshlanishiga"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

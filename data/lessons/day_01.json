@@ -1,0 +1,202 @@
+{
+  "id": 1,
+  "day": 1,
+  "title": "Dasturlash qanday fikrlaydi?",
+  "description": "Dasturlash, algoritm va muammoni bosqichma-bosqich yechish fikrlashi bilan tanishamiz.",
+  "level": "beginner",
+  "category": "programming_thinking",
+  "duration_minutes": 40,
+
+  "objectives": [
+    "Dasturlash nima ekanligini oddiy tilda tushunish",
+    "Algoritm tushunchasini anglash",
+    "Muammoni kichik qadamlarga ajratishni o'rganish",
+    "Input, process va output tushunchalari bilan tanishish",
+    "Kod yozishdan oldin yechim haqida fikrlash odatini shakllantirish"
+  ],
+
+  "prerequisites": [],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Dasturlash nima?",
+      "content": "Dasturlash bu kompyuterga nima qilish kerakligini aniq ko'rsatmalar orqali tushuntirish jarayonidir. Kompyuter inson kabi taxmin qilmaydi. U faqat berilgan ko'rsatmalarni bajaradi. Masalan, kalkulyator dasturiga ikkita son berilsa, dastur ularni qo'shish, ayirish yoki boshqa amalni bajarish bo'yicha oldindan yozilgan ko'rsatmalardan foydalanadi."
+    },
+    {
+      "id": 2,
+      "title": "Kompyuter qanday fikrlaydi?",
+      "content": "Kompyuter aslida inson kabi fikrlamaydi. U buyruqlarni ketma-ket bajaradi. Shuning uchun dasturchi muammoni aniq va tushunarli qadamlarga ajratishi kerak. Masalan, 'choy tayyorla' degan buyruq inson uchun tushunarli, lekin kompyuter uchun yetarli emas. Unga suvni olish, suvni qaynatish, choyni idishga solish va suvni quyish kabi alohida qadamlar kerak bo'ladi."
+    },
+    {
+      "id": 3,
+      "title": "Algoritm nima?",
+      "content": "Algoritm bu ma'lum bir muammoni yechish uchun bajariladigan aniq va tartibli qadamlar ketma-ketligidir. Dastur yozishdan oldin algoritmni tushunish juda muhim. Chunki dasturlash tili faqat shu algoritmni kompyuter tushunadigan ko'rinishga aylantirish vositasidir."
+    },
+    {
+      "id": 4,
+      "title": "Kundalik hayotdagi algoritmlar",
+      "content": "Algoritmlar faqat dasturlashda emas, kundalik hayotda ham mavjud. Masalan, ertalab uyg'onish, kiyinish, nonushta qilish va ishga yoki o'qishga ketish ham ketma-ket bajariladigan qadamlar hisoblanadi. Retsept bo'yicha ovqat tayyorlash ham algoritmga misol bo'la oladi."
+    },
+    {
+      "id": 5,
+      "title": "Input, Process va Output",
+      "content": "Ko'p dasturlarni uch qism orqali tushunish mumkin: input, process va output. Input — dasturga kiradigan ma'lumot. Process — shu ma'lumot ustida bajariladigan amal. Output — dastur qaytaradigan natija. Masalan, ikkita sonni qo'shish dasturida 5 va 3 input bo'ladi, qo'shish amali process bo'ladi, 8 esa output hisoblanadi."
+    },
+    {
+      "id": 6,
+      "title": "Muammoni kichik qismlarga ajratish",
+      "content": "Dasturchining eng muhim ko'nikmalaridan biri katta muammoni kichik vazifalarga ajratishdir. Masalan, foydalanuvchining yoshini tekshiradigan dastur yozmoqchi bo'lsak, avval yoshni olish, keyin uni tekshirish va oxirida natijani chiqarish kabi bosqichlarga ajratamiz. Muammo qanchalik kichik qismlarga ajratilsa, uni yechish shunchalik osonlashadi."
+    },
+    {
+      "id": 7,
+      "title": "Kod yozishdan oldin fikrlash",
+      "content": "Yangi boshlovchilar ko'pincha masalani ko'rishi bilan darhol kod yozishga harakat qiladi. To'g'ri yondashuv esa avval muammoni tushunish, input va outputni aniqlash, keyin yechim qadamlarini yozish va shundan keyingina kodga o'tishdir. TechInGrow kursida biz aynan shu fikrlash usulini rivojlantiramiz."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Ertalab uyg'ongandan keyin uydan chiqib ketguningizgacha bajaradigan 5 ta qadamni ketma-ket yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Uyg'onganingizdan keyin birinchi qiladigan ishingizni o'ylang.",
+        "Har bir ishni alohida qadam sifatida yozing.",
+        "Masalan: uyg'onish → yuzni yuvish → kiyinish kabi ketma-ketlikdan foydalanishingiz mumkin."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Ikki sonni qo'shadigan dastur uchun qaysi ma'lumotlar input hisoblanadi?",
+      "type": "multiple_choice",
+      "options": [
+        "Faqat natija",
+        "Qo'shiladigan ikkita son",
+        "Dasturlash tili",
+        "Kompyuter ekrani"
+      ],
+      "hints": [
+        "Input — dasturga tashqaridan kiradigan ma'lumot.",
+        "Qo'shish amalini bajarishdan oldin dasturga nima kerakligini o'ylang.",
+        "Natija hali hisoblanmagan bo'ladi. Dastur avval ikkita sonni qabul qilishi kerak."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Input → Process → Output modelida ikki sonni qo'shish amali qaysi qismga kiradi?",
+      "type": "multiple_choice",
+      "options": [
+        "Input",
+        "Process",
+        "Output",
+        "Storage"
+      ],
+      "hints": [
+        "Input ma'lumotni qabul qiladi, output esa tayyor natijani beradi.",
+        "Savolda ma'lumot ustida bajarilayotgan amal haqida gap ketmoqda.",
+        "Ikki sonni qo'shish — ma'lumotni qayta ishlash bosqichidir."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Choy tayyorlash jarayonini algoritm sifatida 4-6 ta qadamga ajrating.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Choy tayyorlashdan oldin birinchi nima qilishingizni o'ylang.",
+        "Jarayonni boshlanishidan tayyor choygacha ketma-ket yozing.",
+        "Masalan: suv olish → suvni qaynatish → choy solish → suv quyish kabi bosqichlarni o'ylab ko'ring."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Foydalanuvchidan ism olib, ekranga salomlashuv chiqaradigan dastur uchun input va outputni yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Input — foydalanuvchi dasturga beradigan ma'lumot.",
+        "Output — dastur foydalanuvchiga ko'rsatadigan natija.",
+        "Agar foydalanuvchi 'Ali' kiritsa, dastur qanday salomlashuv chiqarishini tasavvur qiling."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Kattaroq sonni aniqlash",
+    "description": "Tasavvur qiling, dasturga ikkita son beriladi. Sizning vazifangiz kod yozmasdan turib, qaysi son kattaroq ekanini aniqlash algoritmini oddiy qadamlar bilan yozish. Avval inputni aniqlang, keyin qanday taqqoslash kerakligini yozing va oxirida qanday output chiqishini tushuntiring.",
+    "hints": [
+      "Avval dasturga qanday ikkita ma'lumot kirishini aniqlang.",
+      "Keyin birinchi sonni ikkinchi son bilan taqqoslash kerakligini o'ylang.",
+      "Birinchi son katta bo'lsa birinchi sonni, ikkinchi son katta bo'lsa ikkinchi sonni natija sifatida chiqarish mumkin.",
+      "Ikkala son teng bo'lishi mumkinligini ham hisobga olishga harakat qiling."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Algoritm nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Faqat dasturlash tili",
+          "Muammoni yechish uchun qadamlar ketma-ketligi",
+          "Kompyuterning bir turi",
+          "Internetga ulanish usuli"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 2,
+        "question": "Input nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Dasturga kiradigan ma'lumot",
+          "Dastur chiqaradigan natija",
+          "Faqat xatolik",
+          "Kompyuter xotirasi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Ikki sonni qo'shishda process qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "Sonlarni kiritish",
+          "Sonlarni qo'shish",
+          "Natijani ekranga chiqarish",
+          "Dasturni yopish"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 4,
+        "question": "Dastur yozishdan oldin eng to'g'ri birinchi qadam qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "Darhol kod yozishni boshlash",
+          "Muammoni tushunish",
+          "Internetni o'chirish",
+          "Dasturlash tilini almashtirish"
+        ],
+        "correct_answer": 1
+      },
+      {
+        "id": 5,
+        "question": "Katta muammoni kichik qismlarga ajratishning asosiy foydasi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Muammoni yechishni osonlashtiradi",
+          "Kompyuterni tezlashtiradi",
+          "Internet tezligini oshiradi",
+          "Kod yozishni keraksiz qiladi"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "id": 9,
+  "day": 9,
+  "title": "Loop va shartlarni birgalikda ishlatish",
+  "description": "Takrorlanish ichida shartlarni tekshirish va ma'lum elementlar bilan alohida ishlashni o'rganamiz.",
+  "level": "beginner",
+  "category": "loops",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Loop ichida if ishlatishni tushunish",
+    "Takrorlanish jarayonida qiymatlarni tekshirishni o'rganish",
+    "Juft va toq sonlarni ajratish mantig'ini tushunish",
+    "Ma'lum shartga mos qiymatlarni tanlashni o'rganish",
+    "Loop va shartlardan birgalikda foydalanib oddiy algoritmlar tuzish"
+  ],
+
+  "prerequisites": [
+    8
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Loop va shart nega birga ishlatiladi?",
+      "content": "Loop bir nechta qiymatni ketma-ket ko'rib chiqish imkonini beradi, shart esa har bir qiymat uchun qaror qabul qiladi. Ularni birlashtirsak, har bir elementni tekshirib, faqat kerakli holatlarda amal bajarishimiz mumkin."
+    },
+    {
+      "id": 2,
+      "title": "Har bir qiymatni tekshirish",
+      "content": "Tasavvur qiling, 1 dan 10 gacha bo'lgan sonlarni ko'rib chiqyapmiz. Loop har bir sonni navbat bilan oladi. If esa joriy son ma'lum bir shartga mos keladimi yoki yo'qmi, shuni tekshiradi."
+    },
+    {
+      "id": 3,
+      "title": "Juft sonlarni aniqlash",
+      "content": "Sonning juft yoki toqligini tekshirish uchun uning 2 ga bo'lingandagi qoldig'idan foydalanish mumkin. Agar qoldiq 0 bo'lsa, son juft hisoblanadi. Loop yordamida ko'plab sonlarning har birini shu shart bilan tekshirish mumkin."
+    },
+    {
+      "id": 4,
+      "title": "Faqat kerakli qiymatlarni chiqarish",
+      "content": "Loop barcha qiymatlarni ko'rib chiqishi mumkin, lekin if yordamida faqat kerakli qiymatlarni chiqaramiz. Masalan, 1 dan 20 gacha bo'lgan sonlardan faqat 10 dan kattalarini ko'rsatish mumkin."
+    },
+    {
+      "id": 5,
+      "title": "Bir nechta shart bilan tekshirish",
+      "content": "Loop ichida AND yoki OR kabi mantiqiy operatorlardan ham foydalanish mumkin. Masalan, son 10 dan katta va 20 dan kichik bo'lsa, uni alohida ajratish mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Hisoblagich ishlatish",
+      "content": "Ba'zan shartga mos nechta qiymat borligini sanash kerak bo'ladi. Buning uchun count kabi o'zgaruvchi yaratib, har safar shart bajarilganda uni 1 ga oshirish mumkin."
+    },
+    {
+      "id": 7,
+      "title": "Yig'indi hisoblash",
+      "content": "Loop va shart yordamida faqat ma'lum qiymatlarning yig'indisini hisoblash mumkin. Masalan, 1 dan 10 gacha bo'lgan faqat juft sonlarni umumiy yig'indiga qo'shib borish mumkin."
+    },
+    {
+      "id": 8,
+      "title": "Fikrlash tartibi",
+      "content": "Bunday masalalarda avval qaysi qiymatlar ko'rib chiqilishini aniqlang. Keyin har bir qiymat uchun qanday shart tekshirilishini belgilang. Oxirida shart bajarilganda qanday amal qilish kerakligini yozing."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "1 dan 10 gacha bo'lgan sonlardan faqat juftlarini chiqarish uchun loop ichida nima qilish kerak?",
+      "type": "multiple_choice",
+      "options": [
+        "Har bir sonni juftlik sharti bilan tekshirish",
+        "Faqat birinchi sonni chiqarish",
+        "Loopni ishlatmaslik",
+        "Barcha sonlarni o'chirish"
+      ],
+      "hints": [
+        "Loop barcha sonlarni navbat bilan ko'rib chiqadi.",
+        "Har bir son uchun juft yoki toq ekanini tekshirish kerak.",
+        "Faqat juft bo'lgan qiymatlar chiqarilishi kerak."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Agar son 2 ga bo'linganda qoldiq 0 bo'lsa, u qanday son hisoblanadi?",
+      "type": "multiple_choice",
+      "options": [
+        "Juft",
+        "Toq",
+        "Manfiy",
+        "Har doim nol"
+      ],
+      "hints": [
+        "Juft sonlar 2 ga qoldiqsiz bo'linadi.",
+        "Qoldiq 0 bo'lishi nimani anglatishini eslang.",
+        "2 ga qoldiqsiz bo'linadigan son juft bo'ladi."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "1 dan 5 gacha bo'lgan sonlardan 3 dan kattalarini chiqarish algoritmini oddiy qadamlar bilan yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval 1 dan 5 gacha bo'lgan barcha sonlarni ko'rib chiqish kerak.",
+        "Har bir son uchun number > 3 shartini tekshiring.",
+        "Shart true bo'lsa, shu sonni chiqaring.",
+        "Natijada faqat 4 va 5 mos kelishini tekshirib ko'ring."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Shartga mos nechta qiymat borligini hisoblash uchun odatda qanday yondashuv ishlatiladi?",
+      "type": "multiple_choice",
+      "options": [
+        "Hisoblagichni oshirib borish",
+        "Faqat else ishlatish",
+        "Inputni o'chirish",
+        "Loopni darhol to'xtatish"
+      ],
+      "hints": [
+        "Nechta mos qiymat borligini biror joyda saqlash kerak.",
+        "Masalan, count = 0 dan boshlash mumkin.",
+        "Har safar shart bajarilganda count ni 1 ga oshirish mumkin."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "1 dan 10 gacha bo'lgan faqat juft sonlarning yig'indisini topish uchun qanday algoritm tuzgan bo'lardingiz?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval umumiy yig'indini saqlash uchun sum = 0 kabi qiymat kerak bo'ladi.",
+        "1 dan 10 gacha sonlarni loop orqali ko'rib chiqing.",
+        "Har bir son juft ekanini tekshiring.",
+        "Faqat juft son bo'lsa, uni umumiy yig'indiga qo'shing."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Sonlarni saralash",
+    "description": "1 dan 20 gacha bo'lgan sonlarni ko'rib chiqing. Faqat 5 dan katta va 15 dan kichik bo'lgan juft sonlarni chiqaradigan algoritm tuzing. Loop, taqqoslash va mantiqiy operatorlardan qanday foydalanishingizni tushuntiring.",
+    "hints": [
+      "Avval 1 dan 20 gacha bo'lgan barcha sonlarni loop orqali ko'rib chiqing.",
+      "Har bir son uchun number > 5 va number < 15 shartlarini tekshiring.",
+      "Bu ikki shartning ikkalasi ham bajarilishi kerak, shuning uchun AND kerak bo'ladi.",
+      "So'ng sonning 2 ga bo'lingandagi qoldig'i 0 ekanini tekshiring va faqat mos sonlarni chiqaring."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Loop ichidagi if nima uchun ishlatilishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Har bir qiymatni shart bilan tekshirish uchun",
+          "Faqat dastur nomini o'zgartirish uchun",
+          "Internet tezligini tekshirish uchun",
+          "Faqat qiymat saqlash uchun"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Son juft ekanini qanday aniqlash mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "2 ga bo'linganda qoldiq 0 bo'lsa",
+          "Son 0 dan katta bo'lsa",
+          "Son 10 dan kichik bo'lsa",
+          "Faqat son manfiy bo'lsa"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Loop ichida count = count + 1 qachon ishlatilishi mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Shartga mos elementlar sonini sanashda",
+          "Faqat matn yozishda",
+          "Loopni yaratmaslik uchun",
+          "Internetga ulanishda"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "1 dan 10 gacha sonlardan faqat 5 dan kattalarini olish uchun qaysi shart mos?",
+        "type": "multiple_choice",
+        "options": [
+          "number > 5",
+          "number < 5",
+          "number == 5",
+          "number != 10"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Loop va shartlarni birgalikda ishlatishning asosiy foydasi nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Ko'p qiymatlarni tekshirib, keraklilariga amal qo'llash",
+          "Faqat bitta qiymat saqlash",
+          "Dastur nomini avtomatik tanlash",
+          "Koddagi barcha shartlarni olib tashlash"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

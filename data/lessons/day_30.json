@@ -1,0 +1,242 @@
+{
+  "id": 30,
+  "day": 30,
+  "title": "Final Challenge",
+  "description": "30 kun davomida o'rganilgan dasturlash fikrlashi, shartlar, looplar, funksiyalar, ma'lumot strukturalari, debugging va problem-solving bilimlarini bitta yakuniy vazifada birlashtiramiz.",
+  "level": "beginner",
+  "category": "final",
+  "duration_minutes": 50,
+
+  "objectives": [
+    "Muammoni mustaqil tahlil qilish",
+    "Input, Process va Outputni aniqlash",
+    "Muammoni kichik qismlarga ajratish",
+    "Kerakli ma'lumot strukturalarini tanlash",
+    "Shart, loop va funksiyalarni birgalikda rejalashtirish",
+    "Pseudocode orqali to'liq algoritm tuzish",
+    "Xato holatlarini oldindan aniqlash",
+    "O'z yechimini tushuntirish va tekshirish"
+  ],
+
+  "prerequisites": [
+    29
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Final Challenge maqsadi",
+      "content": "Bu darsda yangi katta mavzu o'rganmaymiz. Asosiy maqsad oldingi 29 kun davomida o'rganilgan tushunchalarni bitta masalada birlashtirish va muammoni mustaqil yechish fikrlashini mashq qilishdir."
+    },
+    {
+      "id": 2,
+      "title": "Yakuniy loyiha",
+      "content": "Yakuniy vazifa sifatida Student Score Tracker dasturini rejalashtiramiz. Dastur bir nechta talabalar va ularning ballarini saqlashi, natijalarni ko'rsatishi, o'tgan talabalarni aniqlashi va umumiy statistikani hisoblay olishi kerak."
+    },
+    {
+      "id": 3,
+      "title": "Talablarni aniqlash",
+      "content": "Dastur quyidagi asosiy imkoniyatlarga ega bo'ladi: yangi talaba va uning ballini qo'shish, barcha talabalarni ko'rsatish, 70 yoki undan katta ball olganlarni aniqlash, o'rtacha ballni hisoblash va eng yuqori ballni topish."
+    },
+    {
+      "id": 4,
+      "title": "Muammoni qismlarga bo'lish",
+      "content": "Katta vazifani kichik qismlarga ajratamiz: student qo'shish, studentlarni ko'rsatish, o'tganlarni aniqlash, o'rtacha ballni hisoblash va eng katta ballni topish. Har bir qism alohida funksiya sifatida tasavvur qilinishi mumkin."
+    },
+    {
+      "id": 5,
+      "title": "Ma'lumot strukturasini tanlash",
+      "content": "Bir nechta talabani saqlash uchun List ishlatish mumkin. Har bir talabaning name va score kabi ma'lumotlarini Map ko'rinishida saqlash mumkin. Natijada List ichida bir nechta student Map lari bo'ladi."
+    },
+    {
+      "id": 6,
+      "title": "Shartlardan foydalanish",
+      "content": "Talabaning o'tgan yoki o'tmaganini aniqlash uchun score >= 70 sharti ishlatilishi mumkin. Shart true bo'lsa talaba o'tgan, aks holda o'tmagan deb hisoblanadi."
+    },
+    {
+      "id": 7,
+      "title": "Looplardan foydalanish",
+      "content": "Barcha talabalarni ko'rish, o'tgan talabalarni sanash, ballar yig'indisini hisoblash va eng katta ballni topish uchun students List bo'ylab loop yordamida yurish mumkin."
+    },
+    {
+      "id": 8,
+      "title": "Funksiyalarga ajratish",
+      "content": "add_student yangi talaba qo'shishi, show_students ro'yxatni ko'rsatishi, calculate_average o'rtacha ballni qaytarishi, find_highest_score eng katta ballni topishi va count_passed o'tgan talabalar sonini hisoblashi mumkin."
+    },
+    {
+      "id": 9,
+      "title": "Input → Process → Output",
+      "content": "Masalan, o'rtacha ballni hisoblashda input — students ro'yxatidagi score qiymatlari. Process — barcha ballarni qo'shish va studentlar soniga bo'lish. Output — o'rtacha ball."
+    },
+    {
+      "id": 10,
+      "title": "Xato holatlari",
+      "content": "Foydalanuvchi bo'sh ism, 0 dan kichik yoki 100 dan katta ball kiritishi mumkin. Shuningdek, studentlar ro'yxati bo'sh bo'lsa o'rtacha qiymatni hisoblashda alohida tekshiruv kerak bo'ladi."
+    },
+    {
+      "id": 11,
+      "title": "Debugging rejasi",
+      "content": "Agar natija noto'g'ri chiqsa, reproduce, isolate, inspect, fix va test bosqichlaridan foydalanish mumkin. Masalan, o'rtacha ball noto'g'ri bo'lsa score lar, total va studentlar sonini alohida tekshirish mumkin."
+    },
+    {
+      "id": 12,
+      "title": "Yakuniy fikrlash modeli",
+      "content": "Masalani ko'rganda darhol kod yozishga o'tmang. Avval muammoni tushuning, input va outputni aniqlang, kichik qismlarga ajrating, kerakli strukturalarni tanlang, pseudocode tuzing, keyin yechimni tekshiring."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Bir nechta talabalarni saqlash uchun qaysi struktura qulay?",
+      "type": "multiple_choice",
+      "options": [
+        "List",
+        "Faqat bitta o'zgaruvchi",
+        "Faqat if",
+        "Return"
+      ],
+      "hints": [
+        "Dasturda bir nechta student bo'ladi.",
+        "Ko'p elementni bitta joyda saqlash kerak.",
+        "Bunday holatda List qulay."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Har bir studentning name va score ma'lumotlarini qanday ko'rinishda saqlash mumkin?",
+      "type": "multiple_choice",
+      "options": [
+        "Map",
+        "Faqat loop",
+        "Faqat boolean",
+        "Faqat return"
+      ],
+      "hints": [
+        "Har bir qiymatning ma'noli nomi bor.",
+        "name va score key sifatida ishlatilishi mumkin.",
+        "Key-value strukturasini eslang."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Student score = 82 bo'lsa va o'tish bali 70 bo'lsa, qanday qaror olinadi?",
+      "type": "multiple_choice",
+      "options": [
+        "Student o'tgan",
+        "Student o'tmagan",
+        "Natijani aniqlab bo'lmaydi",
+        "Score avtomatik 70 bo'ladi"
+      ],
+      "hints": [
+        "score >= 70 shartini tekshiring.",
+        "82 sonini 70 bilan taqqoslang.",
+        "Shart true bo'lsa student o'tgan hisoblanadi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Studentlarning o'rtacha ballini hisoblash algoritmini o'z so'zingiz bilan yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Avval total = 0 dan boshlang.",
+        "Barcha studentlar bo'ylab loop bilan yuring.",
+        "Har bir score ni total ga qo'shing.",
+        "Oxirida total ni studentlar soniga bo'ling.",
+        "Ro'yxat bo'sh bo'lishi mumkinligini ham hisobga oling."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Eng yuqori ballni topish uchun qanday fikrlash mumkin?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Bir qiymatni vaqtincha eng katta deb olish mumkin.",
+        "Keyingi score lar bilan uni solishtirib boring.",
+        "Agar kattaroq score topilsa, highest qiymatini yangilang.",
+        "Loop tugagach highest eng katta ballni saqlaydi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Final loyiha: Student Score Tracker",
+    "description": "Student Score Tracker dasturi uchun to'liq yechim rejasini tuzing. Dastur yangi student qo'shishi, barcha studentlarni ko'rsatishi, o'tgan studentlarni aniqlashi, o'rtacha ballni hisoblashi va eng yuqori ballni topishi kerak. Ma'lumot strukturasi, funksiyalar, shartlar, looplar, Input → Process → Output modeli, xato holatlari va pseudocode ni yozing.",
+    "hints": [
+      "Avval students nomli List kerakligini aniqlang.",
+      "Har bir studentni name va score maydonlari mavjud Map sifatida tasavvur qiling.",
+      "add_student, show_students, count_passed, calculate_average va find_highest_score kabi funksiyalarni rejalashtiring.",
+      "O'tgan studentni aniqlash uchun score >= 70 shartidan foydalaning.",
+      "O'rtacha va eng katta ballni topish uchun students List bo'ylab loop bilan yurishni rejalashtiring.",
+      "Bo'sh ism, noto'g'ri score va bo'sh students List holatlarini tekshirishni unutmang."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Muammoni yechishni boshlashdagi yaxshi yondashuv qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "Muammoni tushunib, input va outputni aniqlash",
+          "Darhol tasodifiy kod yozish",
+          "Barcha kodni bitta funksiyaga joylash",
+          "Xato holatlarini e'tiborsiz qoldirish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Bir nechta student va ularning ma'lumotlarini saqlash uchun qaysi kombinatsiya qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "List va Map",
+          "Faqat bitta string",
+          "Faqat if",
+          "Faqat return"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Student o'tganini aniqlash uchun qaysi tushuncha kerak?",
+        "type": "multiple_choice",
+        "options": [
+          "Shart",
+          "Faqat scope",
+          "Faqat return",
+          "Faqat string"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Barcha studentlarning ballarini tekshirish uchun qaysi tushuncha qulay?",
+        "type": "multiple_choice",
+        "options": [
+          "Loop",
+          "Faqat if",
+          "Faqat return",
+          "Faqat global variable"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Yechim noto'g'ri natija bersa qaysi debugging modeli foydali?",
+        "type": "multiple_choice",
+        "options": [
+          "Reproduce → Isolate → Inspect → Fix → Test",
+          "Delete → Rewrite → Ignore",
+          "Print → Close → Delete",
+          "Faqat Restart"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "id": 24,
+  "day": 24,
+  "title": "Input → Process → Output",
+  "description": "Dastur qanday ma'lumot qabul qilishi, uni qanday qayta ishlashi va natijani qanday chiqarishini tushunamiz.",
+  "level": "beginner",
+  "category": "problem_solving",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Input tushunchasini tushunish",
+    "Process nima ekanligini anglash",
+    "Output tushunchasini tushunish",
+    "Masalani Input → Process → Output modeli bilan tahlil qilish",
+    "Algoritm tuzishdan oldin kiruvchi va chiquvchi ma'lumotlarni aniqlashni o'rganish"
+  ],
+
+  "prerequisites": [
+    23
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Input nima?",
+      "content": "Input dastur ishlashi uchun qabul qiladigan ma'lumotdir. Masalan, foydalanuvchining yoshi, ikkita son, login ma'lumotlari yoki mahsulot narxi dastur uchun input bo'lishi mumkin."
+    },
+    {
+      "id": 2,
+      "title": "Process nima?",
+      "content": "Process input sifatida olingan ma'lumot ustida bajariladigan amallarni bildiradi. Masalan, ikki sonni qo'shish, yoshni tekshirish, narxga chegirma qo'llash yoki list ichidan kerakli qiymatni topish process hisoblanadi."
+    },
+    {
+      "id": 3,
+      "title": "Output nima?",
+      "content": "Output dastur ishlashi natijasida hosil bo'ladigan qiymat yoki ma'lumotdir. Masalan, hisoblangan yig'indi, 'Kirish mumkin' xabari yoki yakuniy mahsulot narxi output bo'lishi mumkin."
+    },
+    {
+      "id": 4,
+      "title": "Oddiy misol",
+      "content": "Ikki sonni qo'shish masalasini olaylik. Input — ikkita son. Process — ularni qo'shish. Output — hosil bo'lgan yig'indi. Shu oddiy model ko'plab dastur va algoritmlarda ishlaydi."
+    },
+    {
+      "id": 5,
+      "title": "Shartli masalada IPO",
+      "content": "Foydalanuvchining yoshini tekshirishda input — age. Process — age >= 18 shartini tekshirish. Output esa shart natijasiga qarab 'Kirish mumkin' yoki 'Kirish mumkin emas' bo'lishi mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Bir nechta input",
+      "content": "Dastur bitta emas, bir nechta input qabul qilishi mumkin. Masalan, mahsulot narxi va quantity ikkita input bo'lishi mumkin. Process price * quantity hisobini bajaradi, output esa umumiy narx bo'ladi."
+    },
+    {
+      "id": 7,
+      "title": "IPO va decomposition",
+      "content": "Input → Process → Output modeli decomposition bilan birga ishlatilishi mumkin. Avval katta muammoni qismlarga ajratamiz, keyin har bir qism qanday input olishi, qanday process bajarishi va qanday output berishini aniqlaymiz."
+    },
+    {
+      "id": 8,
+      "title": "Masalani boshlash uchun uchta savol",
+      "content": "Yangi masalani ko'rganda uchta savol berish foydali: Menga qanday ma'lumot berilgan? Shu ma'lumot bilan nima qilishim kerak? Yakunda qanday natija olishim kerak? Bu savollar mos ravishda input, process va outputni aniqlashga yordam beradi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "Ikki sonni qo'shadigan dasturda input nima bo'ladi?",
+      "type": "multiple_choice",
+      "options": [
+        "Ikkita son",
+        "Ularning yig'indisi",
+        "Faqat return",
+        "Faqat loop"
+      ],
+      "hints": [
+        "Input dasturga tashqaridan keladigan ma'lumot.",
+        "Dastur qo'shishni boshlashdan oldin qaysi ma'lumotlarni bilishi kerak?",
+        "Qo'shiladigan ikkita son input hisoblanadi."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "price = 5000 va quantity = 3 bo'lsa, process qanday bo'lishi mumkin?",
+      "type": "multiple_choice",
+      "options": [
+        "price * quantity",
+        "Faqat price ni chiqarish",
+        "quantity ni o'chirish",
+        "Hech qanday amal bajarmaslik"
+      ],
+      "hints": [
+        "Process inputlar ustida bajariladigan amal.",
+        "Umumiy narxni topish kerak.",
+        "Narxni mahsulot soniga ko'paytirishni o'ylang."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Ikki sonni qo'shish misolida output nima?",
+      "type": "multiple_choice",
+      "options": [
+        "Yig'indi",
+        "Birinchi son",
+        "Ikkinchi son",
+        "Inputlarning nomi"
+      ],
+      "hints": [
+        "Output dastur oxirida hosil bo'lgan natija.",
+        "Ikki son process davomida qo'shiladi.",
+        "Qo'shishdan hosil bo'lgan natija output hisoblanadi."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Foydalanuvchining yoshini tekshiradigan dastur uchun Input → Process → Output modelini yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Input sifatida foydalanuvchidan qaysi qiymat olinadi?",
+        "Process bosqichida age >= 18 kabi shart ishlatilishi mumkin.",
+        "Output shart natijasiga qarab mos xabar bo'lishi mumkin."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Nega kod yozishdan oldin input va outputni aniqlash foydali?",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Masalaning boshlanishi va yakuni aniq bo'lsa yechimni rejalashtirish osonroq.",
+        "Input nima borligini, output esa nimaga erishish kerakligini ko'rsatadi.",
+        "Shundan keyin ular orasidagi processni tuzish osonlashadi."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Chegirmali xarid",
+    "description": "Mahsulot narxi, mahsulot soni va chegirma foizi berilgan deb tasavvur qiling. Yakuniy to'lov miqdorini hisoblash uchun Input → Process → Output modelini tuzing va har bir bosqichni tushuntiring.",
+    "hints": [
+      "Avval barcha inputlarni alohida aniqlang: price, quantity va discount.",
+      "Birinchi process sifatida price * quantity orqali umumiy narxni topish mumkin.",
+      "Keyin chegirma miqdorini hisoblash kerak.",
+      "Umumiy narxdan chegirma qiymatini ayiring.",
+      "Hosil bo'lgan yakuniy narx output bo'ladi."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Input nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Dastur qabul qiladigan ma'lumot",
+          "Dastur chiqaradigan yakuniy natija",
+          "Faqat loop",
+          "Faqat funksiya nomi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "Process nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Input ustida bajariladigan amallar",
+          "Faqat input nomi",
+          "Faqat output qiymati",
+          "Faqat database"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 3,
+        "question": "Output nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Dastur ishlashi natijasida hosil bo'lgan ma'lumot",
+          "Faqat kiruvchi ma'lumot",
+          "Faqat parametr",
+          "Faqat index"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Ikki sonni ko'paytirish masalasida process qaysi?",
+        "type": "multiple_choice",
+        "options": [
+          "Ikki sonni bir-biriga ko'paytirish",
+          "Faqat sonlarni input sifatida olish",
+          "Faqat natijani chiqarish",
+          "List yaratish"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "Input → Process → Output modeli nima uchun foydali?",
+        "type": "multiple_choice",
+        "options": [
+          "Masalaning kirish ma'lumoti, bajariladigan amal va natijasini aniq ajratishga yordam beradi",
+          "Faqat internet tezligini oshiradi",
+          "Barcha kodni avtomatik yozadi",
+          "Faqat string bilan ishlaydi"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}

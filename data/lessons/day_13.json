@@ -1,0 +1,215 @@
+{
+  "id": 13,
+  "day": 13,
+  "title": "Return qiymati",
+  "description": "Funksiya bajarilganidan keyin natijani tashqariga qaytarish uchun return qanday ishlashini o'rganamiz.",
+  "level": "beginner",
+  "category": "functions",
+  "duration_minutes": 45,
+
+  "objectives": [
+    "Return nima ekanligini tushunish",
+    "Funksiya natijani qanday qaytarishini anglash",
+    "Return va oddiy ekranga chiqarish orasidagi farqni tushunish",
+    "Qaytarilgan qiymatni o'zgaruvchiga saqlashni anglash",
+    "Funksiyalarni bir-biri bilan bog'lashda return nima uchun muhimligini tushunish"
+  ],
+
+  "prerequisites": [
+    12
+  ],
+
+  "sections": [
+    {
+      "id": 1,
+      "title": "Return nima?",
+      "content": "Return funksiya hisoblagan yoki yaratgan natijani funksiyadan tashqariga qaytarish uchun ishlatiladi. Masalan, ikkita sonni qo'shadigan funksiya natijani return orqali qaytarishi mumkin."
+    },
+    {
+      "id": 2,
+      "title": "Funksiya natijasi",
+      "content": "Tasavvur qiling, add(a, b) funksiyasi a va b sonlarini qo'shadi. Agar add(5, 3) chaqirilsa, funksiya 8 natijasini hisoblaydi. Return shu 8 qiymatini funksiyani chaqirgan joyga qaytaradi."
+    },
+    {
+      "id": 3,
+      "title": "Return qilingan qiymatni saqlash",
+      "content": "Funksiya qaytargan qiymatni boshqa o'zgaruvchiga saqlash mumkin. Masalan, result = add(5, 3) deb tasavvur qilsak, add funksiyasi 8 qaytaradi va result o'zgaruvchisiga 8 saqlanadi."
+    },
+    {
+      "id": 4,
+      "title": "Return va ekranga chiqarish farqi",
+      "content": "Ekranga natijani chiqarish va return qilish bir xil narsa emas. Ekranga chiqarish foydalanuvchiga ma'lumotni ko'rsatadi. Return esa qiymatni dastur ichida keyingi hisoblashlarda ishlatish uchun qaytaradi."
+    },
+    {
+      "id": 5,
+      "title": "Return qilingan natijadan qayta foydalanish",
+      "content": "Return qilingan natija boshqa hisoblashlarda ishlatilishi mumkin. Masalan, ikkita son yig'indisini qaytaradigan funksiya natijasini keyin 2 ga ko'paytirish yoki boshqa funksiya ichiga argument sifatida uzatish mumkin."
+    },
+    {
+      "id": 6,
+      "title": "Return funksiyani tugatishi mumkin",
+      "content": "Ko'p dasturlash tillarida return bajarilganda funksiya shu joyda tugaydi va undan keyingi kod bajarilmaydi. Bu shartga qarab funksiyadan erta chiqish kerak bo'lgan vaziyatlarda ham foydali bo'ladi."
+    },
+    {
+      "id": 7,
+      "title": "Bir nechta natija holatlari",
+      "content": "Funksiya turli shartlarga qarab turli qiymat qaytarishi mumkin. Masalan, check_age(age) funksiyasi age 18 yoki undan katta bo'lsa true, aks holda false qaytarishi mumkin."
+    },
+    {
+      "id": 8,
+      "title": "Return haqida fikrlash modeli",
+      "content": "Funksiya yaratishda 'Bu funksiya ishini tugatgandan keyin dasturga qanday natija kerak?' degan savol berish foydali. Agar natija keyinchalik ishlatilishi kerak bo'lsa, return ishlatish mantiqli bo'ladi."
+    }
+  ],
+
+  "practice": [
+    {
+      "id": 1,
+      "question": "add(5, 3) funksiyasi 8 qaytarsa, return orqali qanday qiymat olinadi?",
+      "type": "multiple_choice",
+      "options": [
+        "5",
+        "3",
+        "8",
+        "0"
+      ],
+      "hints": [
+        "Funksiya 5 va 3 ustida amal bajaradi.",
+        "Return funksiyaning tayyor natijasini qaytaradi.",
+        "5 + 3 natijasini hisoblang."
+      ]
+    },
+    {
+      "id": 2,
+      "question": "result = add(10, 5) va add funksiyasi yig'indini qaytarsa, result qiymati nima bo'ladi?",
+      "type": "multiple_choice",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "105"
+      ],
+      "hints": [
+        "Avval add(10, 5) qanday natija qaytarishini hisoblang.",
+        "Qaytarilgan qiymat result ichiga saqlanadi.",
+        "10 + 5 qiymatini toping."
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Return va natijani ekranga chiqarish orasidagi farqni o'z so'zingiz bilan tushuntiring.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Ekranga chiqarish foydalanuvchiga ko'rsatish uchun ishlatiladi.",
+        "Return qiymatni dastur ichiga qaytaradi.",
+        "Return qilingan qiymatdan keyingi hisoblashlarda foydalanish mumkinligini eslang."
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Ikki sonni ko'paytirib natijani qaytaradigan funksiya qanday vazifa bajarishini oddiy qadamlar bilan yozing.",
+      "type": "text",
+      "options": null,
+      "hints": [
+        "Funksiya ikkita qiymat qabul qilishi kerak.",
+        "Bu ikki qiymatni bir-biriga ko'paytirish kerak.",
+        "Hosil bo'lgan natijani faqat chiqarish emas, funksiyadan qaytarish kerak.",
+        "Oxirgi qadam return orqali natijani tashqariga berish bo'ladi."
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Funksiya qaytargan qiymatdan keyingi hisoblashlarda foydalanish mumkinmi?",
+      "type": "multiple_choice",
+      "options": [
+        "Ha",
+        "Yo'q",
+        "Faqat loop ichida",
+        "Faqat if ichida"
+      ],
+      "hints": [
+        "Return ning asosiy maqsadini eslang.",
+        "Qaytarilgan qiymatni o'zgaruvchiga saqlash mumkin.",
+        "Saqlangan qiymat keyingi amallarda ishlatilishi mumkin."
+      ]
+    }
+  ],
+
+  "challenge": {
+    "title": "Mini challenge: Chegirmali narx",
+    "description": "Mahsulot narxi va chegirma foizini qabul qiladigan calculate_discounted_price funksiyasini tasavvur qiling. Funksiya yangi narxni hisoblab return qilishi kerak. Qaysi parametrlar kerakligini, qanday hisoblash bajarilishini va return orqali qanday natija qaytishini qadamlar bilan tushuntiring.",
+    "hints": [
+      "Funksiyaga kamida ikkita ma'lumot kerak: mahsulot narxi va chegirma foizi.",
+      "Avval chegirma miqdorini hisoblash kerakligini o'ylang.",
+      "Keyin asl narxdan chegirma miqdorini ayiring.",
+      "Hisoblangan yangi narxni return orqali funksiyadan qaytaring."
+    ]
+  },
+
+  "assessment": {
+    "passing_score": 70,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Return nima uchun ishlatiladi?",
+        "type": "multiple_choice",
+        "options": [
+          "Funksiya natijasini tashqariga qaytarish uchun",
+          "Faqat loop yaratish uchun",
+          "Faqat ekranga matn chiqarish uchun",
+          "Internetga ulanish uchun"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 2,
+        "question": "result = add(4, 6) va add funksiyasi yig'indini qaytarsa, result nima bo'ladi?",
+        "type": "multiple_choice",
+        "options": [
+          "4",
+          "6",
+          "10",
+          "46"
+        ],
+        "correct_answer": 2
+      },
+      {
+        "id": 3,
+        "question": "Return qilingan qiymat bilan nima qilish mumkin?",
+        "type": "multiple_choice",
+        "options": [
+          "Uni boshqa hisoblashlarda ishlatish mumkin",
+          "U faqat ekranda ko'rinadi",
+          "Uni hech qayerda ishlatib bo'lmaydi",
+          "U doim o'chib ketadi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 4,
+        "question": "Ekranga chiqarish va return orasidagi asosiy farq nima?",
+        "type": "multiple_choice",
+        "options": [
+          "Return qiymatni dasturga qaytaradi, chiqarish esa uni foydalanuvchiga ko'rsatadi",
+          "Ular mutlaqo bir xil",
+          "Return faqat matn bilan ishlaydi",
+          "Ekranga chiqarish faqat son bilan ishlaydi"
+        ],
+        "correct_answer": 0
+      },
+      {
+        "id": 5,
+        "question": "check_age(20) funksiyasi age >= 18 bo'lsa true qaytarsa, natija qanday bo'ladi?",
+        "type": "multiple_choice",
+        "options": [
+          "True",
+          "False",
+          "20",
+          "18"
+        ],
+        "correct_answer": 0
+      }
+    ]
+  }
+}
