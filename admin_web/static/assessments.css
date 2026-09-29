@@ -1,0 +1,194 @@
+.assessment-table-panel {
+    margin-top: 24px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: var(--surface);
+
+    overflow: hidden;
+}
+
+
+.assessment-panel-header {
+    padding: 22px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.assessment-panel-header h2 {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+}
+
+
+.assessment-panel-header p {
+    color: var(--text-secondary);
+
+    font-size: 13px;
+}
+
+
+.assessment-table-scroll {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.assessment-table {
+    width: 100%;
+
+    min-width: 1250px;
+
+    border-collapse: collapse;
+}
+
+
+.assessment-table th {
+    padding: 14px 16px;
+
+    text-align: left;
+
+    background: var(--surface-secondary);
+
+    color: var(--text-secondary);
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.assessment-table td {
+    padding: 16px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 13px;
+
+    vertical-align: middle;
+}
+
+
+.assessment-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.assessment-table tbody tr:hover {
+    background: rgba(
+        255,
+        255,
+        255,
+        0.015
+    );
+}
+
+
+.assessment-day-badge {
+    display: inline-flex;
+
+    min-width: 58px;
+
+    justify-content: center;
+
+    padding: 7px 9px;
+
+    border-radius: 8px;
+
+    background: var(--surface-secondary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.assessment-title {
+    font-weight: 600;
+}
+
+
+.number-value {
+    font-weight: 700;
+}
+
+
+.pass-value {
+    color: #56d49b;
+
+    font-weight: 700;
+}
+
+
+.fail-value {
+    color: #ff8b8b;
+
+    font-weight: 700;
+}
+
+
+.rate-wrapper {
+    min-width: 150px;
+}
+
+
+.rate-info {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+}
+
+
+.rate-info strong {
+    font-size: 12px;
+}
+
+
+.rate-track {
+    height: 6px;
+
+    border-radius: 100px;
+
+    background: var(--background);
+
+    overflow: hidden;
+}
+
+
+.rate-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--accent);
+}
+
+
+.score-value {
+    font-weight: 700;
+}
+
+
+.muted-assessment {
+    color: var(--text-secondary);
+}
+
+
+.assessment-empty {
+    padding: 45px !important;
+
+    text-align: center !important;
+
+    color: var(--text-secondary);
+}

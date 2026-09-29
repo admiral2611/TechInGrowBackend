@@ -1,100 +1,133 @@
 # =========================
-# Python
+# Environment variables
 # =========================
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
 
-# =========================
-# Virtual environment
-# =========================
-venv/
-.venv/
-env/
-ENV/
-
-# =========================
-# Environment / secrets
-# =========================
 .env
 .env.*
 !.env.example
 
-# =========================
-# PyCharm / JetBrains
-# =========================
-.idea/
-*.iml
-*.ipr
-*.iws
 
 # =========================
-# VS Code
+# Python virtual environments
 # =========================
-.vscode/
+
+.venv/
+venv/
+env/
+ENV/
+
 
 # =========================
-# Logs
+# Python cache / compiled
 # =========================
-*.log
-logs/
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
 
 # =========================
-# Database
+# SQLite databases
 # =========================
+
+techingrow.db
+techingrow_production.db
+techingrow_before_e2e.db
+
 *.db
 *.sqlite
 *.sqlite3
 
-# =========================
-# Cache
-# =========================
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.cache/
+*.db-journal
+*.db-shm
+*.db-wal
+
 
 # =========================
-# Coverage
+# PyCharm / IDE
 # =========================
-.coverage
-.coverage.*
-htmlcov/
 
-# =========================
-# Build / package
-# =========================
-build/
-dist/
-*.egg-info/
-.eggs/
+.idea/
+.vscode/
+
+*.iml
+
 
 # =========================
 # OS files
 # =========================
+
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# =========================
-# TechInGrow local files
-# =========================
-media/
-uploads/
-temp/
-tmp/
-
-# Local generated data
-data/*.db
-data/*.sqlite
-data/*.sqlite3
 
 # =========================
-# Credentials / keys
+# Testing / Coverage
 # =========================
-*.pem
-*.key
-*.crt
-credentials.json
-secrets.json
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+.tox/
+.nox/
+
+
+# =========================
+# Python tooling
+# =========================
+
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+
+# =========================
+# Build / Distribution
+# =========================
+
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+
+*.egg-info/
+.installed.cfg
+*.egg
+
+
+# =========================
+# Logs
+# =========================
+
+*.log
+logs/
+
+
+# =========================
+# Temporary files
+# =========================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+~$*

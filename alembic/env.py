@@ -1,41 +1,22 @@
+import os
 from logging.config import fileConfig
 
 from alembic import context
+from dotenv import load_dotenv
+from sqlalchemy import engine_from_config, pool
 
-from sqlalchemy import (
-    engine_from_config,
-    pool
-)
+from app.database.database import Base
 
-from app.database.database import (
-    Base,
-    DATABASE_URL
-)
+from app.models.assessment_attempt import AssessmentAttempt
+from app.models.progress import UserProgress
+from app.models.refresh_token import RefreshToken
+from app.models.user import User
 
-from app.models.assessment_attempt import (
-    AssessmentAttempt
-)
 
-from app.models.progress import (
-    UserProgress
-)
-
-from app.models.refresh_token import (
-    RefreshToken
-)
-
-from app.models.user import (
-    User
-)
+load_dotenv()
 
 
 config = context.config
-
-
-config.set_main_option(
-    "sqlalchemy.url",
-    DATABASE_URL
-)
 
 
 if config.config_file_name is not None:
@@ -43,6 +24,18 @@ if config.config_file_name is not None:
     fileConfig(
         config.config_file_name
     )
+
+
+database_url = os.getenv(
+    "DATABASE_URL",
+    "sqlite:///./techingrow.db"
+)
+
+
+config.set_main_option(
+    "sqlalchemy.url",
+    database_url
+)
 
 
 target_metadata = Base.metadata
@@ -94,7 +87,9 @@ def run_migrations_online() -> None:
 
 
 if context.is_offline_mode():
+
     run_migrations_offline()
 
 else:
+
     run_migrations_online()

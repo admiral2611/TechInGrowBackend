@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import DateTime, Integer, String, func
+from sqlalchemy import Boolean, DateTime, Integer, String, func, text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.database.database import Base
@@ -32,6 +32,18 @@ class User(Base):
     hashed_password: Mapped[str] = mapped_column(
         String(255),
         nullable=False
+    )
+
+    is_admin: Mapped[bool] = mapped_column(
+        Boolean,
+        nullable=False,
+        default=False,
+        server_default=text("0")
+    )
+
+    last_active_at: Mapped[datetime | None] = mapped_column(
+        DateTime,
+        nullable=True
     )
 
     created_at: Mapped[datetime] = mapped_column(

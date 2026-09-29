@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Users | TechInGrow Admin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/users.css?v=3"
+    >
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<div class="admin-layout">
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                TIG
+            </div>
+
+            <div>
+
+                <strong>
+                    TechInGrow
+                </strong>
+
+                <span>
+                    Admin
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="/admin/dashboard"
+                class="nav-item"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="/admin/users"
+                class="nav-item active"
+            >
+                Users
+            </a>
+
+            <a
+                href="/admin/course"
+                class="nav-item"
+            >
+                Course
+            </a>
+
+            <a
+                href="/admin/assessments"
+                class="nav-item"
+            >
+                Assessments
+            </a>
+
+        </nav>
+
+
+        <button
+            id="logoutButton"
+            class="logout-button"
+        >
+            Chiqish
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <p class="page-label">
+                    ADMIN PANEL
+                </p>
+
+                <h1>
+                    Users
+                </h1>
+
+                <p class="page-description">
+                    TechInGrow foydalanuvchilari
+                    va ularning kurs progressi.
+                </p>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <span
+                    id="usersCount"
+                    class="last-updated"
+                >
+                    —
+                </span>
+
+                <button
+                    id="refreshButton"
+                    class="secondary-button"
+                >
+                    Yangilash
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div
+            id="usersError"
+            class="error-message hidden"
+        ></div>
+
+
+        <section class="users-toolbar">
+
+            <div class="search-wrapper">
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Username yoki email qidirish..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <select
+                id="pageSizeSelect"
+                class="page-size-select"
+            >
+                <option value="10">
+                    10
+                </option>
+
+                <option
+                    value="20"
+                    selected
+                >
+                    20
+                </option>
+
+                <option value="50">
+                    50
+                </option>
+
+                <option value="100">
+                    100
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <section class="users-table-panel">
+
+            <div class="table-scroll">
+
+                <table class="users-table">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>
+                            User
+                        </th>
+
+                        <th>
+                            Email
+                        </th>
+
+                        <th>
+                            Registered
+                        </th>
+
+                        <th>
+                            Last active
+                        </th>
+
+                        <th>
+                            Progress
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Actions
+                        </th>
+
+                    </tr>
+
+                    </thead>
+
+
+                    <tbody id="usersTableBody">
+
+                    <tr>
+
+                        <td
+                            colspan="7"
+                            class="empty-table"
+                        >
+                            Yuklanmoqda...
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="pagination">
+
+                <button
+                    id="previousPageButton"
+                    class="pagination-button"
+                >
+                    ← Previous
+                </button>
+
+
+                <span
+                    id="paginationInfo"
+                    class="pagination-info"
+                >
+                    Page 1
+                </span>
+
+
+                <button
+                    id="nextPageButton"
+                    class="pagination-button"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/admin/static/users.js?v=3"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Course Analytics | TechInGrow Admin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/course.css"
+    >
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<div class="admin-layout">
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                TIG
+            </div>
+
+            <div>
+
+                <strong>
+                    TechInGrow
+                </strong>
+
+                <span>
+                    Admin
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="/admin/dashboard"
+                class="nav-item"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="/admin/users"
+                class="nav-item"
+            >
+                Users
+            </a>
+
+            <a
+                href="/admin/course"
+                class="nav-item active"
+            >
+                Course
+            </a>
+
+            <a
+                href="/admin/assessments"
+                class="nav-item"
+            >
+                Assessments
+            </a>
+
+        </nav>
+
+
+        <button
+            id="logoutButton"
+            class="logout-button"
+        >
+            Chiqish
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <p class="page-label">
+                    ADMIN PANEL
+                </p>
+
+                <h1>
+                    Course Analytics
+                </h1>
+
+                <p class="page-description">
+                    30 kunlik kurs bo‘yicha
+                    foydalanuvchilar progressi.
+                </p>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <span
+                    id="lastUpdated"
+                    class="last-updated"
+                >
+                    —
+                </span>
+
+                <button
+                    id="refreshButton"
+                    class="secondary-button"
+                >
+                    Yangilash
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div
+            id="courseError"
+            class="error-message hidden"
+        ></div>
+
+
+        <section class="stats-grid">
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Total Users
+                </span>
+
+                <strong
+                    id="totalUsers"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Jami real userlar
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Started Course
+                </span>
+
+                <strong
+                    id="startedUsers"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Kamida 1 ta Day tugatgan
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Completed Course
+                </span>
+
+                <strong
+                    id="completedUsers"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    30/30 tugatganlar
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Completion Rate
+                </span>
+
+                <strong
+                    id="completionRate"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Kursni to‘liq tugatganlar ulushi
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Average Progress
+                </span>
+
+                <strong
+                    id="averageProgress"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span
+                    id="averageProgressDescription"
+                    class="stat-description"
+                >
+                    —
+                </span>
+
+            </article>
+
+        </section>
+
+
+        <section class="drop-panel">
+
+            <div>
+
+                <span class="drop-label">
+                    ENG KATTA DROP
+                </span>
+
+                <h2 id="largestDropTitle">
+                    —
+                </h2>
+
+                <p id="largestDropDescription">
+                    Ma'lumot yuklanmoqda...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="course-table-panel">
+
+            <div class="course-panel-header">
+
+                <div>
+
+                    <h2>
+                        Day 1 → Day 30
+                    </h2>
+
+                    <p>
+                        Har bir darsni nechta user
+                        tugatganini ko‘ring.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="course-table-scroll">
+
+                <table class="course-table">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>
+                            Day
+                        </th>
+
+                        <th>
+                            Lesson
+                        </th>
+
+                        <th>
+                            Completed
+                        </th>
+
+                        <th>
+                            Completion
+                        </th>
+
+                        <th>
+                            Drop
+                        </th>
+
+                    </tr>
+
+                    </thead>
+
+
+                    <tbody id="courseTableBody">
+
+                    <tr>
+
+                        <td
+                            colspan="5"
+                            class="course-empty"
+                        >
+                            Yuklanmoqda...
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/admin/static/course.js"></script>
+
+</body>
+
+</html>

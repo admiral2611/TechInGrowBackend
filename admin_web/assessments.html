@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Assessments | TechInGrow Admin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/assessments.css"
+    >
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<div class="admin-layout">
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                TIG
+            </div>
+
+            <div>
+
+                <strong>
+                    TechInGrow
+                </strong>
+
+                <span>
+                    Admin
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="/admin/dashboard"
+                class="nav-item"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="/admin/users"
+                class="nav-item"
+            >
+                Users
+            </a>
+
+            <a
+                href="/admin/course"
+                class="nav-item"
+            >
+                Course
+            </a>
+
+            <a
+                href="/admin/assessments"
+                class="nav-item active"
+            >
+                Assessments
+            </a>
+
+        </nav>
+
+
+        <button
+            id="logoutButton"
+            class="logout-button"
+        >
+            Chiqish
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <p class="page-label">
+                    ADMIN PANEL
+                </p>
+
+                <h1>
+                    Assessment Analytics
+                </h1>
+
+                <p class="page-description">
+                    Test natijalari va
+                    foydalanuvchilarning urinishlari.
+                </p>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <span
+                    id="lastUpdated"
+                    class="last-updated"
+                >
+                    —
+                </span>
+
+                <button
+                    id="refreshButton"
+                    class="secondary-button"
+                >
+                    Yangilash
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div
+            id="assessmentError"
+            class="error-message hidden"
+        ></div>
+
+
+        <section class="stats-grid">
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Total Attempts
+                </span>
+
+                <strong
+                    id="totalAttempts"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Jami assessment urinishlari
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Unique Users
+                </span>
+
+                <strong
+                    id="uniqueUsers"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Assessment topshirgan userlar
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Passed
+                </span>
+
+                <strong
+                    id="passedAttempts"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Muvaffaqiyatli urinishlar
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Failed
+                </span>
+
+                <strong
+                    id="failedAttempts"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    O‘ta olmagan urinishlar
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Pass Rate
+                </span>
+
+                <strong
+                    id="passRate"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Barcha urinishlar bo‘yicha
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Average Score
+                </span>
+
+                <strong
+                    id="averageScore"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    O‘rtacha assessment score
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Avg Attempts / User
+                </span>
+
+                <strong
+                    id="averageAttempts"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Bir userga o‘rtacha urinish
+                </span>
+
+            </article>
+
+        </section>
+
+
+        <section class="assessment-table-panel">
+
+            <div class="assessment-panel-header">
+
+                <div>
+
+                    <h2>
+                        Day 1 → Day 30
+                    </h2>
+
+                    <p>
+                        Har bir lesson assessment
+                        natijalarini solishtiring.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="assessment-table-scroll">
+
+                <table class="assessment-table">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>
+                            Day
+                        </th>
+
+                        <th>
+                            Lesson
+                        </th>
+
+                        <th>
+                            Attempts
+                        </th>
+
+                        <th>
+                            Users
+                        </th>
+
+                        <th>
+                            Passed
+                        </th>
+
+                        <th>
+                            Failed
+                        </th>
+
+                        <th>
+                            Pass Rate
+                        </th>
+
+                        <th>
+                            Avg Score
+                        </th>
+
+                        <th>
+                            Avg Attempts
+                        </th>
+
+                    </tr>
+
+                    </thead>
+
+
+                    <tbody id="assessmentTableBody">
+
+                    <tr>
+
+                        <td
+                            colspan="9"
+                            class="assessment-empty"
+                        >
+                            Yuklanmoqda...
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/admin/static/assessments.js"></script>
+
+</body>
+
+</html>

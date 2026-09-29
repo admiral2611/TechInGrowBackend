@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        User Detail | TechInGrow Admin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/user_detail.css"
+    >
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<div class="admin-layout">
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                TIG
+            </div>
+
+            <div>
+
+                <strong>
+                    TechInGrow
+                </strong>
+
+                <span>
+                    Admin
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="/admin/dashboard"
+                class="nav-item"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="/admin/users"
+                class="nav-item active"
+            >
+                Users
+            </a>
+
+            <a
+                href="/admin/course"
+                class="nav-item"
+            >
+                Course
+            </a>
+
+            <a
+                href="/admin/assessments"
+                class="nav-item"
+            >
+                Assessments
+            </a>
+
+        </nav>
+
+
+        <button
+            id="logoutButton"
+            class="logout-button"
+        >
+            Chiqish
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <a
+            href="/admin/users"
+            class="back-link"
+        >
+            ← Users
+        </a>
+
+
+        <header class="user-detail-header">
+
+            <div>
+
+                <p class="page-label">
+                    USER DETAIL
+                </p>
+
+                <h1 id="username">
+                    Yuklanmoqda...
+                </h1>
+
+                <p
+                    id="email"
+                    class="page-description"
+                >
+                    —
+                </p>
+
+            </div>
+
+            <div
+                id="courseStatus"
+                class="detail-status"
+            >
+                —
+            </div>
+
+        </header>
+
+
+        <div
+            id="detailError"
+            class="error-message hidden"
+        ></div>
+
+
+        <section class="detail-meta-grid">
+
+            <article class="detail-meta-card">
+
+                <span>
+                    User ID
+                </span>
+
+                <strong id="userId">
+                    —
+                </strong>
+
+            </article>
+
+
+            <article class="detail-meta-card">
+
+                <span>
+                    Registered
+                </span>
+
+                <strong id="createdAt">
+                    —
+                </strong>
+
+            </article>
+
+
+            <article class="detail-meta-card">
+
+                <span>
+                    Last Active
+                </span>
+
+                <strong id="lastActive">
+                    —
+                </strong>
+
+            </article>
+
+
+            <article class="detail-meta-card">
+
+                <span>
+                    Course Progress
+                </span>
+
+                <strong id="progressValue">
+                    —
+                </strong>
+
+            </article>
+
+        </section>
+
+
+        <section class="detail-section">
+
+            <div class="detail-section-header">
+
+                <div>
+
+                    <h2>
+                        Course Progress
+                    </h2>
+
+                    <p>
+                        Day 1 → Day 30 holati.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="main-progress">
+
+                <div class="main-progress-info">
+
+                    <strong id="progressPercent">
+                        0%
+                    </strong>
+
+                    <span id="progressDays">
+                        0/30 Day
+                    </span>
+
+                </div>
+
+                <div class="main-progress-track">
+
+                    <div
+                        id="mainProgressFill"
+                        class="main-progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="lessonProgressGrid"
+                class="lesson-progress-grid"
+            ></div>
+
+        </section>
+
+
+        <section class="detail-section">
+
+            <div class="detail-section-header">
+
+                <div>
+
+                    <h2>
+                        Assessment Summary
+                    </h2>
+
+                    <p>
+                        Userning barcha test urinishlari.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="assessment-summary-grid">
+
+                <article class="assessment-summary-card">
+
+                    <span>
+                        Attempts
+                    </span>
+
+                    <strong id="totalAttempts">
+                        —
+                    </strong>
+
+                </article>
+
+
+                <article class="assessment-summary-card">
+
+                    <span>
+                        Passed
+                    </span>
+
+                    <strong id="passedAttempts">
+                        —
+                    </strong>
+
+                </article>
+
+
+                <article class="assessment-summary-card">
+
+                    <span>
+                        Failed
+                    </span>
+
+                    <strong id="failedAttempts">
+                        —
+                    </strong>
+
+                </article>
+
+
+                <article class="assessment-summary-card">
+
+                    <span>
+                        Average Score
+                    </span>
+
+                    <strong id="averageScore">
+                        —
+                    </strong>
+
+                </article>
+
+
+                <article class="assessment-summary-card">
+
+                    <span>
+                        Best Score
+                    </span>
+
+                    <strong id="bestScore">
+                        —
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="detail-section">
+
+            <div class="detail-section-header">
+
+                <div>
+
+                    <h2>
+                        Recent Assessment Attempts
+                    </h2>
+
+                    <p>
+                        Oxirgi 20 ta urinish.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="attempt-table-scroll">
+
+                <table class="attempt-table">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>
+                            Day
+                        </th>
+
+                        <th>
+                            Lesson
+                        </th>
+
+                        <th>
+                            Attempt
+                        </th>
+
+                        <th>
+                            Score
+                        </th>
+
+                        <th>
+                            Correct
+                        </th>
+
+                        <th>
+                            Result
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                    </tr>
+
+                    </thead>
+
+
+                    <tbody id="attemptTableBody">
+
+                    <tr>
+
+                        <td
+                            colspan="7"
+                            class="empty-attempts"
+                        >
+                            Yuklanmoqda...
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/admin/static/user_detail.js"></script>
+
+</body>
+
+</html>

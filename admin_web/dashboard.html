@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        TechInGrow Admin Dashboard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/styles.css"
+    >
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<div class="admin-layout">
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                TIG
+            </div>
+
+            <div>
+
+                <strong>
+                    TechInGrow
+                </strong>
+
+                <span>
+                    Admin
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="/admin/dashboard"
+                class="nav-item active"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="/admin/users"
+                class="nav-item"
+            >
+                Users
+            </a>
+
+            <a
+                href="/admin/course"
+                class="nav-item"
+            >
+                Course
+            </a>
+
+            <a
+                href="/admin/assessments"
+                class="nav-item"
+            >
+                Assessments
+            </a>
+
+        </nav>
+
+
+        <button
+            id="logoutButton"
+            class="logout-button"
+        >
+            Chiqish
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <p class="page-label">
+                    ADMIN PANEL
+                </p>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p class="page-description">
+                    TechInGrow foydalanuvchilari va faolligi.
+                </p>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <span
+                    id="lastUpdated"
+                    class="last-updated"
+                >
+                    —
+                </span>
+
+                <button
+                    id="refreshButton"
+                    class="secondary-button"
+                >
+                    Yangilash
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div
+            id="dashboardError"
+            class="error-message hidden"
+        ></div>
+
+
+        <section class="stats-grid">
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Total Users
+                </span>
+
+                <strong
+                    id="totalUsers"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Jami real foydalanuvchilar
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Active Today
+                </span>
+
+                <strong
+                    id="activeToday"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Bugun aktiv bo‘lganlar
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Active 7 Days
+                </span>
+
+                <strong
+                    id="active7Days"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Oxirgi 7 kun
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    Active 30 Days
+                </span>
+
+                <strong
+                    id="active30Days"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Oxirgi 30 kun
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    New Today
+                </span>
+
+                <strong
+                    id="newUsersToday"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Bugungi registratsiyalar
+                </span>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <span class="stat-label">
+                    New 7 Days
+                </span>
+
+                <strong
+                    id="newUsers7Days"
+                    class="stat-value"
+                >
+                    —
+                </strong>
+
+                <span class="stat-description">
+                    Oxirgi 7 kundagi yangi userlar
+                </span>
+
+            </article>
+
+
+        </section>
+
+
+        <section class="overview-panel">
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        User activity
+                    </h2>
+
+                    <p>
+                        Aktiv foydalanuvchilar bo‘yicha qisqa ko‘rinish.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="activity-list">
+
+
+                <div class="activity-row">
+
+                    <div class="activity-info">
+
+                        <span>
+                            Today
+                        </span>
+
+                        <strong id="activityTodayText">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-track">
+
+                        <div
+                            id="activityTodayBar"
+                            class="progress-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-row">
+
+                    <div class="activity-info">
+
+                        <span>
+                            Last 7 days
+                        </span>
+
+                        <strong id="activity7Text">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-track">
+
+                        <div
+                            id="activity7Bar"
+                            class="progress-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-row">
+
+                    <div class="activity-info">
+
+                        <span>
+                            Last 30 days
+                        </span>
+
+                        <strong id="activity30Text">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-track">
+
+                        <div
+                            id="activity30Bar"
+                            class="progress-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/admin/static/dashboard.js"></script>
+
+</body>
+
+</html>
