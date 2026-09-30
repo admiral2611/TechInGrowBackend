@@ -1,7 +1,17 @@
 from datetime import datetime
 
-from sqlalchemy import Boolean, DateTime, Integer, String, func, text
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import (
+    Boolean,
+    DateTime,
+    Integer,
+    String,
+    func,
+    text
+)
+from sqlalchemy.orm import (
+    Mapped,
+    mapped_column
+)
 
 from app.database.database import Base
 
@@ -32,6 +42,13 @@ class User(Base):
     hashed_password: Mapped[str] = mapped_column(
         String(255),
         nullable=False
+    )
+
+    google_sub: Mapped[str | None] = mapped_column(
+        String(255),
+        unique=True,
+        index=True,
+        nullable=True
     )
 
     is_admin: Mapped[bool] = mapped_column(

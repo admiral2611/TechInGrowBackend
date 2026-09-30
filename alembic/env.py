@@ -3,12 +3,19 @@ from logging.config import fileConfig
 
 from alembic import context
 from dotenv import load_dotenv
-from sqlalchemy import engine_from_config, pool
+from sqlalchemy import (
+    engine_from_config,
+    pool
+)
 
 from app.database.database import Base
 
-from app.models.assessment_attempt import AssessmentAttempt
-from app.models.password_reset_code import PasswordResetCode
+from app.models.assessment_attempt import (
+    AssessmentAttempt
+)
+from app.models.password_reset_code import (
+    PasswordResetCode
+)
 from app.models.progress import UserProgress
 from app.models.refresh_token import RefreshToken
 from app.models.user import User
