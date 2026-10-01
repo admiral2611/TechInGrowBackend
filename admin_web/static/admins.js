@@ -1,6 +1,6 @@
-const usersTableBody =
+const adminsTableBody =
     document.getElementById(
-        "usersTableBody"
+        "adminsTableBody"
     );
 
 const searchInput =
@@ -8,9 +8,9 @@ const searchInput =
         "searchInput"
     );
 
-const usersCount =
+const adminsCount =
     document.getElementById(
-        "usersCount"
+        "adminsCount"
     );
 
 const refreshButton =
@@ -23,9 +23,9 @@ const logoutButton =
         "logoutButton"
     );
 
-const usersError =
+const adminsError =
     document.getElementById(
-        "usersError"
+        "adminsError"
     );
 
 const previousPageButton =
@@ -49,6 +49,62 @@ const pageSizeSelect =
     );
 
 
+const adminModal =
+    document.getElementById(
+        "adminModal"
+    );
+
+const closeModalButton =
+    document.getElementById(
+        "closeModalButton"
+    );
+
+const modalCloseActionButton =
+    document.getElementById(
+        "modalCloseActionButton"
+    );
+
+const modalDeleteButton =
+    document.getElementById(
+        "modalDeleteButton"
+    );
+
+const modalAdminId =
+    document.getElementById(
+        "modalAdminId"
+    );
+
+const modalUsername =
+    document.getElementById(
+        "modalUsername"
+    );
+
+const modalEmail =
+    document.getElementById(
+        "modalEmail"
+    );
+
+const modalVerified =
+    document.getElementById(
+        "modalVerified"
+    );
+
+const modalCurrentAdmin =
+    document.getElementById(
+        "modalCurrentAdmin"
+    );
+
+const modalCreatedAt =
+    document.getElementById(
+        "modalCreatedAt"
+    );
+
+const modalLastActive =
+    document.getElementById(
+        "modalLastActive"
+    );
+
+
 let currentPage = 1;
 
 let pageSize = Number(
@@ -60,6 +116,8 @@ let totalPages = 0;
 let searchValue = "";
 
 let searchTimer = null;
+
+let selectedAdmin = null;
 
 
 function getAccessToken() {
@@ -119,10 +177,10 @@ function showError(
     message
 ) {
 
-    usersError.textContent =
+    adminsError.textContent =
         message;
 
-    usersError.classList.remove(
+    adminsError.classList.remove(
         "hidden"
     );
 }
@@ -130,7 +188,7 @@ function showError(
 
 function hideError() {
 
-    usersError.classList.add(
+    adminsError.classList.add(
         "hidden"
     );
 }
@@ -140,7 +198,6 @@ async function refreshAccessToken() {
 
     const refreshToken =
         getRefreshToken();
-
 
     if (!refreshToken) {
         return false;
@@ -152,23 +209,20 @@ async function refreshAccessToken() {
         const response =
             await fetch(
                 "/api/v1/auth/refresh",
-
                 {
-                    method:
-                        "POST",
+                    method: "POST",
 
                     headers: {
                         "Content-Type":
                             "application/json"
                     },
 
-                    body:
-                        JSON.stringify(
-                            {
-                                refresh_token:
-                                    refreshToken
-                            }
-                        )
+                    body: JSON.stringify(
+                        {
+                            refresh_token:
+                                refreshToken
+                        }
+                    )
                 }
             );
 
@@ -229,7 +283,6 @@ async function apiFetch(
     const response =
         await fetch(
             url,
-
             {
                 ...options,
                 headers
@@ -267,24 +320,6 @@ async function apiFetch(
 }
 
 
-function escapeHtml(
-    value
-) {
-
-    const element =
-        document.createElement(
-            "div"
-        );
-
-
-    element.textContent =
-        value ?? "";
-
-
-    return element.innerHTML;
-}
-
-
 function formatDate(
     value
 ) {
@@ -311,28 +346,34 @@ function formatDate(
 
     return date.toLocaleString(
         "uz-UZ",
-
         {
-            year:
-                "numeric",
-
-            month:
-                "short",
-
-            day:
-                "2-digit",
-
-            hour:
-                "2-digit",
-
-            minute:
-                "2-digit"
+            year: "numeric",
+            month: "short",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit"
         }
     );
 }
 
 
-function getVerificationBadge(
+function escapeHtml(
+    value
+) {
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+    div.textContent =
+        value ?? "";
+
+    return div.innerHTML;
+}
+
+
+function verificationBadge(
     verified
 ) {
 
@@ -364,77 +405,35 @@ function getVerificationBadge(
 }
 
 
-function getCourseStatusBadge(
-    courseCompleted
+function createAdminRow(
+    admin
 ) {
 
-    if (courseCompleted) {
-
-        return `
-            <span
-                class="
-                    status-badge
-                    status-completed
-                "
-            >
-                Completed
-            </span>
-        `;
-    }
+    const currentBadge =
+        admin.is_current_admin
+            ? `
+                <span
+                    class="current-admin-badge"
+                >
+                    You
+                </span>
+            `
+            : "";
 
 
-    return `
-        <span
-            class="
-                status-badge
-                status-learning
-            "
-        >
-            Learning
-        </span>
-    `;
-}
-
-
-function createUserRow(
-    user
-) {
-
-    const username =
-        escapeHtml(
-            user.username
-        );
-
-
-    const email =
-        escapeHtml(
-            user.email
-        );
-
-
-    const firstLetter =
-        user.username
-            ? user.username
-                .charAt(0)
-                .toUpperCase()
-            : "?";
-
-
-    const progressPercent =
-        Number(
-            user.progress_percent
-            ?? 0
-        );
-
-
-    const safeProgressPercent =
-        Math.min(
-            100,
-            Math.max(
-                0,
-                progressPercent
-            )
-        );
+    const deleteButton =
+        admin.is_current_admin
+            ? ""
+            : `
+                <button
+                    class="delete-admin-button"
+                    data-admin-id="${admin.id}"
+                    data-username="${escapeHtml(admin.username)}"
+                    type="button"
+                >
+                    Delete
+                </button>
+            `;
 
 
     return `
@@ -442,20 +441,25 @@ function createUserRow(
 
             <td>
 
-                <div class="user-cell">
+                <div class="admin-account-cell">
 
-                    <div class="user-avatar">
-                        ${escapeHtml(firstLetter)}
+                    <div class="admin-avatar">
+                        ${escapeHtml(
+                            admin.username
+                                .charAt(0)
+                                .toUpperCase()
+                        )}
                     </div>
 
-                    <div class="user-info">
+                    <div class="admin-account-info">
 
                         <strong>
-                            ${username}
+                            ${escapeHtml(admin.username)}
+                            ${currentBadge}
                         </strong>
 
                         <span>
-                            ID ${user.id}
+                            ID ${admin.id}
                         </span>
 
                     </div>
@@ -466,71 +470,28 @@ function createUserRow(
 
 
             <td class="muted-text">
-                ${email}
+                ${escapeHtml(admin.email)}
             </td>
 
 
             <td>
-                ${getVerificationBadge(
-                    user.is_email_verified
+                ${verificationBadge(
+                    admin.is_email_verified
                 )}
             </td>
 
 
             <td class="muted-text">
                 ${formatDate(
-                    user.created_at
+                    admin.created_at
                 )}
             </td>
 
 
             <td class="muted-text">
                 ${formatDate(
-                    user.last_active_at
+                    admin.last_active_at
                 )}
-            </td>
-
-
-            <td>
-
-                <div class="progress-cell">
-
-                    <div class="progress-cell-info">
-
-                        <strong>
-                            ${safeProgressPercent}%
-                        </strong>
-
-                        <span>
-                            ${user.completed_lessons}/${user.total_lessons}
-                        </span>
-
-                    </div>
-
-
-                    <div class="mini-progress-track">
-
-                        <div
-                            class="mini-progress-fill"
-                            style="
-                                width:
-                                ${safeProgressPercent}%
-                            "
-                        ></div>
-
-                    </div>
-
-                </div>
-
-            </td>
-
-
-            <td>
-
-                ${getCourseStatusBadge(
-                    user.course_completed
-                )}
-
             </td>
 
 
@@ -539,22 +500,14 @@ function createUserRow(
                 <div class="action-buttons">
 
                     <button
-                        class="view-user-button"
-                        data-user-id="${user.id}"
+                        class="view-admin-button"
+                        data-admin-id="${admin.id}"
                         type="button"
                     >
                         View
                     </button>
 
-
-                    <button
-                        class="delete-user-button"
-                        data-user-id="${user.id}"
-                        data-username="${username}"
-                        type="button"
-                    >
-                        Delete
-                    </button>
+                    ${deleteButton}
 
                 </div>
 
@@ -565,23 +518,23 @@ function createUserRow(
 }
 
 
-function renderUsers(
-    users
+function renderAdmins(
+    admins
 ) {
 
     if (
-        users.length === 0
+        admins.length === 0
     ) {
 
-        usersTableBody.innerHTML =
+        adminsTableBody.innerHTML =
             `
                 <tr>
 
                     <td
-                        colspan="8"
+                        colspan="6"
                         class="empty-table"
                     >
-                        User topilmadi.
+                        Admin topilmadi.
                     </td>
 
                 </tr>
@@ -591,34 +544,30 @@ function renderUsers(
     }
 
 
-    usersTableBody.innerHTML =
-        users
+    adminsTableBody.innerHTML =
+        admins
             .map(
-                createUserRow
+                createAdminRow
             )
             .join("");
 
 
     document
         .querySelectorAll(
-            ".view-user-button"
+            ".view-admin-button"
         )
         .forEach(
-            (
-                button
-            ) => {
+            (button) => {
 
                 button.addEventListener(
                     "click",
-
                     () => {
 
-                        const userId =
-                            button.dataset.userId;
-
-
-                        window.location.href =
-                            `/admin/users/${userId}`;
+                        openAdminDetail(
+                            Number(
+                                button.dataset.adminId
+                            )
+                        );
                     }
                 );
             }
@@ -627,21 +576,18 @@ function renderUsers(
 
     document
         .querySelectorAll(
-            ".delete-user-button"
+            ".delete-admin-button"
         )
         .forEach(
-            (
-                button
-            ) => {
+            (button) => {
 
                 button.addEventListener(
                     "click",
-
                     async () => {
 
-                        await deleteUser(
+                        await deleteAdmin(
                             Number(
-                                button.dataset.userId
+                                button.dataset.adminId
                             ),
 
                             button.dataset.username,
@@ -663,8 +609,8 @@ function updatePagination(
         data.total_pages;
 
 
-    usersCount.textContent =
-        `${data.total} ta user`;
+    adminsCount.textContent =
+        `${data.total} ta admin`;
 
 
     if (
@@ -692,36 +638,9 @@ function updatePagination(
 }
 
 
-async function readErrorMessage(
-    response,
-    fallbackMessage
-) {
-
-    try {
-
-        const data =
-            await response.json();
-
-
-        return (
-            data.detail
-            ||
-            data.message
-            ||
-            fallbackMessage
-        );
-
-    } catch {
-
-        return fallbackMessage;
-    }
-}
-
-
-async function loadUsers() {
+async function loadAdmins() {
 
     hideError();
-
 
     refreshButton.disabled =
         true;
@@ -735,7 +654,6 @@ async function loadUsers() {
         "page",
         currentPage
     );
-
 
     params.set(
         "page_size",
@@ -756,7 +674,7 @@ async function loadUsers() {
 
         const response =
             await apiFetch(
-                `/api/v1/admin/users?${params.toString()}`
+                `/api/v1/admin/admins?${params.toString()}`
             );
 
 
@@ -769,9 +687,7 @@ async function loadUsers() {
             response.status === 403
         ) {
 
-            showError(
-                "Bu sahifa faqat admin uchun."
-            );
+            goToLogin();
 
             return;
         }
@@ -779,15 +695,8 @@ async function loadUsers() {
 
         if (!response.ok) {
 
-            const message =
-                await readErrorMessage(
-                    response,
-                    "Userlarni olishda xatolik."
-                );
-
-
             showError(
-                message
+                "Adminlar ma'lumotini olishda xatolik."
             );
 
             return;
@@ -798,8 +707,8 @@ async function loadUsers() {
             await response.json();
 
 
-        renderUsers(
-            data.users || []
+        renderAdmins(
+            data.admins || []
         );
 
 
@@ -826,15 +735,153 @@ async function loadUsers() {
 }
 
 
-async function deleteUser(
-    userId,
+async function readErrorMessage(
+    response,
+    fallbackMessage
+) {
+
+    try {
+
+        const data =
+            await response.json();
+
+        return (
+            data.detail
+            ||
+            data.message
+            ||
+            fallbackMessage
+        );
+
+    } catch {
+
+        return fallbackMessage;
+    }
+}
+
+
+async function openAdminDetail(
+    adminId
+) {
+
+    hideError();
+
+
+    try {
+
+        const response =
+            await apiFetch(
+                `/api/v1/admin/admins/${adminId}`
+            );
+
+
+        if (!response) {
+            return;
+        }
+
+
+        if (!response.ok) {
+
+            const message =
+                await readErrorMessage(
+                    response,
+                    "Admin ma'lumotini olishda xatolik."
+                );
+
+            showError(
+                message
+            );
+
+            return;
+        }
+
+
+        selectedAdmin =
+            await response.json();
+
+
+        modalAdminId.textContent =
+            selectedAdmin.id;
+
+        modalUsername.textContent =
+            selectedAdmin.username;
+
+        modalEmail.textContent =
+            selectedAdmin.email;
+
+        modalVerified.textContent =
+            selectedAdmin.is_email_verified
+                ? "Ha"
+                : "Yo'q";
+
+        modalCurrentAdmin.textContent =
+            selectedAdmin.is_current_admin
+                ? "Ha"
+                : "Yo'q";
+
+        modalCreatedAt.textContent =
+            formatDate(
+                selectedAdmin.created_at
+            );
+
+        modalLastActive.textContent =
+            formatDate(
+                selectedAdmin.last_active_at
+            );
+
+
+        if (
+            selectedAdmin.is_current_admin
+        ) {
+
+            modalDeleteButton.classList.add(
+                "hidden"
+            );
+
+        } else {
+
+            modalDeleteButton.classList.remove(
+                "hidden"
+            );
+        }
+
+
+        adminModal.classList.remove(
+            "hidden"
+        );
+
+    } catch (error) {
+
+        console.error(
+            error
+        );
+
+        showError(
+            "Server bilan bog'lanishda xatolik."
+        );
+    }
+}
+
+
+function closeAdminModal() {
+
+    selectedAdmin = null;
+
+    adminModal.classList.add(
+        "hidden"
+    );
+}
+
+
+async function deleteAdmin(
+    adminId,
     username,
-    button
+    button = null
 ) {
 
     const confirmed =
         window.confirm(
-            `${username} userini o'chirishni tasdiqlaysizmi?\n\nBu amalni qaytarib bo'lmaydi.`
+            `${username} admin accountini o'chirishni tasdiqlaysizmi?\n\nBu amalni qaytarib bo'lmaydi.`
         );
 
 
@@ -843,7 +890,14 @@ async function deleteUser(
     }
 
 
-    button.disabled =
+    if (button) {
+
+        button.disabled =
+            true;
+    }
+
+
+    modalDeleteButton.disabled =
         true;
 
 
@@ -854,11 +908,9 @@ async function deleteUser(
 
         const response =
             await apiFetch(
-                `/api/v1/admin/users/${userId}`,
-
+                `/api/v1/admin/admins/${adminId}`,
                 {
-                    method:
-                        "DELETE"
+                    method: "DELETE"
                 }
             );
 
@@ -873,9 +925,8 @@ async function deleteUser(
             const message =
                 await readErrorMessage(
                     response,
-                    "Userni o'chirishda xatolik."
+                    "Adminni o'chirishda xatolik."
                 );
-
 
             showError(
                 message
@@ -885,16 +936,10 @@ async function deleteUser(
         }
 
 
-        const data =
-            await response.json();
+        closeAdminModal();
 
 
-        console.log(
-            data
-        );
-
-
-        await loadUsers();
+        await loadAdmins();
 
     } catch (error) {
 
@@ -902,14 +947,19 @@ async function deleteUser(
             error
         );
 
-
         showError(
             "Server bilan bog'lanishda xatolik."
         );
 
     } finally {
 
-        button.disabled =
+        if (button) {
+
+            button.disabled =
+                false;
+        }
+
+        modalDeleteButton.disabled =
             false;
     }
 }
@@ -934,10 +984,8 @@ async function logout() {
 
             await fetch(
                 "/api/v1/auth/logout",
-
                 {
-                    method:
-                        "POST",
+                    method: "POST",
 
                     headers: {
                         "Content-Type":
@@ -947,13 +995,12 @@ async function logout() {
                             `Bearer ${accessToken}`
                     },
 
-                    body:
-                        JSON.stringify(
-                            {
-                                refresh_token:
-                                    refreshToken
-                            }
-                        )
+                    body: JSON.stringify(
+                        {
+                            refresh_token:
+                                refreshToken
+                        }
+                    )
                 }
             );
         }
@@ -973,7 +1020,6 @@ async function logout() {
 
 searchInput.addEventListener(
     "input",
-
     () => {
 
         clearTimeout(
@@ -990,11 +1036,9 @@ searchInput.addEventListener(
                             .value
                             .trim();
 
-
                     currentPage = 1;
 
-
-                    loadUsers();
+                    loadAdmins();
 
                 },
                 350
@@ -1005,7 +1049,6 @@ searchInput.addEventListener(
 
 pageSizeSelect.addEventListener(
     "change",
-
     () => {
 
         pageSize =
@@ -1013,18 +1056,15 @@ pageSizeSelect.addEventListener(
                 pageSizeSelect.value
             );
 
-
         currentPage = 1;
 
-
-        loadUsers();
+        loadAdmins();
     }
 );
 
 
 previousPageButton.addEventListener(
     "click",
-
     () => {
 
         if (
@@ -1033,8 +1073,7 @@ previousPageButton.addEventListener(
 
             currentPage--;
 
-
-            loadUsers();
+            loadAdmins();
         }
     }
 );
@@ -1042,18 +1081,15 @@ previousPageButton.addEventListener(
 
 nextPageButton.addEventListener(
     "click",
-
     () => {
 
         if (
-            currentPage
-            < totalPages
+            currentPage < totalPages
         ) {
 
             currentPage++;
 
-
-            loadUsers();
+            loadAdmins();
         }
     }
 );
@@ -1061,7 +1097,7 @@ nextPageButton.addEventListener(
 
 refreshButton.addEventListener(
     "click",
-    loadUsers
+    loadAdmins
 );
 
 
@@ -1071,11 +1107,68 @@ logoutButton.addEventListener(
 );
 
 
+closeModalButton.addEventListener(
+    "click",
+    closeAdminModal
+);
+
+
+modalCloseActionButton.addEventListener(
+    "click",
+    closeAdminModal
+);
+
+
+adminModal
+    .querySelector(
+        ".admin-modal-backdrop"
+    )
+    .addEventListener(
+        "click",
+        closeAdminModal
+    );
+
+
+modalDeleteButton.addEventListener(
+    "click",
+    async () => {
+
+        if (!selectedAdmin) {
+            return;
+        }
+
+
+        await deleteAdmin(
+            selectedAdmin.id,
+            selectedAdmin.username
+        );
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (
+            event.key === "Escape"
+            &&
+            !adminModal.classList.contains(
+                "hidden"
+            )
+        ) {
+
+            closeAdminModal();
+        }
+    }
+);
+
+
 if (!getAccessToken()) {
 
     goToLogin();
 
 } else {
 
-    loadUsers();
+    loadAdmins();
 }

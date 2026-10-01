@@ -1,5 +1,4 @@
 import math
-from pathlib import Path
 
 from sqlalchemy import func, or_
 from sqlalchemy.orm import Session
@@ -8,29 +7,7 @@ from app.models.progress import UserProgress
 from app.models.user import User
 
 
-ROOT_DIR = Path(
-    __file__
-).resolve().parents[2]
-
-LESSONS_DIR = (
-    ROOT_DIR
-    / "data"
-    / "lessons"
-)
-
-
-def _get_total_lessons() -> int:
-
-    if not LESSONS_DIR.exists():
-        return 0
-
-    return len(
-        list(
-            LESSONS_DIR.glob(
-                "day_*.json"
-            )
-        )
-    )
+TOTAL_LESSONS = 30
 
 
 def get_paginated_admin_users(
@@ -40,19 +17,14 @@ def get_paginated_admin_users(
     search: str | None = None
 ) -> dict:
 
-    total_lessons = (
-        _get_total_lessons()
-    )
-
-    completed_subquery = (
+    completed_progress_subquery = (
         db.query(
             UserProgress.user_id.label(
                 "user_id"
             ),
+
             func.count(
-                func.distinct(
-                    UserProgress.lesson_id
-                )
+                UserProgress.id
             ).label(
                 "completed_lessons"
             )
@@ -68,11 +40,13 @@ def get_paginated_admin_users(
         .subquery()
     )
 
-    base_query = (
+
+    query = (
         db.query(
             User,
+
             func.coalesce(
-                completed_subquery
+                completed_progress_subquery
                 .c
                 .completed_lessons,
                 0
@@ -81,8 +55,9 @@ def get_paginated_admin_users(
             )
         )
         .outerjoin(
-            completed_subquery,
-            completed_subquery
+            completed_progress_subquery,
+
+            completed_progress_subquery
             .c
             .user_id
             == User.id
@@ -94,6 +69,7 @@ def get_paginated_admin_users(
         )
     )
 
+
     if search:
 
         clean_search = (
@@ -103,42 +79,46 @@ def get_paginated_admin_users(
 
         if clean_search:
 
-            search_pattern = (
+            pattern = (
                 f"%{clean_search}%"
             )
 
-            base_query = (
-                base_query.filter(
+            query = (
+                query.filter(
                     or_(
                         User.username.ilike(
-                            search_pattern
+                            pattern
                         ),
+
                         User.email.ilike(
-                            search_pattern
+                            pattern
                         )
                     )
                 )
             )
 
+
     total = (
-        base_query.count()
+        query.count()
     )
+
 
     total_pages = (
         math.ceil(
-            total
-            / page_size
+            total / page_size
         )
         if total > 0
         else 0
     )
 
+
     offset = (
         page - 1
     ) * page_size
 
+
     rows = (
-        base_query
+        query
         .order_by(
             User.created_at.desc()
         )
@@ -151,35 +131,35 @@ def get_paginated_admin_users(
         .all()
     )
 
+
     users = []
 
-    for user, completed_lessons in rows:
+
+    for (
+        user,
+        completed_lessons
+    ) in rows:
 
         completed_lessons = int(
-            completed_lessons
-            or 0
+            completed_lessons or 0
         )
 
-        if total_lessons > 0:
 
-            progress_percent = round(
-                (
-                    completed_lessons
-                    / total_lessons
-                )
-                * 100
+        progress_percent = round(
+            (
+                completed_lessons
+                / TOTAL_LESSONS
             )
+            * 100,
+            1
+        )
 
-        else:
-
-            progress_percent = 0
 
         course_completed = (
-            total_lessons > 0
-            and
             completed_lessons
-            >= total_lessons
+            >= TOTAL_LESSONS
         )
+
 
         users.append(
             {
@@ -192,6 +172,9 @@ def get_paginated_admin_users(
                 "email":
                     user.email,
 
+                "is_email_verified":
+                    user.is_email_verified,
+
                 "created_at":
                     user.created_at,
 
@@ -202,7 +185,7 @@ def get_paginated_admin_users(
                     completed_lessons,
 
                 "total_lessons":
-                    total_lessons,
+                    TOTAL_LESSONS,
 
                 "progress_percent":
                     progress_percent,
@@ -211,6 +194,7 @@ def get_paginated_admin_users(
                     course_completed
             }
         )
+
 
     return {
         "page":

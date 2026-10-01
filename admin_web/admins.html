@@ -11,7 +11,7 @@
     >
 
     <title>
-        Users | TechInGrow Admin
+        Admins | TechInGrow Admin
     </title>
 
     <link
@@ -21,7 +21,12 @@
 
     <link
         rel="stylesheet"
-        href="/admin/static/users.css?v=4"
+        href="/admin/static/users.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/admin/static/admins.css?v=1"
     >
 
 </head>
@@ -67,14 +72,14 @@
 
             <a
                 href="/admin/users"
-                class="nav-item active"
+                class="nav-item"
             >
                 Users
             </a>
 
             <a
                 href="/admin/admins"
-                class="nav-item"
+                class="nav-item active"
             >
                 Admins
             </a>
@@ -118,12 +123,12 @@
                 </p>
 
                 <h1>
-                    Users
+                    Admin Accounts
                 </h1>
 
                 <p class="page-description">
-                    TechInGrow foydalanuvchilari
-                    va ularning kurs progressi.
+                    TechInGrow administrator
+                    accountlarini boshqarish.
                 </p>
 
             </div>
@@ -132,7 +137,7 @@
             <div class="header-right">
 
                 <span
-                    id="usersCount"
+                    id="adminsCount"
                     class="last-updated"
                 >
                     —
@@ -151,7 +156,7 @@
 
 
         <div
-            id="usersError"
+            id="adminsError"
             class="error-message hidden"
         ></div>
 
@@ -163,7 +168,7 @@
                 <input
                     id="searchInput"
                     type="search"
-                    placeholder="Username yoki email qidirish..."
+                    placeholder="Admin username yoki email..."
                     autocomplete="off"
                 >
 
@@ -203,14 +208,14 @@
 
             <div class="table-scroll">
 
-                <table class="users-table">
+                <table class="users-table admins-table">
 
                     <thead>
 
                     <tr>
 
                         <th>
-                            User
+                            Admin
                         </th>
 
                         <th>
@@ -218,7 +223,7 @@
                         </th>
 
                         <th>
-                            Email Verified
+                            Email status
                         </th>
 
                         <th>
@@ -230,14 +235,6 @@
                         </th>
 
                         <th>
-                            Progress
-                        </th>
-
-                        <th>
-                            Status
-                        </th>
-
-                        <th>
                             Actions
                         </th>
 
@@ -246,12 +243,12 @@
                     </thead>
 
 
-                    <tbody id="usersTableBody">
+                    <tbody id="adminsTableBody">
 
                     <tr>
 
                         <td
-                            colspan="8"
+                            colspan="6"
                             class="empty-table"
                         >
                             Yuklanmoqda...
@@ -301,7 +298,150 @@
 </div>
 
 
-<script src="/admin/static/users.js?v=4"></script>
+<div
+    id="adminModal"
+    class="admin-modal hidden"
+>
+
+    <div class="admin-modal-backdrop"></div>
+
+
+    <div class="admin-modal-card">
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <p class="page-label">
+                    ADMIN DETAIL
+                </p>
+
+                <h2 id="modalUsername">
+                    —
+                </h2>
+
+            </div>
+
+
+            <button
+                id="closeModalButton"
+                class="modal-close-button"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="admin-detail-grid">
+
+            <div class="admin-detail-item">
+
+                <span>
+                    ID
+                </span>
+
+                <strong id="modalAdminId">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="admin-detail-item">
+
+                <span>
+                    Email
+                </span>
+
+                <strong id="modalEmail">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="admin-detail-item">
+
+                <span>
+                    Email verified
+                </span>
+
+                <strong id="modalVerified">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="admin-detail-item">
+
+                <span>
+                    Current admin
+                </span>
+
+                <strong id="modalCurrentAdmin">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="admin-detail-item">
+
+                <span>
+                    Registered
+                </span>
+
+                <strong id="modalCreatedAt">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="admin-detail-item">
+
+                <span>
+                    Last active
+                </span>
+
+                <strong id="modalLastActive">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-modal-actions">
+
+            <button
+                id="modalDeleteButton"
+                class="delete-admin-button hidden"
+                type="button"
+            >
+                Adminni o'chirish
+            </button>
+
+            <button
+                id="modalCloseActionButton"
+                class="secondary-button"
+                type="button"
+            >
+                Yopish
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="/admin/static/admins.js?v=1"></script>
 
 </body>
 

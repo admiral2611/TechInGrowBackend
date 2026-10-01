@@ -9,14 +9,26 @@ router = APIRouter(
 )
 
 
-ROOT_DIR = Path(
-    __file__
-).resolve().parents[2]
+ROOT_DIR = (
+    Path(__file__)
+    .resolve()
+    .parents[2]
+)
 
 ADMIN_WEB_DIR = (
     ROOT_DIR
     / "admin_web"
 )
+
+
+def admin_file(
+    file_name: str
+) -> FileResponse:
+
+    return FileResponse(
+        ADMIN_WEB_DIR
+        / file_name
+    )
 
 
 @router.get(
@@ -25,9 +37,8 @@ ADMIN_WEB_DIR = (
 )
 def admin_login_page():
 
-    return FileResponse(
-        ADMIN_WEB_DIR
-        / "login.html"
+    return admin_file(
+        "login.html"
     )
 
 
@@ -37,9 +48,8 @@ def admin_login_page():
 )
 def admin_dashboard_page():
 
-    return FileResponse(
-        ADMIN_WEB_DIR
-        / "dashboard.html"
+    return admin_file(
+        "dashboard.html"
     )
 
 
@@ -49,9 +59,8 @@ def admin_dashboard_page():
 )
 def admin_users_page():
 
-    return FileResponse(
-        ADMIN_WEB_DIR
-        / "users.html"
+    return admin_file(
+        "users.html"
     )
 
 
@@ -63,9 +72,19 @@ def admin_user_detail_page(
     user_id: int
 ):
 
-    return FileResponse(
-        ADMIN_WEB_DIR
-        / "user_detail.html"
+    return admin_file(
+        "user_detail.html"
+    )
+
+
+@router.get(
+    "/admin/admins",
+    include_in_schema=False
+)
+def admin_accounts_page():
+
+    return admin_file(
+        "admins.html"
     )
 
 
@@ -75,9 +94,8 @@ def admin_user_detail_page(
 )
 def admin_course_page():
 
-    return FileResponse(
-        ADMIN_WEB_DIR
-        / "course.html"
+    return admin_file(
+        "course.html"
     )
 
 
@@ -87,7 +105,6 @@ def admin_course_page():
 )
 def admin_assessments_page():
 
-    return FileResponse(
-        ADMIN_WEB_DIR
-        / "assessments.html"
+    return admin_file(
+        "assessments.html"
     )

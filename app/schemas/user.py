@@ -14,6 +14,7 @@ from app.core.password_policy import (
 
 
 class UserRegister(BaseModel):
+
     username: str = Field(
         min_length=3,
         max_length=50
@@ -23,7 +24,30 @@ class UserRegister(BaseModel):
 
     password: str
 
-    @field_validator("password")
+    @field_validator(
+        "username"
+    )
+    @classmethod
+    def normalize_username(
+        cls,
+        value: str
+    ) -> str:
+
+        value = (
+            value
+            .strip()
+        )
+
+        if not value:
+            raise ValueError(
+                "Username bo'sh bo'lishi mumkin emas"
+            )
+
+        return value
+
+    @field_validator(
+        "password"
+    )
     @classmethod
     def validate_password(
         cls,
@@ -36,9 +60,15 @@ class UserRegister(BaseModel):
 
 
 class UserResponse(BaseModel):
+
     id: int
+
     username: str
+
     email: EmailStr
+
+    is_email_verified: bool
+
     created_at: datetime
 
     model_config = ConfigDict(

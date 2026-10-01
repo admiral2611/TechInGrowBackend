@@ -5,16 +5,19 @@ from pydantic import BaseModel
 
 class AdminUserListItem(BaseModel):
     id: int
+
     username: str
     email: str
+
+    is_email_verified: bool
 
     created_at: datetime
     last_active_at: datetime | None
 
     completed_lessons: int
     total_lessons: int
-    progress_percent: int
 
+    progress_percent: float
     course_completed: bool
 
 

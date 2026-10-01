@@ -8,6 +8,7 @@ from sqlalchemy import (
     func,
     text
 )
+
 from sqlalchemy.orm import (
     Mapped,
     mapped_column
@@ -44,11 +45,21 @@ class User(Base):
         nullable=False
     )
 
+    # Google Sign-In hozir ishlatilmaydi.
+    # Database bilan model schema bir xil
+    # qolishi uchun saqlanmoqda.
     google_sub: Mapped[str | None] = mapped_column(
         String(255),
         unique=True,
         index=True,
         nullable=True
+    )
+
+    is_email_verified: Mapped[bool] = mapped_column(
+        Boolean,
+        nullable=False,
+        default=False,
+        server_default=text("0")
     )
 
     is_admin: Mapped[bool] = mapped_column(
@@ -58,13 +69,15 @@ class User(Base):
         server_default=text("0")
     )
 
-    last_active_at: Mapped[datetime | None] = mapped_column(
+    last_active_at: Mapped[
+        datetime | None
+    ] = mapped_column(
         DateTime,
         nullable=True
     )
 
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
-        server_default=func.now(),
-        nullable=False
+        nullable=False,
+        server_default=func.now()
     )

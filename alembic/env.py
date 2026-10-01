@@ -13,11 +13,18 @@ from app.database.database import Base
 from app.models.assessment_attempt import (
     AssessmentAttempt
 )
+from app.models.email_verification_code import (
+    EmailVerificationCode
+)
 from app.models.password_reset_code import (
     PasswordResetCode
 )
-from app.models.progress import UserProgress
-from app.models.refresh_token import RefreshToken
+from app.models.progress import (
+    UserProgress
+)
+from app.models.refresh_token import (
+    RefreshToken
+)
 from app.models.user import User
 
 

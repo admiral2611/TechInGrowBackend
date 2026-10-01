@@ -56,7 +56,8 @@ router = APIRouter(
 @router.post(
     "/register",
     response_model=UserResponse,
-    status_code=status.HTTP_201_CREATED
+    status_code=
+        status.HTTP_201_CREATED
 )
 async def register(
     user_data: UserRegister,
@@ -68,33 +69,44 @@ async def register(
     existing_username = (
         get_user_by_username(
             db=db,
-            username=user_data.username
+            username=
+                user_data.username
         )
     )
 
     if existing_username is not None:
+
         raise HTTPException(
-            status_code=409,
-            detail="Username already exists"
+            status_code=
+                status.HTTP_409_CONFLICT,
+            detail=
+                "Username already exists"
         )
 
     existing_email = (
         get_user_by_email(
             db=db,
-            email=user_data.email
+            email=str(
+                user_data.email
+            )
         )
     )
 
     if existing_email is not None:
+
         raise HTTPException(
-            status_code=409,
-            detail="Email already exists"
+            status_code=
+                status.HTTP_409_CONFLICT,
+            detail=
+                "Email already exists"
         )
 
-    return create_user(
+    user = create_user(
         db=db,
         user_data=user_data
     )
+
+    return user
 
 
 @router.post(
@@ -102,7 +114,10 @@ async def register(
     response_model=TokenResponse
 )
 async def login(
-    form_data: OAuth2PasswordRequestForm = Depends(),
+    form_data:
+        OAuth2PasswordRequestForm
+        = Depends(),
+
     db: Session = Depends(
         get_db
     )
@@ -110,26 +125,50 @@ async def login(
 
     user = authenticate_user(
         db=db,
-        username=form_data.username,
-        password=form_data.password
+        username=
+            form_data.username,
+        password=
+            form_data.password
     )
 
+    # SECURITY:
+    # Username mavjud yoki password
+    # noto'g'ri ekanini bir xil xabar bilan
+    # qaytaramiz.
     if user is None:
+
         raise HTTPException(
-            status_code=(
-                status.HTTP_401_UNAUTHORIZED
-            ),
-            detail=(
-                "Incorrect username or password"
-            ),
+            status_code=
+                status.HTTP_401_UNAUTHORIZED,
+
+            detail=
+                "Incorrect username or password",
+
             headers={
-                "WWW-Authenticate": "Bearer"
+                "WWW-Authenticate":
+                    "Bearer"
             }
         )
 
-    token_pair = create_token_pair(
-        db=db,
-        user_id=user.id
+    # SECURITY:
+    # Credentials to'g'ri bo'lsa ham
+    # verified bo'lmagan accountga
+    # JWT bermaymiz.
+    if not user.is_email_verified:
+
+        raise HTTPException(
+            status_code=
+                status.HTTP_403_FORBIDDEN,
+
+            detail=
+                "Email verification required"
+        )
+
+    token_pair = (
+        create_token_pair(
+            db=db,
+            user_id=user.id
+        )
     )
 
     return TokenResponse(
@@ -143,24 +182,28 @@ async def login(
 )
 async def refresh(
     request: RefreshTokenRequest,
+
     db: Session = Depends(
         get_db
     )
 ):
 
-    token_pair = rotate_refresh_token(
-        db=db,
-        token=request.refresh_token
+    token_pair = (
+        rotate_refresh_token(
+            db=db,
+            token=
+                request.refresh_token
+        )
     )
 
     if token_pair is None:
+
         raise HTTPException(
-            status_code=(
-                status.HTTP_401_UNAUTHORIZED
-            ),
-            detail=(
+            status_code=
+                status.HTTP_401_UNAUTHORIZED,
+
+            detail=
                 "Invalid or expired refresh token"
-            )
         )
 
     return TokenResponse(
@@ -174,28 +217,33 @@ async def refresh(
 )
 async def logout(
     request: LogoutRequest,
+
     db: Session = Depends(
         get_db
     )
 ):
 
-    revoked = revoke_refresh_token(
-        db=db,
-        token=request.refresh_token
+    revoked = (
+        revoke_refresh_token(
+            db=db,
+            token=
+                request.refresh_token
+        )
     )
 
     if not revoked:
+
         raise HTTPException(
-            status_code=(
-                status.HTTP_401_UNAUTHORIZED
-            ),
-            detail=(
+            status_code=
+                status.HTTP_401_UNAUTHORIZED,
+
+            detail=
                 "Invalid refresh token"
-            )
         )
 
     return LogoutResponse(
-        message="Logged out successfully"
+        message=
+            "Logged out successfully"
     )
 
 

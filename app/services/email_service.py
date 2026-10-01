@@ -3,6 +3,7 @@ import smtplib
 import ssl
 
 from email.message import EmailMessage
+from email.utils import formatdate, make_msgid
 
 from dotenv import load_dotenv
 
@@ -12,7 +13,7 @@ load_dotenv()
 
 SMTP_HOST = os.getenv(
     "SMTP_HOST",
-    "smtp-relay.brevo.com"
+    "smtp.gmail.com"
 )
 
 SMTP_PORT = int(
@@ -39,38 +40,68 @@ EMAIL_FROM_NAME = os.getenv(
     "TechInGrow"
 )
 
+SMTP_USE_TLS = (
+    os.getenv(
+        "SMTP_USE_TLS",
+        "true"
+    )
+    .strip()
+    .lower()
+    == "true"
+)
+
 
 def _validate_email_config() -> None:
 
+    missing = []
+
+    if not SMTP_HOST:
+        missing.append(
+            "SMTP_HOST"
+        )
+
+    if not SMTP_PORT:
+        missing.append(
+            "SMTP_PORT"
+        )
+
     if not SMTP_USERNAME:
-        raise RuntimeError(
-            "SMTP_USERNAME .env ichida topilmadi"
+        missing.append(
+            "SMTP_USERNAME"
         )
 
     if not SMTP_PASSWORD:
-        raise RuntimeError(
-            "SMTP_PASSWORD .env ichida topilmadi"
+        missing.append(
+            "SMTP_PASSWORD"
         )
 
     if not EMAIL_FROM_ADDRESS:
+        missing.append(
+            "EMAIL_FROM_ADDRESS"
+        )
+
+    if missing:
+
         raise RuntimeError(
-            "EMAIL_FROM_ADDRESS .env ichida topilmadi"
+            "Email konfiguratsiyasi to'liq emas: "
+            + ", ".join(missing)
         )
 
 
-def send_password_reset_email(
+def _send_email(
     to_email: str,
-    reset_code: str,
-    expires_minutes: int
+    subject: str,
+    text_content: str,
+    html_content: str
 ) -> None:
 
     _validate_email_config()
 
+
     message = EmailMessage()
 
-    message["Subject"] = (
-        "TechInGrow - Parolni tiklash kodi"
-    )
+
+    message["Subject"] = subject
 
     message["From"] = (
         f"{EMAIL_FROM_NAME} "
@@ -79,46 +110,118 @@ def send_password_reset_email(
 
     message["To"] = to_email
 
-    text_content = f"""
-TechInGrow
+    message["Reply-To"] = (
+        EMAIL_FROM_ADDRESS
+    )
 
-Parolni tiklash uchun tasdiqlash kodingiz:
+    message["Date"] = (
+        formatdate(
+            localtime=True
+        )
+    )
 
-{reset_code}
+    message["Message-ID"] = (
+        make_msgid()
+    )
 
-Kod {expires_minutes} daqiqa davomida amal qiladi.
-
-Agar parolni tiklashni siz so'ramagan bo'lsangiz,
-ushbu xabarni e'tiborsiz qoldiring.
-
-TechInGrow
-""".strip()
 
     message.set_content(
         text_content
     )
 
+
+    message.add_alternative(
+        html_content,
+        subtype="html"
+    )
+
+
+    context = (
+        ssl.create_default_context()
+    )
+
+
+    with smtplib.SMTP(
+        SMTP_HOST,
+        SMTP_PORT,
+        timeout=30
+    ) as smtp:
+
+        smtp.ehlo()
+
+
+        if SMTP_USE_TLS:
+
+            smtp.starttls(
+                context=context
+            )
+
+            smtp.ehlo()
+
+
+        smtp.login(
+            SMTP_USERNAME,
+            SMTP_PASSWORD
+        )
+
+
+        smtp.send_message(
+            message
+        )
+
+
+def send_password_reset_email(
+    to_email: str,
+    code: str,
+    expire_minutes: int
+) -> None:
+
+    subject = (
+        "TechInGrow parolni tiklash kodi"
+    )
+
+
+    text_content = f"""
+Salom,
+
+TechInGrow akkauntingiz uchun parolni tiklash kodi:
+
+{code}
+
+Kod {expire_minutes} daqiqa davomida amal qiladi.
+
+Agar siz parolni tiklashni so'ramagan bo'lsangiz,
+ushbu xabarni e'tiborsiz qoldiring.
+
+TechInGrow
+""".strip()
+
+
     html_content = f"""
 <!DOCTYPE html>
+
 <html lang="uz">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
 
     <title>
-        TechInGrow Password Reset
+        TechInGrow
     </title>
+
 </head>
 
 <body
     style="
         margin: 0;
         padding: 0;
-        background-color: #f4f6fa;
+        background-color: #f5f6fa;
         font-family: Arial, Helvetica, sans-serif;
     "
 >
@@ -126,7 +229,7 @@ TechInGrow
     <div
         style="
             width: 100%;
-            padding: 40px 16px;
+            padding: 32px 16px;
             box-sizing: border-box;
         "
     >
@@ -136,7 +239,8 @@ TechInGrow
                 max-width: 520px;
                 margin: 0 auto;
                 background-color: #ffffff;
-                border-radius: 16px;
+                border: 1px solid #e5e7eb;
+                border-radius: 14px;
                 padding: 32px;
                 box-sizing: border-box;
             "
@@ -144,91 +248,84 @@ TechInGrow
 
             <h1
                 style="
-                    margin: 0 0 24px 0;
-                    font-size: 28px;
-                    line-height: 1.2;
+                    margin: 0 0 24px;
+                    color: #111827;
+                    font-size: 24px;
                 "
             >
                 TechInGrow
             </h1>
 
-            <h2
-                style="
-                    font-size: 20px;
-                    margin-bottom: 16px;
-                "
-            >
-                Parolni tiklash
-            </h2>
 
             <p
                 style="
-                    font-size: 16px;
+                    margin: 0 0 16px;
+                    color: #374151;
+                    font-size: 15px;
                     line-height: 1.6;
                 "
             >
-                Parolni tiklash uchun
-                quyidagi tasdiqlash kodidan
-                foydalaning:
+                Salom,
             </p>
 
-            <div
-                style="
-                    margin: 28px 0;
-                    padding: 20px;
-                    background-color: #f4f6fa;
-                    border-radius: 12px;
-                    text-align: center;
-                    font-size: 34px;
-                    font-weight: bold;
-                    letter-spacing: 8px;
-                "
-            >
-                {reset_code}
-            </div>
 
             <p
                 style="
-                    font-size: 16px;
+                    margin: 0 0 20px;
+                    color: #374151;
+                    font-size: 15px;
+                    line-height: 1.6;
+                "
+            >
+                Parolingizni tiklash uchun
+                quyidagi tasdiqlash kodidan foydalaning.
+            </p>
+
+
+            <div
+                style="
+                    margin: 24px 0;
+                    padding: 18px;
+                    background-color: #f3f4f6;
+                    border-radius: 10px;
+                    text-align: center;
+                    color: #111827;
+                    font-size: 30px;
+                    font-weight: 700;
+                    letter-spacing: 6px;
+                "
+            >
+                {code}
+            </div>
+
+
+            <p
+                style="
+                    margin: 0 0 16px;
+                    color: #374151;
+                    font-size: 14px;
                     line-height: 1.6;
                 "
             >
                 Ushbu kod
                 <strong>
-                    {expires_minutes} daqiqa
+                    {expire_minutes} daqiqa
                 </strong>
                 davomida amal qiladi.
             </p>
 
+
             <p
                 style="
-                    margin-top: 32px;
-                    font-size: 14px;
-                    color: #666666;
+                    margin: 24px 0 0;
+                    color: #6b7280;
+                    font-size: 13px;
                     line-height: 1.6;
                 "
             >
-                Agar parolni tiklashni siz
+                Agar siz parolni tiklashni
                 so'ramagan bo'lsangiz,
-                ushbu xabarni e'tiborsiz
-                qoldirishingiz mumkin.
-            </p>
-
-            <hr
-                style="
-                    border: none;
-                    border-top: 1px solid #eeeeee;
-                    margin: 32px 0 20px;
-                "
-            >
-
-            <p
-                style="
-                    font-size: 13px;
-                    color: #999999;
-                "
-            >
-                © TechInGrow
+                ushbu xabarni e'tiborsiz qoldiring.
             </p>
 
         </div>
@@ -240,34 +337,187 @@ TechInGrow
 </html>
 """
 
-    message.add_alternative(
-        html_content,
-        subtype="html"
+
+    _send_email(
+        to_email=to_email,
+        subject=subject,
+        text_content=text_content,
+        html_content=html_content
     )
 
-    ssl_context = (
-        ssl.create_default_context()
+
+def send_email_verification_email(
+    to_email: str,
+    code: str,
+    expire_minutes: int
+) -> None:
+
+    subject = (
+        "TechInGrow email tasdiqlash kodi"
     )
 
-    with smtplib.SMTP(
-        SMTP_HOST,
-        SMTP_PORT,
-        timeout=30
-    ) as smtp:
 
-        smtp.ehlo()
+    text_content = f"""
+Salom,
 
-        smtp.starttls(
-            context=ssl_context
-        )
+TechInGrow akkauntingizni tasdiqlash kodi:
 
-        smtp.ehlo()
+{code}
 
-        smtp.login(
-            SMTP_USERNAME,
-            SMTP_PASSWORD
-        )
+Kod {expire_minutes} daqiqa davomida amal qiladi.
 
-        smtp.send_message(
-            message
-        )
+Agar siz TechInGrow'da ro'yxatdan o'tmagan bo'lsangiz,
+ushbu xabarni e'tiborsiz qoldiring.
+
+TechInGrow
+""".strip()
+
+
+    html_content = f"""
+<!DOCTYPE html>
+
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        TechInGrow
+    </title>
+
+</head>
+
+<body
+    style="
+        margin: 0;
+        padding: 0;
+        background-color: #f5f6fa;
+        font-family: Arial, Helvetica, sans-serif;
+    "
+>
+
+    <div
+        style="
+            width: 100%;
+            padding: 32px 16px;
+            box-sizing: border-box;
+        "
+    >
+
+        <div
+            style="
+                max-width: 520px;
+                margin: 0 auto;
+                background-color: #ffffff;
+                border: 1px solid #e5e7eb;
+                border-radius: 14px;
+                padding: 32px;
+                box-sizing: border-box;
+            "
+        >
+
+            <h1
+                style="
+                    margin: 0 0 24px;
+                    color: #111827;
+                    font-size: 24px;
+                "
+            >
+                TechInGrow
+            </h1>
+
+
+            <p
+                style="
+                    margin: 0 0 16px;
+                    color: #374151;
+                    font-size: 15px;
+                    line-height: 1.6;
+                "
+            >
+                Salom,
+            </p>
+
+
+            <p
+                style="
+                    margin: 0 0 20px;
+                    color: #374151;
+                    font-size: 15px;
+                    line-height: 1.6;
+                "
+            >
+                TechInGrow akkauntingizni
+                tasdiqlash uchun quyidagi
+                koddan foydalaning.
+            </p>
+
+
+            <div
+                style="
+                    margin: 24px 0;
+                    padding: 18px;
+                    background-color: #f3f4f6;
+                    border-radius: 10px;
+                    text-align: center;
+                    color: #111827;
+                    font-size: 30px;
+                    font-weight: 700;
+                    letter-spacing: 6px;
+                "
+            >
+                {code}
+            </div>
+
+
+            <p
+                style="
+                    margin: 0 0 16px;
+                    color: #374151;
+                    font-size: 14px;
+                    line-height: 1.6;
+                "
+            >
+                Ushbu kod
+                <strong>
+                    {expire_minutes} daqiqa
+                </strong>
+                davomida amal qiladi.
+            </p>
+
+
+            <p
+                style="
+                    margin: 24px 0 0;
+                    color: #6b7280;
+                    font-size: 13px;
+                    line-height: 1.6;
+                "
+            >
+                Agar siz TechInGrow'da
+                ro'yxatdan o'tmagan bo'lsangiz,
+                ushbu xabarni e'tiborsiz qoldiring.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+"""
+
+
+    _send_email(
+        to_email=to_email,
+        subject=subject,
+        text_content=text_content,
+        html_content=html_content
+    )
